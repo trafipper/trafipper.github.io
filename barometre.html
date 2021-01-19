@@ -1,0 +1,586 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>Trafipper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.wixstatic.com/media/232b09_ad1fc11a15a94cd0a4a93641a6f8b695%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/232b09_ad1fc11a15a94cd0a4a93641a6f8b695%7Emv2.png" type="image/png" />
+    <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/232b09_ad1fc11a15a94cd0a4a93641a6f8b695%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/232b09_ad1fc11a15a94cd0a4a93641a6f8b695%7Emv2.png" type="image/png" />
+    <meta>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn-a.cumul.io/js/cumulio.min.js"></script>
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.4;
+            color: #555555;
+            margin: 0px;
+        }
+
+        .header {
+            background-color: lightgray;
+            height: 80px;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        #navbar {
+            overflow: hidden;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+            #navbar a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                #navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                #navbar a.active {
+                    background-color: #c70000;
+                    color: white;
+                }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .sticky + .content {
+                padding-top: 60px;
+            }
+
+        @media screen and (max-width: 814px) {
+            #my-dashboard-000 {
+                width: 90% !important;
+            }
+
+            #navbar a {
+                padding: 2px 2px !important;
+                width: 48%;
+            }
+
+            #cleanFilters {
+                width: 100% !important;
+            }
+        }
+
+        #my-dashboard-000 > p {
+            text-align: justify;
+        }
+
+        /*        html {
+            scroll-behavior: smooth;
+        }*/
+
+        #my-dashboard-932, #my-dashboard-594, #my-dashboard-772, #my-dashboard-721 {
+            border: 2px solid lightgray;
+        }
+        /*login css*/
+        #main-holder {
+            /*padding:50px;*/
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            background-color: white;
+            /*border-radius: 7px;*/
+            /*box-shadow: 0px 0px 5px 2px black;*/
+            position: fixed;
+            z-index: 9999999;
+        }
+
+        #login-error-msg-holder {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        #login-error-msg {
+            width: 23%;
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #8a0000;
+            border: 1px solid #8a0000;
+            background-color: #e58f8f;
+            opacity: 0;
+        }
+
+        #error-msg-second-line {
+            display: block;
+        }
+
+        #login-form {
+            align-self: flex-start;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .login-form-field::placeholder {
+            color: #3a3a3a;
+        }
+
+        .login-form-field {
+            border: none;
+            border-bottom: 1px solid #3a3a3a;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            outline: none;
+            padding: 0px 0px 5px 5px;
+        }
+
+        #login-form-submit {
+            width: 100%;
+            padding: 7px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            background-color: #3a3a3a;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            Cumulio.addDashboard({
+                dashboardId: '0c5a6b15-c9a0-45ce-acb4-79035f1e09d3',
+                container: '#my-dashboard-932',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: 'green'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: 'd3de9531-41fc-42e7-9d28-a91f46ff9cb8',
+                container: '#my-dashboard-772',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: 'green'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '9249a627-a8ba-4088-a37d-80c7e1398b52',
+                container: '#my-dashboard-594',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: 'green'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: 'dda90f61-5791-4775-a7e0-0f2f019fe6d0',
+                container: '#my-dashboard-721',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: 'green'
+                }
+            });
+
+            $('#dash0').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-758' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-960' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-761' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-287' });
+                Cumulio.addDashboard({
+                    dashboardId: '0c5a6b15-c9a0-45ce-acb4-79035f1e09d3',
+                    container: '#my-dashboard-932',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor: 'green'
+                    }
+                });
+                Cumulio.addDashboard({
+                    dashboardId: 'd3de9531-41fc-42e7-9d28-a91f46ff9cb8',
+                    container: '#my-dashboard-772',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor: 'green'
+                    }
+                });
+                Cumulio.addDashboard({
+                    dashboardId: '9249a627-a8ba-4088-a37d-80c7e1398b52',
+                    container: '#my-dashboard-594',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor: 'green'
+                    }
+                });
+                Cumulio.addDashboard({
+                    dashboardId: 'dda90f61-5791-4775-a7e0-0f2f019fe6d0',
+                    container: '#my-dashboard-721',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor: 'green'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash0').addClass('active');
+                //$('#my-dashboard-758').show();
+                $('#my-dashboard-000').show();
+                $('#cleanFilters').hide();
+            });
+
+            $('#dash1').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-960' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-761' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-932' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-772' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-594' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-721' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-287' });
+                Cumulio.addDashboard({
+                    dashboardId: '012127fc-7ca0-4a97-b950-e459156c4423',
+                    container: '#my-dashboard-758',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor: 'green'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash1').addClass('active');
+                //$('#my-dashboard-758').show();
+                $('#my-dashboard-000').hide();
+                $('#cleanFilters').show();
+            });
+
+            $('#dash2').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-758' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-761' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-932' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-772' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-594' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-721' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-287' });
+                Cumulio.addDashboard({
+                    dashboardId: '3ca08852-ab79-4210-9651-aac24e3907c8',
+                    container: '#my-dashboard-960',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor: 'green'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash2').addClass('active');
+                //$('#my-dashboard-960').show();
+                $('#my-dashboard-000').hide();
+                $('#cleanFilters').show();
+            });
+
+            $('#dash3').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-758' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-960' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-932' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-772' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-594' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-721' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-287' });
+                Cumulio.addDashboard({
+                    dashboardId: '866635c4-f1b8-4d3a-bf06-0fa590513b51',
+                    container: '#my-dashboard-761',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor: 'green'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash3').addClass('active');
+                //$('#my-dashboard-761').show();
+                $('#my-dashboard-000').hide();
+                $('#cleanFilters').show();
+            });
+
+            $('#dash4').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-758' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-960' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-932' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-772' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-594' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-721' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-761' });
+                Cumulio.addDashboard({
+                    dashboardId: '32c887f5-929f-43a6-9b1c-5fb914a4dc00',
+                    container: '#my-dashboard-287',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor: 'green'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash4').addClass('active');
+                //$('#my-dashboard-761').show();
+                $('#my-dashboard-000').hide();
+                $('#cleanFilters').show();
+            });
+
+            $('#cleanFilters').click(function () {
+                Cumulio.reloadDashboard();
+            });
+
+            //login js
+            const loginForm = document.getElementById("login-form");
+            const loginButton = document.getElementById("login-form-submit");
+            const loginErrorMsg = document.getElementById("login-error-msg");
+
+            loginButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                const username = loginForm.username.value;
+                const password = loginForm.password.value;
+
+                if (username === "traf" && password === "1881") {
+                    //alert("You have successfully logged in.");
+                    //location.reload();
+                    window.scrollTo(0, 0);
+                    $('#main-holder').hide();
+                } else {
+                    loginErrorMsg.style.opacity = 1;
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <!-- login html -->
+    <main id="main-holder">
+        <h1 id="login-header">GİRİŞ YAP</h1>
+
+        <div id="login-error-msg-holder">
+            <p id="login-error-msg">Hatalı kullanıcı adı <span id="error-msg-second-line">ve/veya şifre</span></p>
+        </div>
+        <br />
+        <form id="login-form">
+            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Kullanıcı adı">
+            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Şifre">
+            <input type="submit" value="Giriş" id="login-form-submit">
+        </form>
+
+    </main>
+    <div class="header">
+        <div style="padding: 20px 0px 20px 20px;height: 40px;float: left">
+            <a target="_blank" href="https://konda.com.tr/"> <img style="height: 40px" src="https://konda.com.tr/wp-content/themes/konda/images/konda_logo_yilsiz.png" alt="Alternate Text" /></a>
+        </div>
+        <div style="float: right;padding-right:10px">
+            <p style="cursor:pointer" onClick="window.location.reload();"><b>Barometre</b> | <span>Aralık'20</span></p>
+        </div>
+    </div>
+    <div id="navbar">
+        <a id="dash0" class="active" href="javascript:void(0)">Yönetici Özeti</a>
+        <a id="dash1" href="javascript:void(0)">Siyasi Tercihler</a>
+        <a id="dash2" href="javascript:void(0)">Gündem: Koronavirüs</a>
+        <a id="dash3" href="javascript:void(0)">Moral Endeksi</a>
+        <a id="dash4" href="javascript:void(0)">Hizmetiçi</a>
+        <a id="cleanFilters" style="float:right;color:yellow;display:none" href="javascript:void(0)">Tüm Filtreleri Temizle</a>
+    </div>
+    <div class="content">
+        <div class="dash" style=" width: 80%; margin: auto; background-image: url('https://ucd8ec44fb092a046fd030aaed98.previews.dropboxusercontent.com/p/thumb/ABCjD7l_Z1gy3epJH0zWMot7b7hAamKeD2sVXbnSBN9gQv17vVoZ_TF7jQFlrP_l7p0OHhRIgVVTHCk-V8QUyIowCgfGwtksmMfo41ephDo7Hs30NW4dIQUohjiE3QGFFNgIsbdGns_OzkGZMi1ZiFzStCK1bj-ygrLdTz6kvJIsn1d-BiSrY_LlMNPVOYx2bWPEo_V3YrwIB35mSa-ljF6lC113yI1tUJXHhICiCijN8QC55b0GVg7QtnDM7ysZalyS0rSEROyd-WCo3LS9BZd-Ao4uH_7yWN5g4ixNt1-oW7LrOCXoQGjDh6G6p7LigecQ-begp4mfpa_byjHz1WvPFZjHIE6FYgmgVKOFw9YIsaoleNEsZEDMuc5_pmHPwNgj9ayQcD9yM7U9Lvcm9aGv/p.jpeg?size=2048x1536&size_mode=3'); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;" id="my-dashboard-000">
+            <p><span style="color: #c70000;"><strong>1. YÖNETİCİ ÖZETİ </strong></span></p>
+            <p>Saha çalışmasını 5-6 Aralık 2020 tarihlerinde gerçekleştirdiğimiz ve 115. Barometre raporumuz olan Aralık’20 Barometresi Türkiye’deki 15 yaş üstü yetişkin nüfusun, saha çalışmasının yapıldığı günlerdeki siyasal eğilimlerini, tercihleri ve profillerini yansıtmaktadır.</p>
+            <p><span style="color: #c70000;"><strong>Muhalefet blokunun çoğunluğu devam ediyor </strong></span></p>
+            <p>Siyasi tercihlerde Eylül ayından beri gözlemlediğimiz bloklar arası dengenin tersine dönmüş olma hali bu ay da devam ediyor. Yüzde 25,9 oranındaki seçmen Ak Parti’ye ve yüzde 6,4 oranındaki seçmen de MHP’ye; buna karşılık seçmenin yüzde 14,5’i CHP’ye, yüzde 6,9’u İyi Parti’ye, yüzde 7’si HDP’ye ve yüzde 4,5’i de diğer partilere oy vereceğini söylüyor. Muhalefet bloku şeklinde bakılırsa muhalefet blokunun yüzde 32,8, iktidar blokunun da yüzde 32,3 oy oranına ulaştığı görülüyor. Çoğunluğun muhalefet blokuna geçmiş olması durumunun az farkla da olsa sürdüğü anlaşılmaktadır.</p>
+            <p>5-6 Aralık günlerinde hâlâ seçmenin yüzde 28,4’ü kararsız ve yüzde 6,4’ü de oy kullanmayacağını söyleyen seçmenlerdi ki bu oranlarla gri alandakiler olarak tanımladığımız seçmen kümesi de yüzde 34,8 oranındadır. Gri alandaki kararsızlar dağıtıldıktan sonra Cumhur İttifakı ya da iktidar bloku oyu yüzde 49,6, muhalefet blokunun oyu yüzde 50,4 oranındadır. Millet İttifakı olarak CHP ve İyi Parti oy toplamı ise yüzde 32,7’dir.</p>
+            <p><span style="color: #c70000;"><strong>Erdoğan’ın karnesi tekrar en düşük seviyesinde</strong></span></p>
+            <p>Bu ayki bulgularımıza göre Erdoğan’ın karne notu ortalaması 2,9 ve bu not Mart’19, Eylül’19 ve Ekim’19 ile birlikte ölçtüğümüz en düşük seviye. “Çok zayıf-zayıf” ve “iyi- pekiyi” verenler olarak grupladığımızda iki küme birbirine denk olsa da “çok zayıf” notunu verenlerin Eylül’18’den beri en yüksek, “pekiyi” notu verenlerinse en düşük seviyede olması Erdoğan’ın yönetimini zayıf bulma halinin derinleştiğine işaret ediyor.</p>
+            <p>Karne notundaki bu düşüşün aslında Erdoğan’ın bir süredir düşük not aldığı siyasi ve toplumsal, kesimlerden daha da düşük not almasıyla ilişkili olduğunu görüyoruz. Dolayısıyla Erdoğan’ın bazı siyasi ve toplumsal kesimlerle arasındaki mesafe derinleşiyor denilebilir. Bu noktada da toplumsal ve siyasi kutuplaşmanın artık Erdoğan’a yarar mı yoksa zarar mı getirdiği tartışması yapılabilir.</p>
+            <p><span style="color: #c70000;"><strong>Gelir ve harcamalara dair beklentilerde tablo karamsar </strong></span></p>
+            <p>2020 yılını tamamlarken, gelecek yıl için hane geliri ile gıda, giyim kuşam ve eğitim harcamalarına ilişkin bireysel ekonomik beklentileri ve ülkeye dair güncel, ekonomik ve siyasi beklentileri ele aldık ve oldukça karamsar bir tabloyla karşılaştık.</p>
+            <p>Aralık’17 Barometresi araştırmamızdaki soruların karşılaştırmasına dayanan analizimiz hane gelirinin azalmasını, harcamalarınsa artmasını bekleyenlerin arttığını gösteriyor. Her 10 kişiden 3’ü hane gelirinin azalacağını düşünürken, 4’ü aynı kalmasını bekliyor. 2017’ye kıyasla hane gelirinin aynı kalacağını düşünenlerde 7 puanlık bir düşüş; azalacağını düşünenlerdeyse 7 puanlık bir artış görüyoruz. Harcama beklentileri söz konusu olduğunda ise üç yılın ardından biraz daha kötümser bir tablonun ortaya çıktığını söyleyebiliriz. Özellikle gıda harcamalarının artacağını düşünenlerde 4 puan, hele de çok artaracağını düşünenlerde 11 puan artış olmuş durumda.</p>
+            <p>Harcamalara ilişkin beklentilerde ülkede ekonomik kriz bekleyenlerin beklemeyenlere kıyasla daha karamsar olmasına karşın neredeyse benzer eğilimlere sahip gözüküyor. Ancak harcamaya dair beklenti sadece bu algıyla değil, gelirle de ilişkili. Aylık hane gelirinin yükselmesiyle birlikte bu gelirin gelecek yıl artmasını bekleyenlerin oranı da yükseliyor.</p>
+            <p><br /><span style="color: #c70000;"><strong>Gelir beklentisi gelir seviyesinden çok, geçinebilmeye göre şekilleniyor </strong></span></p>
+            <p>Türkiye’de genel bir eğilimle hane gelirinin aynı kalacağı beklentisi söz konusu. Ancak aylık hane geliri 2000 TL’nin altında olanlar hane gelirlerinin gelecek yıl azalacağını; 2001-3000 TL arası hane gelirine sahip olanlarsa aynı kalacağını; 3000 TL ve üzerinde aylık hane gelirine sahip olanlarsa artmasını bekliyor. Ekonomik sınıflar da hane gelirlerine ilişkin beklentide benzer bir eğilimi ortaya koyuyor. Bu durumu geçinebilmeye ilişkin yargılar üzerinden çok daha net biçimde görebiliyoruz. Kenara para koyabildiğini söyleyenler hane gelirinin de yükseleceğini söylerken, geçinemediğini belirtenlerde hane gelirinin azalmasına yönelik beklenti artıyor.</p>
+            <p><strong><span style="color: #c70000;">Tüm kesimler gıda harcamalarının artmasını bekliyor</span></strong></p>
+            <p>Gıda harcamalarına ilişkin beklentide ise demografik özelliklere göre bariz bir farklılaşmanın olmadığını, tüm kesimlerde oldukça yüksek olduğunu görüyoruz. Bununla birlikte geçinemediğini söyleyenlerin gıda harcamalarına ilişkin artış beklentisinin de var olduğunu belirtmeliyiz.</p>
+            <p><br /><strong><span style="color: #c70000;">Yeni yıldan ekonomik ve siyasi beklentiler konusunda da 2017 sonuna kıyasla daha karamsarız.</span></strong></p>
+            <div id="my-dashboard-932"></div>
+            <p><span>Toplumun ekonomik ve siyasi beklentilerini Aralık’17 Barometresi araştırmamızın bulgularıyla karşılaştırdığımızda, geride bıraktığımız üç yıl içinde toplum genelindeki karamsarlığın yükseldiğini görüyoruz. Enflasyonun yükseleceğini düşünenler üç yılın ardından yüzde 60’dan yüzde 68’e yükselirken, işsizliğin artacağını söyleyenler yüzde 70’ten yüzde 80’e ulaşmış durumda. 2017 yılının sonunda gelecek yılda siyasi gerilimin azalacağını söyleyenler yüzde 20 seviyesindeyken, bu oranın da 8 puanlık bir düşüşle yüzde 12’ye gerilediğini saptıyoruz. Yolsuzlukların artacağı ile erken seçim beklentisi ise 3 yılın ardından çok fazla değişmemiş gözüküyor. Görüştüğümüz her 5 kişiden 2’si erken seçim beklemiyor, ancak 1’i bekliyor. </span></p>
+            <p><span><span style="color: #c70000;"><strong>Koronavirüs salgınının biteceği konusunda net bir beklenti yok </strong></span></span></p>
+            <p><span>Koronavirüs salgının biteceğine dair beklenti ise olumlu ya da olumsuz olarak toplum genelinde tek bir algıda yoğunlaşmıyor. Her 5 kişiden 2’si salgının biteceğini düşünürken, 2’si de gelecek yıl içinde sonlanmayacağını düşünüyor. Ak Parti seçmeninin yarısı salgının 2021’de biteceğine inanıyor. MHP seçmenlerinin yüzde 37’si bu yargıya katılırken, bu oran İyi Parti’de yüzde 40 seviyesinde gözüküyor. CHP ve HDP seçmen tabanlarında ise bu beklenti daha düşük seviyelere iniyor. Her 4 CHP seçmeninden 1’i, her 10 HDP seçmenindense 3’ü salgının 2021’de sonlanacağını belirtiyor.<br /></span></p>
+            <p><span>Salgının gelecek yıl sonlanacağına dair beklenti en çok Dindar Muhafazakârlarda görülüyor. Dindar Muhafazakârların yüzde 46’sı salgının gelecek yıl sonlanacağını söylerken, Modern’lerde bu oran yüzde 31’e düşüyor. Eğitim seviyesinin yükselmesiyle salgının biteceği yönündeki beklenti ise ters orantılı. Üniversite mezunlarının yüzde 33’ü salgının gelecek yıl biteceğini beklerken, lise altı eğitimlilerin yüzde 42’si bu yargıya katılıyor.<br /></span></p>
+            <p><span><span style="color: #c70000;"><strong>Sosyal medyanın yasaklanacağı beklentisi yok </strong></span></span></p>
+            <p><span>Görüştüğümüz her 2 kişiden 1’i gelecek yıl sosyal medyanın yasaklanmasını beklemiyor. Yasaklanacağını düşünenler ise Türkiye genelinde yüzde 15 seviyesinde gözüküyor. Her 10 Ak Parti ve MHP seçmeninden 1’i, her 5 CHP seçmeninden 1’i ve biraz daha karamsar bir bakışla her 10 HDP seçmeninden 3’ü sosyal medyanın 2021’de yasaklanacağını söylüyor.<br /></span></p>
+            <p><span><span style="color: #c70000;"><strong>Ekonomik beklentiler: enflasyon ve işsizlik artacak, ekonomi iyileşmeyecek </strong></span></span></p>
+            <p><span>Toplumun yeni yıla dair beklentilerinde asıl karamsar olduğu konular ekonomi alanında yoğunlaşıyor. Hayat pahalılığının giderek yükselmesiyle enflasyon ve salgın koşullarının da etkileriyle daha da kronik bir hale gelmesi muhtemel olan işsizlik toplumun ilk gündem maddelerini oluşturuyor.</span></p>
+            <p><span><br />Her 10 kişiden 7’si gelecek yıl içinde enflasyonun yükseleceğini düşünüyor. Her 10 kişiden yalnızca </span><span>1’i enflasyonun yükselmeyeceğine inanıyor ve siyasi tercihler bu beklentiyi kısmen farklılaştırıyor. En düşük beklenti Ak Parti ve MHP seçmenlerinde olsa da çoğunluğu enflasyonun yükseleceğini düşünüyor. Beklentiyi en çok farklılaştıran demografik etmenlerin başında eğitim durumu ile geçinebilme durumu geliyor. Ödemelerini yapamayıp borca giren her 10 kişiden 8’i enflasyonun yükseleceğini düşünüyor.</span></p>
+            <p><span><br />İşsizliğin artacağı beklentisi görüştüğümüz kişilere sunduğumuz seçenekler arasında en karamsar olduklarını gördüğümüz başlığı oluşturuyor. Her 5 kişiden 4’ü 2021’de işsizliğin artacağını düşünürken, 10 kişiden yalnızca 1’i bu yargıya katılmıyor. Çalışma durumuna göre işsizliğin artacağını söyleyenlerin başında işsizler, emekliler ve beyaz yaka çalışanlar geliyor. Yine de her çalışma kümesinde işsizliğin artacağını söyleyenler yüzde 75 seviyesinin altına inmiyor.</span></p>
+            <p><span>Ekonominin 2021’de iyileşeceğine dair beklentiyi ele aldığımızda da yine toplumda karamsar bir havanın hâkim olduğunu görüyoruz. Her 5 kişiden 3’ü ekonomide bir iyileşme beklemediğini, her 5 kişiden yalnızca 1’inin iyileşme olacağını beklediğini saptıyoruz.<br /></span></p>
+            <p><span style="color: #c70000;"><strong>Seçmenlerin ekonominin iyileşmesine dair beklentisi farklılaşıyor </strong></span></p>
+            <p><span>Ekonominin iyileşmesine yönelik beklenti en çok Ak Parti ile diğer partiler arasında farklılaşıyor. Ak Parti seçmenlerinin yüzde 44’ü ekonominin iyileşeceğini bekliyor. HDP ve İyi Parti seçmenlerinde ise ekonominin iyileşmesini bekleyenlerin oranı yüzde 11’e, CHP seçmenlerinde ise yüzde 7’ye kadar düşüyor.</span></p>
+            <p><span><br /><strong><span style="color: #c70000;">Siyasi gerilimin veya yolsuzlukların azalması beklenmiyor</span></strong></span></p>
+            <p><span>Koronavirüs salgınından sosyal medyanın kısıtlanmasına, ekonominin gidişatından işsizliğe Türkiye’nin gündemini oluşturan koşulların büyük bir kısmı toplumun siyasi beklentileri üzerinde belirleyici dinamiklere sahip gözüküyor. İlk olarak siyasi gerilimin azalacağı yönünde bir beklenti olmadığını, toplum genelinde karamsar bir havanın hakim olduğunu görüyoruz.<br /></span></p>
+            <p><span>Siyasi gerilimin azalacağını, görüştüğümüz her 10 kişiden yalnızca 1’i söylüyor ve bu beklenti Ak Partililer arasında iki katına çıkıyor. Toplumun yüzde 55’i gelecek yıl yolsuzlukların artacağını düşünüyor. 2017’den bu yana yolsuzlukların artacağını düşünenlerin oranı sabit kalırken, fikir belirtmeyenlerde bir artış görülüyor. Diğer başlıkların aksine yolsuzluklar konusuna bakış siyasi tercihlere göre daha yüksek oranda farklılaşıyor. Her 3 Ak Parti seçmeninden biri, MHP seçmenlerinin yarısı, her 5 CHP ve HDP seçmeninden 4’ü, her 4 İyi Parti seçmenindense 3’ü gelecek yıl yolsuzlukların artacağını düşünüyor. Enflasyon ve işsizlik gibi makro-ekonomik sorunların toplum genelinde daha karamsar bir havayı hâkim kılmasına rağmen, yolsuzluklar söz konusu olduğunda siyasi ve ideolojik bakışla kutuplaşmanın etkilerinin devam ettiğini iddia edebiliriz. Yine de iktidar bloğunu oluşturan parti seçmenlerinde de bu beklentinin kayda değer bir oranda var olduğunu hesaba kattığımızda, yolsuzlukların kronik bir problem olarak siyasal hayatta devam ettiğinden de söz edebiliriz.<br /></span></p>
+            <p><span style="color: #c70000;"><strong>Erken seçim beklentisi yok ama muhalefet seçmenlerinde ve geçinmekte zorlananlarda daha fazla</strong> </span></p>
+            <p><span>Gelecek yıl içinde bir erken seçim bekleyenlerin oranı yüzde 23. Bu beklentinin iktidar bloğunda Türkiye kamuoyundaki eğilimin de altına düştüğünü, muhalefet partilerinin seçmen tabanlarında ise çok da yükselmeyerek Türkiye ortalamasının üzerine çıktığını görüyoruz.<br /></span></p>
+            <p><span>Erken seçim beklentisi demografik etmenlere göre çok fazla değişmese de geçinebilme durumundaki zorlaşmayla arttığını söyleyebiliriz. Kıt kanaat geçindiğini söyleyen her 5 kişiden 1’i 2021’de erken seçim beklerken, ödemelerini yapmakta zorlanan ya da borca giren her 10 kişiden 3’ü erken seçim beklentisine sahip gözüküyor.<br /></span></p>
+            <p><span>Toplumsal karamsar ruh halinde ve duruma dair değerlendirmesinde hemfikir Bireysel ekonomik duruma dair beklentileri ve ülke hayatına dair güncel, ekonomik ve siyasi beklentileri bir arada değerlendirdiğimizde toplumun 2021 yılına oldukça karamsar bir ruh haliyle girdiği, 2018’e girerkenki duruma kıyasla da daha karamsar olduğu anlaşılıyor.<br /></span></p>
+            <p><span>Seçmenler arasında farklar olsa da bunlar büyük farklar değil ve herkesin durumun ne olduğuna dair hemfikir olduğu, bu konuda toplumda bir birlik olduğu söylenebilir.</span></p>
+            <p><span style="color: #c70000;"><strong>Milli Piyango bileti almayı planlayanlar azalmış</strong></span></p>
+            <p><span>Bu yıl yılbaşı ikramiyesi 100 milyon TL olarak açıklandı. Bu yılki çekiliş aynı zamanda Milli Piyango’nun işletme hakkının özel bir ortaklığa devredilmesinin ardından gerçekleştirilecek ilk yılbaşı çekilişi olma özelliğini de taşıyor. Yüzde 17 yılbaşı çekilişi için milli piyango bileti aldığını ya da alacağını söylerken, her 10 kişiden 3’ü bu yıl almayacağını belirtiyor. Her 2 kişiden 1’i ise </span></p>
+            <p><span>“Ben asla piyango bileti almam.” diyor. Aralık’17 Barometresi bulgusuyla karşılaştırdığımızda bilet alanlarda 11 puanlık bir düşüş görüyoruz. Vakaların artması ve yasaklarla insanlar tekrar eve kapanmaya başladı Nisan’dan Ekim’e kesintisiz biçimde süren rahatlama ve normalleşme hali Kasım ayında kısme  tersine döndükten sonra bu ay keskin bir şekilde neredeyse Nisan-Mayıs dönemindeki haline geri gelmiş durumda. Sokağa her zamanki sıklıkta veya daha seyrek çıkanlar hızla azalırken, hiç çıkmama veya sadece alışveriş için çıkma hali artmış durumda. Elbette bunda hem vakaların artması, Sağlık Bakanlığı’nın vaka sayılarını 30 bin mertebesinde açıklamaya başlamasının yarattığı ruh hali ve sokağa çıkma yasaklarının etkili olduğunu olduğunu düşünebiliriz.</span></p>
+            <div id="my-dashboard-772"></div>
+            <p><span>Sadece iş için çıkanların oranıysa hem Nisan’a hem de geçen aya kıyasla artmış durumda. Çalışanlar daha normal bir hayattan sadece iş için sokağa çıkmaya daha fazla yönelmişken, çalışmayanlar normalden daha seyrek çıkmaktan sadece alışveriş için çıkmaya daha fazla yönelmişler. </span><span>Sokağa çıkmanın azalmasına paralel olarak salgın karşı alınan önlemlerin tümünde artışlar görülüyor ve önlem alma seviyesi salgının başından beri en yüksek seviyesine gelmiş durumda. Zaten çok yüksek olan maske kullanımı biraz daha artarken, yine yüksek olan ve salgın boyunca </span><span>oranı pek değişmeyen el yıkama, dezenfektan kullanımı ve kalabalık ortamlara girmeme önlemlerinde kayda değer artışlar görülüyor. Ancak salgının başında yaygın olan evden çıkmama ve toplu taşıma kullanmama önlemleri zaman içinde normalleşmeyle birlikte azalmaya başlamıştı. Bu ay ikisinde de ani sıçrama görüyoruz. Kasım ayında toplumun yüzde 30’u toplu taşıma araçları kullanmazken, bu ay -yüzde 64 kullanmadığını belirtiyor. Önlem olarak gerekmedikçe evden çıkmayanlar ise Kasım’da yüzde 46’dan bu ay yüzde 71’e çıkmış durumda. Sokağa çıkmanın azalması ve önlemlerin artmasıyla birlikte, ülke genelinde hayatın normale döneceği zaman için vade olarak 1 yıl verenler değişmese de, zaten normal ettiğini iddia eden kalmamış görünüyor. Toplumun yüzde 90’ı normalleşmenin en az 6 ay sonra olabileceğini öngörüyor.</span></p>
+            <p><span style="color: #c70000;"><strong>Sağlık Bakanlığı’nın doğru bilgi verdiğine inananlar yüzde 34’le en düşük seviyesinde</strong> </span></p>
+            <p><span>Sağlık Bakanlığı’nın ve devlet kurumlarının koronavirüse dair doğru ve güvenilir bilgi verdiğini düşünenler Mayıs ayında yüzde 73’le en yüksek seviyesine ulaştıktan sonra bu güven seviyesi her ay kademe kademe azaldı. Ekim ve Kasım aylarında yüzde 40 seviyesinde olan  güven, bakanlığın hastanın yanısıra vaka sayılarını açıklamaya başlamasına rağmen artmak yerine bu ay daha da azalmış ve yüzde 34’e gelmiş durumda. Bu düşüş tüm seçmenlerde görülebiliyor ve Ak Partili’lerin dahi yüzde 36’sı Sağlık Bakanlığı’nın salgına dair verdiği bilgilere güvenmiyor.</span></p>
+            <div id="my-dashboard-594"></div>
+            <p><span style="color: #c70000;"><strong>Her 5 kişiden 2’sinin ailesinde, 1’inin evinde koronavirüsten hastalanan olmuş </strong></span></p>
+            <p><span>“Ailenizde koronavirüsten dolayı hastalanan oldu mu?” sorusuna ilk defa sorduğumuz Haziran ayında yüzde 4, Ekim ayında yüzde 18, Kasım ayında yüzde 29 ve bu ay yüzde 41 “evet” cevabını verdi. Aile ile ne kastedildiği net olmasa da, resmen açıklanan vaka sayılarından oldukça farklı olan bu oranlara göre Türkiye’de her 5 kişiden 2’sinin ailesinde birinin salgından sağlık açısından etkilenmiş durumda olması oldukça çarpıcı. Oranların yüksekliği üzerine geçen ay doğrudan o evde koronavirüsten dolayı hastalanan olup olmadığını sormuştuk ve yüzde 12 “evet” cevabını vermişti. Bir ay içinde bu oran yüzde 21’e çıktı. Diğer bir ifadeyle her 5 hanenin birinde hastalanan biri bulunuyor. Demografik kümeler arasındaki farklar daha kalabalık hanelerde ve Kürtler arasında hastalanan oranının daha fazla olduğunu ortaya koyuyor.</span></p>
+            <p><span><span style="color: #c70000;"><strong>Yüzde 73 istemeyenin aşı yaptırmayabileceğini düşünüyor</strong></span><br /></span></p>
+            <p><span>Aşı yaptırma konusu dünya genelindeki koronavirüs salgını ve bu virüse karşı aşı çalışmaları başlamadan önce de Türkiye’de zaman zaman gündeme gelmiş ve tartışılmıştı. Çocuklarına aşı yaptırmaya karşı çıkan bir kesim de, aşıyla ilgili komplo teorileri de gittikçe daha görünür hale gelmeye başlamıştı ve Ocak 2020’de yüzde 31 aşının zorunlu olmasına fikrine karşı çıkıyordu. Koronavirüse karşı aşı geliştirme süreci de tüm dünyada yakından takip edilse de Türkiye’de kamuoyundaki tartışmaların aşı yaptırmanın aleyhine geliştiği anlaşılıyor. </span><span>Toplumun ancak yüzde 27’si aşı yaptırmanın herkese zorunlu olması gerektiğini, kalan yüzde 73 ise istemeyenin yaptırmayabileceğini savunuyor.<br /></span></p>
+            <p><strong><span style="color: #c70000;">Yüzde 49 aşı yaptırmayı düşünmüyor </span></strong></p>
+            <p><span>Somut duruma geldiğimizde ise yüzde 51, yani toplumun yarısı koronvirüs aşısı çıktığında ve ücretsiz olduğunda yaptırmayı planladığını, yüzde 49 yaptırmayacağını söylüyor. Üstelik aşının zorunlu olması gerektiğine inanan ve kendisi de aşı yaptırmayı planlayan yüzde 26’lık bir kesime karşılık aşının isteğe bağlı olmasını savunan ve aşı yaptırmayacak olan yüzde 46’lık bir kesim kamuoyundaki hakim görüşü temsil ediyor.</span></p>
+            <div id="my-dashboard-721"></div>
+            <p><span><span style="color: #c70000;"><strong>Toplum ideal olarak Türkiye’nin, fiilli durumda Almanya’nın aşısını tercih ediyor </strong></span></span></p>
+            <p><span>Türkiye’deki aşı tartışmaları sadece yaptırıp yaptırmamak üzerinden değil, aynı zamanda devletin hangi ülkenin geliştirdiği aşıyı getireceği ve kullanılabileceği üzerinden de yapıldı. Her ne kadar toplumun büyük çoğunluğu devletin getireceği aşıyı yaptıracak ve seçme şansı olmayacak gibi görünse de, tartışmaya ışık tutmak amacıyla eğer seçme şansları olsaydı hangi ülkenin ürettiği aşıyı kullanacaklarını sorduk. Toplumun yüzde 40’ı Türkiye’nin aşısını tercih ettiğini söyledi ve bu cevabı yüzde 28’le Almanya takip etti. Çin’in aşısının ise sadece yüzde 4’ün tercih etmesi ise en çarpıcı bulgulardan biri. Diğer bir ifadeyle toplum şu andaki fiili durumda Almanya’nın ürettiği aşıyı tercih ediyor denebilir.</span></p>
+            <p><span><br /><span style="color: #c70000;"><strong>Aşıya bakışta en çok eğitim seviyesi ve siyasi tercih etkili</strong></span><br /></span></p>
+            <p><span>Daha eğitimli olanlar aşının zorunlu tutulmasına biraz daha karşı olmaya meyilli. Sosyal medya kullanmak da az da olsa benzer yönde bir etkiye sahip. Bu tür demografik unsurların sonucunda parti seçmenleri arasında da farklar görülüyor: zorunlu olmasını Ak Parti ve MHP seçmenleri, diğer seçmenlere göre daha fazla destekliyorlar. Aynı zamanda Sağlık Bakanlığı’nın koronavirüse dair doğru ve güvenilir bilgi verdiğine inananlar, aşının zorunlu olmasını daha fazla savunuyor.</span></p>
+            <p><span>Her ne kadar halen ancak her üç kişinin biri güvense de Sağlık Bakanlığı’na güvenmek aşı yaptırma kararında da oldukça fark yaratıyor. Demografik açıdansa daha eğitimli olanlar, sosyal medya kullananlar, muhalif partilerin seçmenleri arasında aşı yaptırmamayı düşünenler çoğunlukta. Aşının zorunlu olması ve yaptırıp yaptırmamak kısmen demografik farklarla şekilleniyor ve siyasi ve hayat tarzına dayalı bir kutuplaşmadan bahsetmek mümkün görünmüyor. Halbuki hangi aşının tercih edildiği, aşı tartışmasının temelinde yatan esas meseleyi ortaya koyuyor. </span></p>
+            <p><span>Bakanlığa güvenmeyen üçte ikilik kesim Almanya’nın aşısını Türkiye’ninkine tercih ediyor. Türkiye’nin aşısını lise altı eğitimlilerin yüzde 52’sine karşı üniversite mezunlarının yüzde 22’si, sosyal medya kullanmayanların yüzde 51’ine karşı kullananların yüzde 39’u ve daha çarpıcı bir biçimde Ak Partililerin yüzde 70’ine ve MHP’lilerin yüzde 58’ine karşı İyi Partili’lerin yüzde 21’i, CHP’lilerin yüzde 15’i ve HDP’lilerin sadece yüzde 4’ü tercih ediyor. Aşılar arasındaki tercihin rasyonel veya pragmatik değerlendirmelere dayanarak değil, devlete güven, farklı ülkelere bakış gibi dış faktörlerle şekillendiğini iddia edebiliriz.<br /></span></p>
+            <p><span style="color: #c70000;"><strong>Aşı karşıtlığında sosyal medya ve güvensizlik etkili görünüyor</strong> </span></p>
+            <p><span>Salgının bitmesi sağlayacak görüş olan zorunlu olması savunan ve aynı zaman kendisi de yaptırmayı planlayanların yüzde 25’te kalması, kamuoyunda aşı karşıtlığın ne denli güçlü hale gelmiş olduğunu gösteriyor. Üstelik bulgular konuyu sosyal medyadaki bilgi kirliliğinden, komplo teorilerinden bağımsız düşünmenin mümkün olmadığına işaret ediyor.<br /></span></p>
+            <p><span>Sağlık Bakanlığı’na olan güvenin aylar içinde erimeye devam etmesi bu bilgi kirliliğine bir alternatif olmaktan uzaklaşması açısından da endişe veren bir durum olarak değerlendirilmeli. Aşı konusunun çok daha fazla kutuplaşarak halk sağlığını ve salgının sona erdirilmesini tehdit etmesi riskleri bulunuyor. Gerek aşı karşıtlığında gerek bakanlığına güvende durumun tersine çevrilmesi ancak şeffaflıkla mümkün olabilecek acil bir mesele olarak karşımızda duruyor. </span></p>
+            <p><span style="color: #c70000;"><strong>Moral endeksi: Kriz beklentisinde küçük bir azalma </strong></span></p>
+            <p><span>Ülke genelinde ekonomik kriz beklentisinde de bireysel hayatta ekonomik zorluk beklentisi de, yüksek seviyelerin korunmasına rağmen bu ay sırasıyla 2 ve 3 puan düşmüş durumda.</span></p>
+            <p> </p>
+        </div>
+        <div class="dash" id="my-dashboard-758"></div>
+        <div class="dash" id="my-dashboard-960"></div>
+        <div class="dash" id="my-dashboard-761"></div>
+        <div class="dash" id="my-dashboard-287"></div>
+    </div>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky - 20) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            var mybutton = document.getElementById("myBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+                myNavbar.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+                myNavbar.style.display = "none";
+            }
+        }
+    </script>
+    <style>
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 35px;
+            right: 10px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #c70000;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+            opacity: 0.7;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+    </style>
+    <button onclick="topFunction()" id="myBtn" title="Yukarı">&#8593;</button>
+    <script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <style>
+        .bottombar {
+            overflow: hidden;
+            background-color: lightgray;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+        }
+
+            .bottombar img {
+                float: right;
+                display: block;
+                color: dimgrey;
+                text-align: center;
+                padding: 0.5px;
+                text-decoration: none;
+                font-size: 12px;
+                height: 30px;
+                padding: 5px;
+            }
+
+            .bottombar a.active {
+                background-color: #4CAF50;
+                color: white;
+            }
+    </style>
+    <div class="bottombar" id="myNavbar">
+        <!--<a style="float:left!important" target="_blank" href="https://konda.com.tr/">&nbsp;&copy; 2021 Tüm hakları saklıdır. &nbsp;<img style="height: 12px;" src="https://konda.com.tr/wp-content/themes/konda/images/konda_logo_yilsiz.png" alt=""></a>-->
+        <img style="height: 20px;" src="https://konda.com.tr/wp-content/themes/konda/images/konda_logo_yilsiz.png" alt="">
+    </div>
+</body>
+</html>
