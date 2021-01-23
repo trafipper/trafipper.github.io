@@ -1,0 +1,438 @@
+﻿<!doctype html>
+<html lang="tr">
+<head>
+    <title>Konda | Dijital Barometre</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://konda.com.tr/wp-content/themes/konda/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://konda.com.tr/wp-content/themes/konda/images/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        /*!
+        * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template/scrolling-nav)
+        * Copyright 2013-2020 Start Bootstrap
+        * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-scrolling-nav/blob/master/LICENSE)
+        */
+        header {
+            padding: 156px 0 100px;
+            background-image: url('https://konda.com.tr/wp-content/themes/konda/images/reports-bg.png');
+        }
+
+        section {
+            padding: 150px 0;
+        }
+
+        @media (min-width: 992px) {
+            .stickyText {
+                height: 100%;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 100px;
+            }
+        }
+    </style>
+
+
+</head>
+<body id="anasayfa" data-spy="scroll" data-target="#navbarResponsive">
+    <!--login css-->
+    <style>
+        #main-holder {
+            /*padding:50px;*/
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            background-color: white;
+            /*border-radius: 7px;*/
+            /*box-shadow: 0px 0px 5px 2px black;*/
+            position: fixed;
+            z-index: 9999999;
+        }
+
+        #login-error-msg-holder {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        #login-error-msg {
+            width: 23%;
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #8a0000;
+            border: 1px solid #8a0000;
+            background-color: #e58f8f;
+            opacity: 0;
+        }
+
+        #error-msg-second-line {
+            display: block;
+        }
+
+        #login-form {
+            align-self: flex-start;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .login-form-field::placeholder {
+            color: #3a3a3a;
+        }
+
+        .login-form-field {
+            border: none;
+            border-bottom: 1px solid #3a3a3a;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            outline: none;
+            padding: 0px 0px 5px 5px;
+        }
+
+        #login-form-submit {
+            width: 100%;
+            padding: 7px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            background-color: #3a3a3a;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+    <!-- login html -->
+    <main id="main-holder">
+        <h1 id="login-header">GİRİŞ YAP</h1>
+
+        <div id="login-error-msg-holder">
+            <p id="login-error-msg">Hatalı kullanıcı adı <span id="error-msg-second-line">ve/veya şifre</span></p>
+        </div>
+        <br />
+        <form id="login-form">
+            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Kullanıcı adı">
+            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Şifre">
+            <input type="submit" value="Giriş" id="login-form-submit">
+        </form>
+
+    </main>
+    <!--login js-->
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const loginButton = document.getElementById("login-form-submit");
+        const loginErrorMsg = document.getElementById("login-error-msg");
+
+        loginButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            const username = loginForm.username.value;
+            const password = loginForm.password.value;
+
+            if (username === "traf" && password === "1919") {
+                //alert("You have successfully logged in.");
+                //location.reload();
+                window.scrollTo(0, 0);
+                $('#main-holder').hide();
+            } else {
+                loginErrorMsg.style.opacity = 1;
+            }
+        })
+    </script>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#anasayfa">Dijital Barometre</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#siyasi">SİYASİ TERCİHLER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#lider">LİDER KARNELERİ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#moral">MORAL ENDEKSİ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#salgin">SALGIN DÖNEMİ DAVRANIŞLAR</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <header class="bg-primary text-white">
+        <div class="container text-center">
+            <h1>Dijital Barometre</h1>
+            <p class="lead">Bir takım sloganlar, açıklamalar vs</p>
+        </div>
+    </header>
+
+    <section class="bg-danger  text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>KONDA OCAK’21 BAROMETRESİ</h2>
+                    <p class="lead ">
+                        ÖRNEKTİR. Bu ayın araştırması xxxxxx xxxx. Sssss… Saha çalışmasını 5- 6 Aralık 2020
+                        tarihlerinde gerçekleştirdiğimiz ve 115. Barometre raporumuz olan Aralık’20 Barometresi
+                        Türkiye’deki 15 yaş üstü yetişkin nüfusun, saha çalışmasının yapıldığı günlerdeki siyasal
+                        eğilimlerini, tercihleri ve profillerini yansıtmaktadır. ÖRNEKTİR
+                    </p>
+                    <ul>
+                        <li>Asdas sdasd sadsad asdasdsa</li>
+                        <li>ghjh fdgd  dgdfg dfdgdfg</li>
+                        <li>ttyutyu dgdf jhjghj</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="siyasi">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mx-auto stickyText">
+                    <h2>SİYASİ TERCİHLER</h2>
+                    <h4 class="text-danger">ÖRNEKTİR Muhalefet blokunun çoğunluğu devam ediyor ÖRNEKTİR</h4>
+                    <p class="lead">
+                        ÖRNEKTİR Siyasi tercihlerde Eylül ayından ÖRNEKTİR. beri gözlemlediğimiz bloklar
+                        arası dengenin tersine dönmüş olma hali bu ay da devam ediyor. Yüzde 25,9 oranındaki seçmen
+                        Ak Parti’ye ve yüzde 6,4 oranındaki seçmen de MHP’ye; buna karşılık seçmenin yüzde 14,5’i
+                        CHP’ye, yüzde 6,9’u İyi Parti’ye, yüzde 7’si HDP’ye ve yüzde 4,5’i de diğer partilere oy vereceğini
+                        söylüyor. Muhalefet bloku şeklinde bakılırsa muhalefet blokunun yüzde 32,8, iktidar blokunun
+                        da yüzde 32,3 oy oranına ulaştığı görülüyor. Çoğunluğun muhalefet blokuna ÖRNEKTİRgeçmiş
+                        olması durumunun az farkla da olsa sürdüğü anlaşılmaktadı. ÖRNEKTİR.
+                    </p>
+                    <p class="lead">
+                        Çoğunluğun muhalefet blokuna ÖRNEKTİRgeçmiş olması durumunun az farkla da olsa sürdüğü
+                        anlaşılmaktadı. ÖRNEKTİR. Çoğunluğun muhalefet blokuna ÖRNEKTİRgeçmiş olması
+                        durumunun az farkla da olsa sürdüğü anlaşılmaktadı. ÖRNEKTİR.
+                    </p>
+                    <!--<ul>
+                        <li>Clickable nav links that smooth scroll to page sections</li>
+                        <li>Responsive behavior when clicking nav links perfect for a one page website</li>
+                        <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
+                        <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+                    </ul>-->
+                </div>
+                <div class="col-lg-8 mx-auto">
+                    <div id="my-dashboard-772"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lider" class="bg-secondary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mx-auto stickyText">
+                    <h2>LİDER KARNELERİ- Erdoğan’ın Karne Notu</h2>
+                    <h4 class="text-dark">
+                        ÖRNEKTİR Erdoğan’a zayıf ve çok zayıf not verenler en yüksek seivyesinde...
+                        ÖRNEKTİR
+                    </h4>
+                    <p class="lead">
+                        ÖRNEKTİR Bu ayki bulgularımıza göre Erdoğan’ın karne notu ortalaması 2,9 ve bu not
+                        Mart’19, Eylül’19 ve Ekim’19 ile birlikte ölçtüğümüz en düşük seviye. Karne notundaki bu
+                        düşüşün aslında Erdoğan’ın bir süredir düşük not aldığı siyasi ve toplumsal kesimlerden daha
+                        da düşük not almasıyla ilişkili olduğunu görüyoruz. Dolayısıyla Erdoğan’ın bazı siyasi ve
+                        toplumsal kesimlerle arasındaki mesafe derinleşiyor denilebilir. Bu noktada da toplumsal ve
+                        siyasi kutuplaşmanın artık Erdoğan’a yarar mı yoksa zarar mı getirdiği tartışması yapılabilir.
+                        ÖRNEKTİR.
+                    </p>
+                </div>
+                <div class="col-lg-8 mx-auto">
+                    <div id="my-dashboard-932"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="moral" class="bg-primary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mx-auto stickyText">
+                    <h2>MORAL ENDEKSİ</h2>
+                    <h4 class="text-dark">ÖRNEKTİR Kriz beklentisinde bilmemne oluyor ÖRNEKTİR</h4>
+                    <p class="lead">
+                        ÖRNEKTİR Ülke genelinde ekonomik kriz beklentisinde de bireysel hayatta ekonomik
+                        zorluk beklentisi de, yüksek seviyelerin korunmasına rağmen bu ay sırasıyla 2 ve 3 puan düşmüş
+                        durumda. Ülke genelinde ekonomik kriz beklentisinde de bireysel hayatta ekonomik zorluk
+                        beklentisi de, yüksek seviyelerin korunmasına rağmen bu ay sırasıyla 2 ve 3 puan düşmüş
+                        durumda. Ülke genelinde ekonomik kriz beklentisinde de bireysel hayatta ekonomik zorluk
+                        beklentisi de, yüksek seviyelerin korunmasına rağmen bu ay sırasıyla 2 ve 3 puan düşmüş
+                        durumda. ÖRNEKTİR
+                    </p>
+                </div>
+                <div class="col-lg-8 mx-auto">
+                    <div id="my-dashboard-594"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="salgin" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mx-auto stickyText">
+                    <h2>SALGIN DÖNEMİ DAVRANIŞLAR</h2>
+                    <h4 class="text-danger">
+                        ÖRNEKTİR Vakaların artması ve yasaklarla insanlar tekrar eve kapanmaya başladı
+                        ÖRNEKTİR
+                    </h4>
+                    <p class="lead">
+                        Nisan’dan Ekim’e kesintisiz biçimde süren rahatlama ve normalleşme hali Kasım ayında
+                        kısmen tersine döndükten sonra bu ay keskin bir şekilde neredeyse Nisan-Mayıs dönemindeki
+                        haline geri gelmiş durumda. Sokağa her zamanki sıklıkta veya daha seyrek çıkanlar hızla
+                        azalırken, hiç çıkmama veya sadece alışveriş için çıkma hali artmış durumda. Elbette bunda
+                        hem vakaların artması, Sağlık Bakanlığı’nın vaka sayılarını 30 bin mertebesinde açıklamaya
+                        başlamasının yarattığı ruh hali ve sokağa çıkma yasaklarının etkili olduğunu olduğunu
+                        düşünebiliriz.
+                    </p>
+                </div>
+                <div class="col-lg-8 mx-auto">
+                    <div id="my-dashboard-721"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Tüm hakları saklıdır &copy; Konda 2021</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <style>
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 100px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <button class="btn-danger text-white" onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn-a.cumul.io/js/cumulio.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //$(".nav-item .nav-link").on("click", function () {
+            //    $(".nav-item").find(".active").removeClass("active");
+            //    $(this).addClass("active");
+            //});
+            Cumulio.addDashboard({
+                dashboardId: '0c5a6b15-c9a0-45ce-acb4-79035f1e09d3',
+                container: '#my-dashboard-932',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: 'green'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: 'd3de9531-41fc-42e7-9d28-a91f46ff9cb8',
+                container: '#my-dashboard-772',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: 'green'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '9249a627-a8ba-4088-a37d-80c7e1398b52',
+                container: '#my-dashboard-594',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: 'green'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: 'dda90f61-5791-4775-a7e0-0f2f019fe6d0',
+                container: '#my-dashboard-721',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: 'green'
+                }
+            });
+
+
+
+            $('#cleanFilters').click(function () {
+                Cumulio.reloadDashboard();
+            });
+        });
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>
