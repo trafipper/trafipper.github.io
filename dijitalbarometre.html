@@ -74,8 +74,8 @@
 
 </head>
 <body id="anasayfa" data-spy="scroll" data-target="#navbarResponsive">
-     <!--The video--> 
-    <style>
+    <!--The video-->
+    <!--<style>
         #myVideo {
             position: fixed;
             right: 0;
@@ -87,7 +87,7 @@
     </style>
     <video autoplay muted loop id="myVideo">
         <source src="https://video.wixstatic.com/video/232b09_d18cf8bb9e3d42cab5c2482608871d5a/1080p/mp4/file.mp4" type="video/mp4">
-    </video>
+    </video>-->
     <!--login css-->
     <style>
         #main-holder {
@@ -237,6 +237,20 @@
     </nav>
 
     <div>
+        <style>
+            #myVideo {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: -2;
+                padding-top: 60px;
+            }
+        </style>
+        <video autoplay muted loop id="myVideo">
+            <source src="https://video.wixstatic.com/video/232b09_d18cf8bb9e3d42cab5c2482608871d5a/1080p/mp4/file.mp4" type="video/mp4">
+        </video>
         <header class="text-white" style="background-image: linear-gradient(rgba(0, 0, 0,0.9),rgba(0, 0, 0,0.85))!important;">
             <div class="container text-center">
                 <h1>KONDA | Barometre</h1>
@@ -244,7 +258,7 @@
             </div>
         </header>
 
-        <section class="text-white" style="background-image: linear-gradient(rgba(0, 0, 0,0.85),rgba(199, 0, 0,0.95)) !important;">
+        <section class="text-white" style="background-image: linear-gradient(rgba(0, 0, 0,0.85),rgba(199, 0, 0,0.80)) !important;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
@@ -260,198 +274,196 @@
             </div>
         </section>
     </div>
-
-        <div style="
-    background: #fff !important;
+    <div style="        background: #fff !important;
         position: relative !important;
-        z-index: 3 !important;
-        margin: -60px 30px 0 !important;
+        /*z-index: 3 !important;*/
+        margin: -60px 30px 50px !important;
         border-radius: 10px !important;
-        box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2) !important;
-        padding:5px
+        box-shadow: 0 100px 100px 100px rgba(199,0,0,.8), 0 100px 100px 100px rgba(199,0,0,.8), 0 -100px 100px 100px rgba(199,0,0,.8) !important;
+        padding: 5px;
     ">
-            <section id="siyasi" class="bg-white">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 mx-auto stickyText">
-                            <h2>SİYASİ TERCİHLER</h2>
-                            <h4 class="text-danger">Muhalefet blokunun çoğunluğu devam ediyor</h4>
-                            <p class="lead">
-                                Siyasi tercihlerde Eylül ayından ÖRNEKTİR. beri gözlemlediğimiz bloklar
-                                arası dengenin tersine dönmüş olma hali bu ay da devam ediyor. Yüzde 25,9 oranındaki seçmen
-                                Ak Parti’ye ve yüzde 6,4 oranındaki seçmen de MHP’ye; buna karşılık seçmenin yüzde 14,5’i
-                                CHP’ye, yüzde 6,9’u İyi Parti’ye, yüzde 7’si HDP’ye ve yüzde 4,5’i de diğer partilere oy vereceğini
-                                söylüyor. Muhalefet bloku şeklinde bakılırsa muhalefet blokunun yüzde 32,8, iktidar blokunun
-                                da yüzde 32,3 oy oranına ulaştığı görülüyor. Çoğunluğun muhalefet blokuna ÖRNEKTİRgeçmiş
-                                olması durumunun az farkla da olsa sürdüğü anlaşılmaktadı.
-                            </p>
-                            <p class="lead">
-                                Çoğunluğun muhalefet blokuna ÖRNEKTİRgeçmiş olması durumunun az farkla da olsa sürdüğü
-                                anlaşılmaktadı.  Çoğunluğun muhalefet blokuna geçmiş olması
-                                durumunun az farkla da olsa sürdüğü anlaşılmaktadı.
-                            </p>
-                            <!--<ul>
+        <section id="siyasi" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h2>SİYASİ TERCİHLER</h2>
+                        <h4 class="text-danger">Muhalefet blokunun çoğunluğu devam ediyor</h4>
+                        <p class="lead">
+                            Siyasi tercihlerde Eylül ayından ÖRNEKTİR. beri gözlemlediğimiz bloklar
+                            arası dengenin tersine dönmüş olma hali bu ay da devam ediyor. Yüzde 25,9 oranındaki seçmen
+                            Ak Parti’ye ve yüzde 6,4 oranındaki seçmen de MHP’ye; buna karşılık seçmenin yüzde 14,5’i
+                            CHP’ye, yüzde 6,9’u İyi Parti’ye, yüzde 7’si HDP’ye ve yüzde 4,5’i de diğer partilere oy vereceğini
+                            söylüyor. Muhalefet bloku şeklinde bakılırsa muhalefet blokunun yüzde 32,8, iktidar blokunun
+                            da yüzde 32,3 oy oranına ulaştığı görülüyor. Çoğunluğun muhalefet blokuna ÖRNEKTİRgeçmiş
+                            olması durumunun az farkla da olsa sürdüğü anlaşılmaktadı.
+                        </p>
+                        <p class="lead">
+                            Çoğunluğun muhalefet blokuna ÖRNEKTİRgeçmiş olması durumunun az farkla da olsa sürdüğü
+                            anlaşılmaktadı.  Çoğunluğun muhalefet blokuna geçmiş olması
+                            durumunun az farkla da olsa sürdüğü anlaşılmaktadı.
+                        </p>
+                        <!--<ul>
                             <li>Clickable nav links that smooth scroll to page sections</li>
                             <li>Responsive behavior when clicking nav links perfect for a one page website</li>
                             <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
                             <li>Minimal custom CSS so you are free to explore your own unique design options</li>
                         </ul>-->
-                        </div>
-                        <div class="col-lg-8 mx-auto">
-                            <div id="my-dashboard-167"></div>
-                        </div>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-167"></div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="lider" class="bg-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 mx-auto stickyText">
-                            <h2>LİDER KARNELERİ: Erdoğan’ın Karne Notu</h2>
-                            <h4 class="text-dark">
-                                Erdoğan’a zayıf ve çok zayıf not verenler en yüksek seivyesinde...
-                            </h4>
-                            <p class="lead">
-                                Bu ayki bulgularımıza göre Erdoğan’ın karne notu ortalaması 2,9 ve bu not
-                                Mart’19, Eylül’19 ve Ekim’19 ile birlikte ölçtüğümüz en düşük seviye. Karne notundaki bu
-                                düşüşün aslında Erdoğan’ın bir süredir düşük not aldığı siyasi ve toplumsal kesimlerden daha
-                                da düşük not almasıyla ilişkili olduğunu görüyoruz. Dolayısıyla Erdoğan’ın bazı siyasi ve
-                                toplumsal kesimlerle arasındaki mesafe derinleşiyor denilebilir. Bu noktada da toplumsal ve
-                                siyasi kutuplaşmanın artık Erdoğan’a yarar mı yoksa zarar mı getirdiği tartışması yapılabilir.
-                            </p>
-                        </div>
-                        <div class="col-lg-8 mx-auto">
-                            <div id="my-dashboard-932"></div>
-                        </div>
+        <section id="lider" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h2>LİDER KARNELERİ: Erdoğan’ın Karne Notu</h2>
+                        <h4 class="text-dark">
+                            Erdoğan’a zayıf ve çok zayıf not verenler en yüksek seivyesinde...
+                        </h4>
+                        <p class="lead">
+                            Bu ayki bulgularımıza göre Erdoğan’ın karne notu ortalaması 2,9 ve bu not
+                            Mart’19, Eylül’19 ve Ekim’19 ile birlikte ölçtüğümüz en düşük seviye. Karne notundaki bu
+                            düşüşün aslında Erdoğan’ın bir süredir düşük not aldığı siyasi ve toplumsal kesimlerden daha
+                            da düşük not almasıyla ilişkili olduğunu görüyoruz. Dolayısıyla Erdoğan’ın bazı siyasi ve
+                            toplumsal kesimlerle arasındaki mesafe derinleşiyor denilebilir. Bu noktada da toplumsal ve
+                            siyasi kutuplaşmanın artık Erdoğan’a yarar mı yoksa zarar mı getirdiği tartışması yapılabilir.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-932"></div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="moral" class="bg-white">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 mx-auto stickyText">
-                            <h2>MORAL ENDEKSİ</h2>
-                            <h4 class="text-dark">Kriz beklentisinde bilmemne oluyor</h4>
-                            <p class="lead">
-                                Ülke genelinde ekonomik kriz beklentisinde de bireysel hayatta ekonomik
-                                zorluk beklentisi de, yüksek seviyelerin korunmasına rağmen bu ay sırasıyla 2 ve 3 puan düşmüş
-                                durumda. Ülke genelinde ekonomik kriz beklentisinde de bireysel hayatta ekonomik zorluk
-                                beklentisi de, yüksek seviyelerin korunmasına rağmen bu ay sırasıyla 2 ve 3 puan düşmüş
-                                durumda. Ülke genelinde ekonomik kriz beklentisinde de bireysel hayatta ekonomik zorluk
-                                beklentisi de, yüksek seviyelerin korunmasına rağmen bu ay sırasıyla 2 ve 3 puan düşmüş
-                                durumda.
-                            </p>
-                        </div>
-                        <div class="col-lg-8 mx-auto">
-                            <div id="my-dashboard-594"></div>
-                        </div>
+        <section id="moral" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h2>MORAL ENDEKSİ</h2>
+                        <h4 class="text-dark">Kriz beklentisinde bilmemne oluyor</h4>
+                        <p class="lead">
+                            Ülke genelinde ekonomik kriz beklentisinde de bireysel hayatta ekonomik
+                            zorluk beklentisi de, yüksek seviyelerin korunmasına rağmen bu ay sırasıyla 2 ve 3 puan düşmüş
+                            durumda. Ülke genelinde ekonomik kriz beklentisinde de bireysel hayatta ekonomik zorluk
+                            beklentisi de, yüksek seviyelerin korunmasına rağmen bu ay sırasıyla 2 ve 3 puan düşmüş
+                            durumda. Ülke genelinde ekonomik kriz beklentisinde de bireysel hayatta ekonomik zorluk
+                            beklentisi de, yüksek seviyelerin korunmasına rağmen bu ay sırasıyla 2 ve 3 puan düşmüş
+                            durumda.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-594"></div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="salgin" class="bg-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 mx-auto stickyText">
-                            <h2>AYIN TEMASI: TOPLUM SAĞLIĞI VE BESLENME</h2>
-                            <h4 class="text-danger">
-                                Halen devlete güvenmeyen güvenenden fazla
-                            </h4>
-                            <p class="lead">
-                                Ekim’e kesintisiz biçimde süren rahatlama ve normalleşme hali Kasım ayında
-                                kısmen tersine döndükten sonra bu ay keskin bir şekilde neredeyse Nisan-Mayıs dönemindeki
-                                haline geri gelmiş durumda. Sokağa her zamanki sıklıkta veya daha seyrek çıkanlar hızla
-                                azalırken, hiç çıkmama veya sadece alışveriş için çıkma hali artmış durumda. Elbette bunda hem
-                                vakaların artması, Sağlık Bakanlığı’nın vaka sayılarını 30 bin mertebesinde açıklamaya
-                                başlamasının yarattığı ruh hali ve sokağa çıkma yasaklarının etkili olduğunu olduğunu
-                                düşünebiliriz. ÖRNEKTİR.
-                            </p>
-                        </div>
-                        <div class="col-lg-8 mx-auto">
-                            <div id="my-dashboard-721"></div>
-                        </div>
+        <section id="salgin" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h2>AYIN TEMASI: TOPLUM SAĞLIĞI VE BESLENME</h2>
+                        <h4 class="text-danger">
+                            Halen devlete güvenmeyen güvenenden fazla
+                        </h4>
+                        <p class="lead">
+                            Ekim’e kesintisiz biçimde süren rahatlama ve normalleşme hali Kasım ayında
+                            kısmen tersine döndükten sonra bu ay keskin bir şekilde neredeyse Nisan-Mayıs dönemindeki
+                            haline geri gelmiş durumda. Sokağa her zamanki sıklıkta veya daha seyrek çıkanlar hızla
+                            azalırken, hiç çıkmama veya sadece alışveriş için çıkma hali artmış durumda. Elbette bunda hem
+                            vakaların artması, Sağlık Bakanlığı’nın vaka sayılarını 30 bin mertebesinde açıklamaya
+                            başlamasının yarattığı ruh hali ve sokağa çıkma yasaklarının etkili olduğunu olduğunu
+                            düşünebiliriz. ÖRNEKTİR.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-721"></div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="salgin2" class="bg-white">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 mx-auto stickyText">
-                            <h2>AYIN TEMASI: SAĞLIK SİSTEMİ</h2>
-                            <h4 class="text-danger">
-                                Halen devlete güvenmeyen güvenenden fazla
-                            </h4>
-                            <p class="lead">
-                                Ekim’e kesintisiz biçimde süren rahatlama ve normalleşme hali Kasım ayında
-                                kısmen tersine döndükten sonra bu ay keskin bir şekilde neredeyse Nisan-Mayıs dönemindeki
-                                haline geri gelmiş durumda. Sokağa her zamanki sıklıkta veya daha seyrek çıkanlar hızla
-                                azalırken, hiç çıkmama veya sadece alışveriş için çıkma hali artmış durumda. Elbette bunda hem
-                                vakaların artması, Sağlık Bakanlığı’nın vaka sayılarını 30 bin mertebesinde açıklamaya
-                                başlamasının yarattığı ruh hali ve sokağa çıkma yasaklarının etkili olduğunu olduğunu
-                                düşünebiliriz. ÖRNEKTİR.
-                            </p>
-                        </div>
-                        <div class="col-lg-8 mx-auto">
-                            <div id="my-dashboard-758"></div>
-                        </div>
+        <section id="salgin2" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h2>AYIN TEMASI: SAĞLIK SİSTEMİ</h2>
+                        <h4 class="text-danger">
+                            Halen devlete güvenmeyen güvenenden fazla
+                        </h4>
+                        <p class="lead">
+                            Ekim’e kesintisiz biçimde süren rahatlama ve normalleşme hali Kasım ayında
+                            kısmen tersine döndükten sonra bu ay keskin bir şekilde neredeyse Nisan-Mayıs dönemindeki
+                            haline geri gelmiş durumda. Sokağa her zamanki sıklıkta veya daha seyrek çıkanlar hızla
+                            azalırken, hiç çıkmama veya sadece alışveriş için çıkma hali artmış durumda. Elbette bunda hem
+                            vakaların artması, Sağlık Bakanlığı’nın vaka sayılarını 30 bin mertebesinde açıklamaya
+                            başlamasının yarattığı ruh hali ve sokağa çıkma yasaklarının etkili olduğunu olduğunu
+                            düşünebiliriz. ÖRNEKTİR.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-758"></div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="saglik" class="bg-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 mx-auto stickyText">
-                            <h2>SALGIN DÖNEMİ DAVRANIŞLAR</h2>
-                            <h4 class="text-danger">
-                                Vakaların artması ve yasaklarla insanlar tekrar eve kapanmaya başladı
-                            </h4>
-                            <p class="lead">
-                                Nisan’dan Ekim’e kesintisiz biçimde süren rahatlama ve normalleşme hali Kasım ayında
-                                kısmen tersine döndükten sonra bu ay keskin bir şekilde neredeyse Nisan-Mayıs dönemindeki
-                                haline geri gelmiş durumda. Sokağa her zamanki sıklıkta veya daha seyrek çıkanlar hızla
-                                azalırken, hiç çıkmama veya sadece alışveriş için çıkma hali artmış durumda. Elbette bunda
-                                hem vakaların artması, Sağlık Bakanlığı’nın vaka sayılarını 30 bin mertebesinde açıklamaya
-                                başlamasının yarattığı ruh hali ve sokağa çıkma yasaklarının etkili olduğunu olduğunu
-                                düşünebiliriz.
-                            </p>
-                        </div>
-                        <div class="col-lg-8 mx-auto">
-                            <div id="my-dashboard-960"></div>
-                        </div>
+        <section id="saglik" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h2>SALGIN DÖNEMİ DAVRANIŞLAR</h2>
+                        <h4 class="text-danger">
+                            Vakaların artması ve yasaklarla insanlar tekrar eve kapanmaya başladı
+                        </h4>
+                        <p class="lead">
+                            Nisan’dan Ekim’e kesintisiz biçimde süren rahatlama ve normalleşme hali Kasım ayında
+                            kısmen tersine döndükten sonra bu ay keskin bir şekilde neredeyse Nisan-Mayıs dönemindeki
+                            haline geri gelmiş durumda. Sokağa her zamanki sıklıkta veya daha seyrek çıkanlar hızla
+                            azalırken, hiç çıkmama veya sadece alışveriş için çıkma hali artmış durumda. Elbette bunda
+                            hem vakaların artması, Sağlık Bakanlığı’nın vaka sayılarını 30 bin mertebesinde açıklamaya
+                            başlamasının yarattığı ruh hali ve sokağa çıkma yasaklarının etkili olduğunu olduğunu
+                            düşünebiliriz.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-960"></div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="saglik2" class="bg-white">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 mx-auto stickyText">
-                            <h2>SALGIN DÖNEMİ DAVRANIŞLAR</h2>
-                            <h4 class="text-danger">
-                                Vakaların artması ve yasaklarla insanlar tekrar eve kapanmaya başladı
-                            </h4>
-                            <p class="lead">
-                                Nisan’dan Ekim’e kesintisiz biçimde süren rahatlama ve normalleşme hali Kasım ayında
-                                kısmen tersine döndükten sonra bu ay keskin bir şekilde neredeyse Nisan-Mayıs dönemindeki
-                                haline geri gelmiş durumda. Sokağa her zamanki sıklıkta veya daha seyrek çıkanlar hızla
-                                azalırken, hiç çıkmama veya sadece alışveriş için çıkma hali artmış durumda. Elbette bunda
-                                hem vakaların artması, Sağlık Bakanlığı’nın vaka sayılarını 30 bin mertebesinde açıklamaya
-                                başlamasının yarattığı ruh hali ve sokağa çıkma yasaklarının etkili olduğunu olduğunu
-                                düşünebiliriz.
-                            </p>
-                        </div>
-                        <div class="col-lg-8 mx-auto">
-                            <div id="my-dashboard-761"></div>
-                        </div>
+        <section id="saglik2" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h2>SALGIN DÖNEMİ DAVRANIŞLAR</h2>
+                        <h4 class="text-danger">
+                            Vakaların artması ve yasaklarla insanlar tekrar eve kapanmaya başladı
+                        </h4>
+                        <p class="lead">
+                            Nisan’dan Ekim’e kesintisiz biçimde süren rahatlama ve normalleşme hali Kasım ayında
+                            kısmen tersine döndükten sonra bu ay keskin bir şekilde neredeyse Nisan-Mayıs dönemindeki
+                            haline geri gelmiş durumda. Sokağa her zamanki sıklıkta veya daha seyrek çıkanlar hızla
+                            azalırken, hiç çıkmama veya sadece alışveriş için çıkma hali artmış durumda. Elbette bunda
+                            hem vakaların artması, Sağlık Bakanlığı’nın vaka sayılarını 30 bin mertebesinde açıklamaya
+                            başlamasının yarattığı ruh hali ve sokağa çıkma yasaklarının etkili olduğunu olduğunu
+                            düşünebiliriz.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-761"></div>
                     </div>
                 </div>
-            </section>
-        </div>
-    
+            </div>
+        </section>
+    </div>
+
 
 
 
@@ -459,7 +471,7 @@
 
     <!-- Footer -->
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-dark" style="position:absolute;width:100%">
         <div class="container">
             <p class="m-0 text-center text-white">Tüm hakları saklıdır &copy; Konda 2021</p>
         </div>
@@ -504,7 +516,7 @@
             display: none;
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            right: 35px;
             z-index: 99999;
             font-size: 15px;
             border: none;
