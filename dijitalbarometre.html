@@ -276,19 +276,19 @@
                     position: absolute;
                     left: 0;
                     height: 100%;
-                    width: 3px;
+                    width: 1px;
                     background-color: #fff;
                     transform-origin: 0 50%;
                 }
 
                 .ml11 .line1 {
-                    top: 0;
-                    left: 0;
+                    /*top: 0;
+                    left: 0;*/
                 }
 
                 .ml11 .letter {
                     display: inline-block;
-                    line-height: 1em;
+                    /*line-height: 1em;*/
                 }
 
 
@@ -396,7 +396,7 @@
                     opacity: 0,
                     duration: 1000,
                     easing: "easeOutExpo",
-                    delay: 100000
+                    delay: 10000000
                 });
 
             anime.timeline({ loop: false })
@@ -419,7 +419,7 @@
                     easing: "easeOutExpo",
                     duration: 600,
                     offset: '-=775',
-                    delay: (el, i) => 34 * (i + 1)
+                    delay: (el, i) => 5 * (i + 1)
                 }).add({
                     targets: '.ml11',
                     opacity: 0,
