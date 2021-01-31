@@ -12,9 +12,11 @@
             height: 100vh;
             padding: 45vh 0 100px;
         }
+
         section {
             padding: 150px 0;
         }
+
         @media (min-width: 992px) {
             .stickyText {
                 height: 100%;
@@ -23,11 +25,13 @@
                 top: 100px;
             }
         }
+
         @media (min-width: 1220px) {
             iframe {
                 width: 769px !important;
             }
         }
+
         .navbar {
             -webkit-transition: all 0.6s ease-out;
             -moz-transition: all 0.6s ease-out;
@@ -40,6 +44,7 @@
             .navbar.scrolled {
                 background: rgba(0, 0, 0,0.85) !important;
             }
+
         #myVideo {
             position: fixed;
             right: 0;
@@ -48,9 +53,11 @@
             min-height: 100%;
             z-index: -99999;
         }
+
         .ml5 {
             position: relative;
         }
+
             .ml5 .text-wrapper {
                 position: relative;
                 display: inline-block;
@@ -58,6 +65,7 @@
                 padding-right: 0.05em;
                 padding-bottom: 0.15em;
             }
+
             .ml5 .line {
                 position: absolute;
                 left: 0;
@@ -68,10 +76,12 @@
                 width: 100%;
                 transform-origin: 0.5 0;
             }
+
             .ml5 .letters {
                 display: inline-block;
                 opacity: 0;
             }
+
         #myBtnToTop {
             display: none;
             position: fixed;
@@ -86,12 +96,15 @@
             border-radius: 100px;
             background-color: rgb(199,0,0);
         }
+
             #myBtnToTop:hover {
                 background-color: #555;
             }
+
         html {
             scroll-behavior: smooth;
         }
+
         #mainDiv {
             background: #fff;
             position: relative;
@@ -101,24 +114,38 @@
             box-shadow: 0 100px 800px 800px rgba(27, 27, 27,0.5), 0 100px 100px 100px rgba(27, 27, 27,0.5), 0 -100px 100px 100px rgba(27, 27, 27,0.5);
             padding: 5px;
         }
+
         @media (max-width: 1220px) {
             #mainDiv {
                 margin: 0px !important;
                 padding: 0px !important;
             }
         }
+
         @media (max-width: 992px) {
             #navButtonBaslik {
-                display:none;
-            }            
+                display: none;
+            }
+
+              #userDiv {
+                width: 100%;
+                text-align: center;
+            }
+
         }
+
         @media (min-width: 992px) {
             #navButtonBurger {
                 display: none;
             }
+
             .navbar-toggler {
                 line-height: 1.25;
                 font-size: 1rem;
+            }
+
+            #myNavDivider {
+                display: none;
             }
         }
     </style>
@@ -129,11 +156,12 @@
     <video autoplay muted loop id="myVideo">
         <source src="https://video.wixstatic.com/video/232b09_d18cf8bb9e3d42cab5c2482608871d5a/1080p/mp4/file.mp4" type="video/mp4">
     </video>
-    <nav class="navbar navbar-dark bg-dark fixed-top" id="mainNav">           
+    <nav class="navbar navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-            <div>
+            <div id="userDiv">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jacques_Ellul_crop.jpg/1200px-Jacques_Ellul_crop.jpg" style="height: 25px;border-radius: 50%;" alt="" />&nbsp;&nbsp;<span class="text-white" style="opacity: 0.5 !important">Jacques Joseph Ellul</span>
             </div>
+            <hr id="myNavDivider" class="solid" style="width:100%;background-color:white">
             <a class="navbar-brand js-scroll-trigger" href="#anasayfa" style="font-size:1rem">
                 <img src="https://konda.com.tr/wp-content/themes/konda/images/icon/hizmet-kurumsal.png" style="height: 25px;" alt="|" />&nbsp;&nbsp;Konda Barometresi Ocak'21
             </a>
@@ -162,8 +190,8 @@
                         <a class="nav-link js-scroll-trigger" href="#saglik">AYIN TEMASI: SAĞLIK VE BESLENME</a>
                     </li>
                     <!--<li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#saglik2">Sağlık Sistemi</a>
-            </li>-->
+                        <a class="nav-link js-scroll-trigger" href="#saglik2">Sağlık Sistemi</a>
+                    </li>-->
                 </ul>
             </div>
         </div>
@@ -193,7 +221,7 @@
             </div>
         </header>
 
-        <section class="text-white" style="        background-image: linear-gradient(rgba(0, 0, 0,0.8),white) !important;">
+        <section class="text-white" style=" background-image: linear-gradient(rgba(0, 0, 0,0.8),white) !important;">
             <!--<div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto" style="z-index: 9999">
@@ -209,7 +237,7 @@
         <section id="siyasi" class="bg-white">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 mx-auto" >
+                    <div class="col-lg-12 mx-auto">
 
                         <h2>SİYASİ TERCİHLER</h2>
                         <h4 class="text-danger">İktidar ve muhalefet bloğu arasındaki fark bıçak sırtında.</h4>
@@ -218,15 +246,15 @@
                             tekrar iktidar ve muhalefet blokları eşitlenmiş görünüyor. Ancak halen herhangi bir oy
                             tercihi belirtmeyen yüzde 31,4 oranında seçmen gri alanda duruyor.
                         </p>
-                      
+
                     </div>
                     <div class="col-lg-4 mx-auto">
                         <p class="lead">
                             Yandaki grafikte lejant bölümünden kararsız ve oy kullanmayanları seçerek sadece oy tercihi
-                            yapanların dağılımını görebilirsiniz. 
+                            yapanların dağılımını görebilirsiniz.
                         </p>
                         <p class="lead">
-                          Bu şekilde baktığımızda Ak Parti ve MHP’nin
+                            Bu şekilde baktığımızda Ak Parti ve MHP’nin
                             oylarının yüzde 50 gibi bıçak sırtı bir oranda seyrettiğini de tespit etmek mümkün. Ayrıca
                             bu dağılımları hem dindarlığa hem de çalışma durumuna göre detaylı inceleyebilirsiniz.
                         </p>
@@ -234,7 +262,7 @@
                         <p class="lead">
                             Genel seyri incelediğimizde seçmen ile iktidar bloku arasındaki gidiş gelişlerin devam ettiğini
                             söyleyebiliyoruz. Aynı zamanda muhalefet bloku veya aktörlerinden birisi henüz dengeyi
-                            değiştirebilecek hamle yapamıyor. 
+                            değiştirebilecek hamle yapamıyor.
                         </p>
                         <p class="lead">
                             Gözlenen siyasi seyrin en önemli özelliği halen
@@ -576,19 +604,19 @@
                 });
 
         });
-            var mybutton = document.getElementById("myBtnToTop");
-            window.onscroll = function () { scrollFunction() };
+        var mybutton = document.getElementById("myBtnToTop");
+        window.onscroll = function () { scrollFunction() };
 
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
-                }
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
             }
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
 
         $(document).ready(function () {
