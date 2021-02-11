@@ -1,0 +1,531 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Barometre Hizmetiçi Platform
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.wixstatic.com/media/232b09_ad1fc11a15a94cd0a4a93641a6f8b695%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/232b09_ad1fc11a15a94cd0a4a93641a6f8b695%7Emv2.png" type="image/png" />
+    <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/232b09_ad1fc11a15a94cd0a4a93641a6f8b695%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/232b09_ad1fc11a15a94cd0a4a93641a6f8b695%7Emv2.png" type="image/png" />
+    <meta>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn-a.cumul.io/js/cumulio.min.js"></script>
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.4;
+            color: #555555;
+            margin: 0px;
+        }
+
+        .header {
+            background-color: lightgray;
+            height: 80px;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        #navbar {
+            overflow: hidden;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+            #navbar a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                #navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                #navbar a.active {
+                    background-color: #c70000;
+                    color: white;
+                }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .sticky + .content {
+                padding-top: 60px;
+            }
+
+        @media screen and (max-width: 814px) {
+            #my-dashboard-000 {
+                width: 90% !important;
+            }
+
+            #navbar a {
+                padding: 2px 2px !important;
+                width: 48%;
+            }
+
+            #cleanFilters {
+                width: 100% !important;
+            }
+        }
+
+        #my-dashboard-000 > p {
+            text-align: justify;
+        }
+
+        /*        html {
+            scroll-behavior: smooth;
+        }*/
+
+        #my-dashboard-932, #my-dashboard-594, #my-dashboard-772, #my-dashboard-721 {
+            border: 2px solid lightgray;
+        }
+        /*login css*/
+        #main-holder {
+            /*padding:50px;*/
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            background-color: white;
+            /*border-radius: 7px;*/
+            /*box-shadow: 0px 0px 5px 2px black;*/
+            position: fixed;
+            z-index: 9999999;
+        }
+
+        #login-error-msg-holder {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        #login-error-msg {
+            width: 23%;
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #8a0000;
+            border: 1px solid #8a0000;
+            background-color: #e58f8f;
+            opacity: 0;
+        }
+
+        #error-msg-second-line {
+            display: block;
+        }
+
+        #login-form {
+            align-self: flex-start;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .login-form-field::placeholder {
+            color: #3a3a3a;
+        }
+
+        .login-form-field {
+            border: none;
+            border-bottom: 1px solid #3a3a3a;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            outline: none;
+            padding: 0px 0px 5px 5px;
+        }
+
+        #login-form-submit {
+            width: 100%;
+            padding: 7px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            background-color: #3a3a3a;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            Cumulio.addDashboard({
+                dashboardId: 'da893910-cc7f-4fcd-96d7-994a46d7dfb9',
+                container: '#my-dashboard-38',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: 'green'
+                }
+            });
+            //Cumulio.addDashboard({
+            //    dashboardId: '0c5a6b15-c9a0-45ce-acb4-79035f1e09d3',
+            //    container: '#my-dashboard-932',
+            //    key: '258531cd-db37-4969-bf36-046692a20827',
+            //    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //    language: 'tr',
+            //    loader: {
+            //        spinnerColor: 'green'
+            //    }
+            //});
+            //Cumulio.addDashboard({
+            //    dashboardId: 'd3de9531-41fc-42e7-9d28-a91f46ff9cb8',
+            //    container: '#my-dashboard-772',
+            //    key: '258531cd-db37-4969-bf36-046692a20827',
+            //    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //    language: 'tr',
+            //    loader: {
+            //        spinnerColor: 'green'
+            //    }
+            //});
+            //Cumulio.addDashboard({
+            //    dashboardId: '9249a627-a8ba-4088-a37d-80c7e1398b52',
+            //    container: '#my-dashboard-594',
+            //    key: '258531cd-db37-4969-bf36-046692a20827',
+            //    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //    language: 'tr',
+            //    loader: {
+            //        spinnerColor: 'green'
+            //    }
+            //});
+            //Cumulio.addDashboard({
+            //    dashboardId: 'dda90f61-5791-4775-a7e0-0f2f019fe6d0',
+            //    container: '#my-dashboard-721',
+            //    key: '258531cd-db37-4969-bf36-046692a20827',
+            //    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //    language: 'tr',
+            //    loader: {
+            //        spinnerColor: 'green'
+            //    }
+            //});
+
+            //$('#dash0').click(function () {
+            //    window.scrollTo(0, 0);
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-758' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-960' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-761' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-287' });
+            //    Cumulio.addDashboard({
+            //        dashboardId: '0c5a6b15-c9a0-45ce-acb4-79035f1e09d3',
+            //        container: '#my-dashboard-932',
+            //        key: '258531cd-db37-4969-bf36-046692a20827',
+            //        token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //        language: 'tr',
+            //        loader: {
+            //            spinnerColor: 'green'
+            //        }
+            //    });
+            //    Cumulio.addDashboard({
+            //        dashboardId: 'd3de9531-41fc-42e7-9d28-a91f46ff9cb8',
+            //        container: '#my-dashboard-772',
+            //        key: '258531cd-db37-4969-bf36-046692a20827',
+            //        token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //        language: 'tr',
+            //        loader: {
+            //            spinnerColor: 'green'
+            //        }
+            //    });
+            //    Cumulio.addDashboard({
+            //        dashboardId: '9249a627-a8ba-4088-a37d-80c7e1398b52',
+            //        container: '#my-dashboard-594',
+            //        key: '258531cd-db37-4969-bf36-046692a20827',
+            //        token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //        language: 'tr',
+            //        loader: {
+            //            spinnerColor: 'green'
+            //        }
+            //    });
+            //    Cumulio.addDashboard({
+            //        dashboardId: 'dda90f61-5791-4775-a7e0-0f2f019fe6d0',
+            //        container: '#my-dashboard-721',
+            //        key: '258531cd-db37-4969-bf36-046692a20827',
+            //        token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //        language: 'tr',
+            //        loader: {
+            //            spinnerColor: 'green'
+            //        }
+            //    });
+            //    //$('.dash').hide();
+            //    $('#navbar a').removeClass('active');
+            //    $('#dash0').addClass('active');
+            //    //$('#my-dashboard-758').show();
+            //    $('#my-dashboard-000').show();
+            //    $('#cleanFilters').hide();
+            //});
+
+            //$('#dash1').click(function () {
+            //    window.scrollTo(0, 0);
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-960' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-761' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-932' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-772' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-594' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-721' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-287' });
+            //    Cumulio.addDashboard({
+            //        dashboardId: '012127fc-7ca0-4a97-b950-e459156c4423',
+            //        container: '#my-dashboard-758',
+            //        key: '258531cd-db37-4969-bf36-046692a20827',
+            //        token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //        language: 'tr',
+            //        loader: {
+            //            spinnerColor: 'green'
+            //        }
+            //    });
+            //    //$('.dash').hide();
+            //    $('#navbar a').removeClass('active');
+            //    $('#dash1').addClass('active');
+            //    //$('#my-dashboard-758').show();
+            //    $('#my-dashboard-000').hide();
+            //    $('#cleanFilters').show();
+            //});
+
+            //$('#dash2').click(function () {
+            //    window.scrollTo(0, 0);
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-758' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-761' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-932' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-772' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-594' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-721' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-287' });
+            //    Cumulio.addDashboard({
+            //        dashboardId: '3ca08852-ab79-4210-9651-aac24e3907c8',
+            //        container: '#my-dashboard-960',
+            //        key: '258531cd-db37-4969-bf36-046692a20827',
+            //        token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //        language: 'tr',
+            //        loader: {
+            //            spinnerColor: 'green'
+            //        }
+            //    });
+            //    //$('.dash').hide();
+            //    $('#navbar a').removeClass('active');
+            //    $('#dash2').addClass('active');
+            //    //$('#my-dashboard-960').show();
+            //    $('#my-dashboard-000').hide();
+            //    $('#cleanFilters').show();
+            //});
+
+            //$('#dash3').click(function () {
+            //    window.scrollTo(0, 0);
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-758' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-960' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-932' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-772' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-594' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-721' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-287' });
+            //    Cumulio.addDashboard({
+            //        dashboardId: '866635c4-f1b8-4d3a-bf06-0fa590513b51',
+            //        container: '#my-dashboard-761',
+            //        key: '258531cd-db37-4969-bf36-046692a20827',
+            //        token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //        language: 'tr',
+            //        loader: {
+            //            spinnerColor: 'green'
+            //        }
+            //    });
+            //    //$('.dash').hide();
+            //    $('#navbar a').removeClass('active');
+            //    $('#dash3').addClass('active');
+            //    //$('#my-dashboard-761').show();
+            //    $('#my-dashboard-000').hide();
+            //    $('#cleanFilters').show();
+            //});
+
+            //$('#dash4').click(function () {
+            //    window.scrollTo(0, 0);
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-758' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-960' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-932' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-772' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-594' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-721' });
+            //    Cumulio.removeDashboard({ container: '#my-dashboard-761' });
+            //    Cumulio.addDashboard({
+            //        dashboardId: '32c887f5-929f-43a6-9b1c-5fb914a4dc00',
+            //        container: '#my-dashboard-287',
+            //        key: '258531cd-db37-4969-bf36-046692a20827',
+            //        token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+            //        language: 'tr',
+            //        loader: {
+            //            spinnerColor: 'green'
+            //        }
+            //    });
+            //    //$('.dash').hide();
+            //    $('#navbar a').removeClass('active');
+            //    $('#dash4').addClass('active');
+            //    //$('#my-dashboard-761').show();
+            //    $('#my-dashboard-000').hide();
+            //    $('#cleanFilters').show();
+            //});
+
+            $('#cleanFilters').click(function () {
+                Cumulio.reloadDashboard();
+            });
+
+            //login js
+            const loginForm = document.getElementById("login-form");
+            const loginButton = document.getElementById("login-form-submit");
+            const loginErrorMsg = document.getElementById("login-error-msg");
+
+            loginButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                const username = loginForm.username.value;
+                const password = loginForm.password.value;
+
+                if (username === "konda" && password === "Dataritim2021!") {
+                    //alert("You have successfully logged in.");
+                    //location.reload();
+                    window.scrollTo(0, 0);
+                    $('#main-holder').hide();
+                } else {
+                    loginErrorMsg.style.opacity = 1;
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+     <!--login html--> 
+    <main id="main-holder">
+        <h1 id="login-header">GİRİŞ YAP</h1>
+
+        <div id="login-error-msg-holder">
+            <p id="login-error-msg">Hatalı kullanıcı adı <span id="error-msg-second-line">ve/veya şifre</span></p>
+        </div>
+        <br />
+        <form id="login-form">
+            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Kullanıcı adı">
+            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Şifre">
+            <input type="submit" value="Giriş" id="login-form-submit">
+        </form>
+
+    </main>
+    <div class="header">
+        <div style="padding: 20px 0px 20px 20px;height: 40px;float: left">
+            <a target="_blank" href="https://konda.com.tr/"> <img style="height: 40px" src="https://konda.com.tr/wp-content/themes/konda/images/konda_logo_yilsiz.png" alt="Alternate Text" /></a>
+        </div>
+        <div style="float: right;padding-right:10px">
+            <p style="cursor:pointer" onClick="window.location.reload();"><b>Barometre Hizmetiçi Platform</b> | <span>Dataritim</span></p>
+        </div>
+    </div>
+    <div id="navbar">
+        <a id="dash0" class="active" href="javascript:void(0)">Babacan Özel</a>
+        <!--<a id="dash1" href="javascript:void(0)">Siyasi Tercihler</a>
+        <a id="dash2" href="javascript:void(0)">Gündem: Koronavirüs</a>
+        <a id="dash3" href="javascript:void(0)">Moral Endeksi</a>
+        <a id="dash4" href="javascript:void(0)">Hizmetiçi</a>-->
+        <a id="cleanFilters" style="float:right;color:yellow" href="javascript:void(0)">Tüm Filtreleri Temizle</a>
+    </div>
+    <div class="content">
+        <div class="dash" id="my-dashboard-38"></div>
+        <!--<div class="dash" id="my-dashboard-758"></div>
+        <div class="dash" id="my-dashboard-960"></div>
+        <div class="dash" id="my-dashboard-761"></div>
+        <div class="dash" id="my-dashboard-287"></div>-->
+    </div>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky - 20) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            var mybutton = document.getElementById("myBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+                myNavbar.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+                myNavbar.style.display = "none";
+            }
+        }
+    </script>
+    <style>
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 35px;
+            right: 10px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #c70000;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+            opacity: 0.7;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+    </style>
+    <button onclick="topFunction()" id="myBtn" title="Yukarı">&#8593;</button>
+    <script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <style>
+        .bottombar {
+            overflow: hidden;
+            background-color: lightgray;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+        }
+
+            .bottombar img {
+                float: right;
+                display: block;
+                color: dimgrey;
+                text-align: center;
+                padding: 0.5px;
+                text-decoration: none;
+                font-size: 12px;
+                height: 30px;
+                padding: 5px;
+            }
+
+            .bottombar a.active {
+                background-color: #4CAF50;
+                color: white;
+            }
+    </style>
+    <div class="bottombar" id="myNavbar">
+        <!--<a style="float:left!important" target="_blank" href="https://konda.com.tr/">&nbsp;&copy; 2021 Tüm hakları saklıdır. &nbsp;<img style="height: 12px;" src="https://konda.com.tr/wp-content/themes/konda/images/konda_logo_yilsiz.png" alt=""></a>-->
+        <img style="height: 20px;" src="https://konda.com.tr/wp-content/themes/konda/images/konda_logo_yilsiz.png" alt="">
+    </div>
+</body>
+</html>
