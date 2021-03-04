@@ -8,14 +8,14 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKSZMQP5C9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-    
+
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag("js", new Date());
-    
+
         gtag("config", "UA-112988863-1");
-        </script>
+    </script>
     <link rel="shortcut icon" href="https://konda.com.tr/wp-content/themes/konda/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="https://konda.com.tr/wp-content/themes/konda/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -201,9 +201,122 @@
         .lead {
             font-size: 1.1rem !important;
         }
+
+        /*login css*/
+        #main-holder {
+            /*padding:50px;*/
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            background-color: white;
+            /*border-radius: 7px;*/
+            /*box-shadow: 0px 0px 5px 2px black;*/
+            position: fixed;
+            z-index: 9999999;
+        }
+
+        #login-error-msg-holder {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        #login-error-msg {
+            width: 23%;
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #8a0000;
+            border: 1px solid #8a0000;
+            background-color: #e58f8f;
+            opacity: 0;
+        }
+
+        #error-msg-second-line {
+            display: block;
+        }
+
+        #login-form {
+            align-self: flex-start;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .login-form-field::placeholder {
+            color: #3a3a3a;
+        }
+
+        .login-form-field {
+            border: none;
+            border-bottom: 1px solid #3a3a3a;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            outline: none;
+            padding: 0px 0px 5px 5px;
+        }
+
+        #login-form-submit {
+            width: 100%;
+            padding: 7px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            background-color: #3a3a3a;
+            cursor: pointer;
+            outline: none;
+        }
     </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        //login js
+        $(document).ready(function () {
+            const loginForm = document.getElementById("login-form");
+            const loginButton = document.getElementById("login-form-submit");
+            const loginErrorMsg = document.getElementById("login-error-msg");
+
+            loginButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                const username = loginForm.username.value;
+                const password = loginForm.password.value;
+
+                if (username === "konda" && password === "2021") {
+                    //alert("You have successfully logged in.");
+                    //location.reload();
+                    window.scrollTo(0, 0);
+                    $('#main-holder').hide();
+                } else {
+                    loginErrorMsg.style.opacity = 1;
+                }
+            })
+
+        });
+
+    </script>
 </head>
 <body id="anasayfa" data-spy="scroll" data-target="#navbarResponsive">
+    <!--login html-->
+    <main id="main-holder">
+        <h1 id="login-header">GİRİŞ YAP</h1>
+
+        <div id="login-error-msg-holder">
+            <p id="login-error-msg">Hatalı kullanıcı adı <span id="error-msg-second-line">ve/veya şifre</span></p>
+        </div>
+        <br />
+        <form id="login-form">
+            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Kullanıcı adı">
+            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Şifre">
+            <input type="submit" value="Giriş" id="login-form-submit">
+        </form>
+
+    </main>
     <video autoplay muted loop id="myVideo">
         <source src="https://video.wixstatic.com/video/232b09_5f2d175d817d42d5a78108cfbfd3fb61/480p/mp4/file.mp4" type="video/mp4">
     </video>

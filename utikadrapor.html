@@ -181,9 +181,122 @@
         .lead {
             font-size: 1.1rem !important;
         }
+
+        /*login css*/
+        #main-holder {
+            /*padding:50px;*/
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            background-color: white;
+            /*border-radius: 7px;*/
+            /*box-shadow: 0px 0px 5px 2px black;*/
+            position: fixed;
+            z-index: 9999999;
+        }
+
+        #login-error-msg-holder {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        #login-error-msg {
+            width: 23%;
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #8a0000;
+            border: 1px solid #8a0000;
+            background-color: #e58f8f;
+            opacity: 0;
+        }
+
+        #error-msg-second-line {
+            display: block;
+        }
+
+        #login-form {
+            align-self: flex-start;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .login-form-field::placeholder {
+            color: #3a3a3a;
+        }
+
+        .login-form-field {
+            border: none;
+            border-bottom: 1px solid #3a3a3a;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            outline: none;
+            padding: 0px 0px 5px 5px;
+        }
+
+        #login-form-submit {
+            width: 100%;
+            padding: 7px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            background-color: #3a3a3a;
+            cursor: pointer;
+            outline: none;
+        }
     </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        //login js
+        $(document).ready(function () {
+            const loginForm = document.getElementById("login-form");
+            const loginButton = document.getElementById("login-form-submit");
+            const loginErrorMsg = document.getElementById("login-error-msg");
+
+            loginButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                const username = loginForm.username.value;
+                const password = loginForm.password.value;
+
+                if (username === "utikad" && password === "2021") {
+                    //alert("You have successfully logged in.");
+                    //location.reload();
+                    window.scrollTo(0, 0);
+                    $('#main-holder').hide();
+                } else {
+                    loginErrorMsg.style.opacity = 1;
+                }
+            })
+
+        });
+
+    </script>
 </head>
 <body id="anasayfa" data-spy="scroll" data-target="#navbarResponsive">
+    <!--login html-->
+    <main id="main-holder">
+        <h1 id="login-header">GİRİŞ YAP</h1>
+
+        <div id="login-error-msg-holder">
+            <p id="login-error-msg">Hatalı kullanıcı adı <span id="error-msg-second-line">ve/veya şifre</span></p>
+        </div>
+        <br />
+        <form id="login-form">
+            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Kullanıcı adı">
+            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Şifre">
+            <input type="submit" value="Giriş" id="login-form-submit">
+        </form>
+
+    </main>
     <video autoplay muted loop id="myVideo">
         <source src="https://video.wixstatic.com/video/232b09_57d0ce2217be42569277be5b3222a03b/1080p/mp4/file.mp4" type="video/mp4">
     </video>
@@ -301,22 +414,22 @@
                             Değerli Dostlar,
                         </p>
                         <p class="lead">
-                            Uluslararası Taşımacılık ve Lojistik Hizmet Üretenleri Derneği UTİKAD’ın sürdürülebilirlik hedefini destekleyen en önemli faaliyetlerinden biri de bildiğiniz üzere sektörün faydası adına hazırladığı ve yayınladığı raporlarıdır. Bu çerçevede geçmişi uzun yıllara dayanan Lojistik Sektöründe Eğilimler ve Beklentiler Araştırması’nı geçtiğimiz dönemde yeniden hayata geçirmiştik. 
+                            Uluslararası Taşımacılık ve Lojistik Hizmet Üretenleri Derneği UTİKAD’ın sürdürülebilirlik hedefini destekleyen en önemli faaliyetlerinden biri de bildiğiniz üzere sektörün faydası adına hazırladığı ve yayınladığı raporlarıdır. Bu çerçevede geçmişi uzun yıllara dayanan Lojistik Sektöründe Eğilimler ve Beklentiler Araştırması’nı geçtiğimiz dönemde yeniden hayata geçirmiştik.
                         </p>
                         <p class="lead">
-                            Türk Lojistik sektörüne özverili ve verimli akademik çalışmaları ile büyük katkı sağlayan kıymetli akademisyen Prof. Dr. Okan Tuna ve ekibinin liderliğinde UTİKAD ve Dokuz Eylül Üniversitesi Denizcilik Fakültesi’nin iş birliği ile hazırlanan Lojistik Sektöründe Eğilimler ve Beklentiler Araştırması’nı sizlerle yeniden buluşturmaktan dolayı onur duyuyoruz. 
+                            Türk Lojistik sektörüne özverili ve verimli akademik çalışmaları ile büyük katkı sağlayan kıymetli akademisyen Prof. Dr. Okan Tuna ve ekibinin liderliğinde UTİKAD ve Dokuz Eylül Üniversitesi Denizcilik Fakültesi’nin iş birliği ile hazırlanan Lojistik Sektöründe Eğilimler ve Beklentiler Araştırması’nı sizlerle yeniden buluşturmaktan dolayı onur duyuyoruz.
                         </p>
                         <p class="lead">
-                            2020’de dünyamız hiç bilmediği bir konuda sınava tabi tutuldu. Covid-19 pandemisi insan sağlığını tehdit etti. Bu ölümcül tehdit hala sürüyor. Tüm sektörlerde olduğu gibi küresel lojistik sektörü de 2020 yılını pandemi gölgesinde geçirdi. 
+                            2020’de dünyamız hiç bilmediği bir konuda sınava tabi tutuldu. Covid-19 pandemisi insan sağlığını tehdit etti. Bu ölümcül tehdit hala sürüyor. Tüm sektörlerde olduğu gibi küresel lojistik sektörü de 2020 yılını pandemi gölgesinde geçirdi.
                         </p>
                         <p class="lead">
-                            Dokuz Eylül Üniversitesi Denizcilik Fakültesi Öğretim Üyesi Prof. Dr. Okan Tuna ve ekibi ile birlikte yürütülen Lojistik Sektöründe Eğilimler ve Beklentiler Araştırması, 2020 yılını farklı başlıklar altında görmemizi sağlayacak. Titizlikle seçilen farklı alanlardaki ve ölçeklerdeki UTİKAD üyesi firmaların üst düzey yöneticileri tarafından yanıtlanan anket sorularının analizleri; Güven Ortamı, Lojistik Ekosistemi, Finansman ve Yatırım Ortamı, İnsan Kaynakları, Dijitalleşme ve Endüstri 4.0, Sürdürülebilirlik ve Kamu İlişkileri başlıkları altında bizlere sunuluyor. 2020 yılına özel olarak bu başlıklara Covid-19 bölümünün de eklenmesinin araştırmanın daha sağlam temellere oturmasını sağladığını da göreceksiniz. 
+                            Dokuz Eylül Üniversitesi Denizcilik Fakültesi Öğretim Üyesi Prof. Dr. Okan Tuna ve ekibi ile birlikte yürütülen Lojistik Sektöründe Eğilimler ve Beklentiler Araştırması, 2020 yılını farklı başlıklar altında görmemizi sağlayacak. Titizlikle seçilen farklı alanlardaki ve ölçeklerdeki UTİKAD üyesi firmaların üst düzey yöneticileri tarafından yanıtlanan anket sorularının analizleri; Güven Ortamı, Lojistik Ekosistemi, Finansman ve Yatırım Ortamı, İnsan Kaynakları, Dijitalleşme ve Endüstri 4.0, Sürdürülebilirlik ve Kamu İlişkileri başlıkları altında bizlere sunuluyor. 2020 yılına özel olarak bu başlıklara Covid-19 bölümünün de eklenmesinin araştırmanın daha sağlam temellere oturmasını sağladığını da göreceksiniz.
                         </p>
                         <p class="lead">
-                            Bu araştırmanın sonucundaki analizler ile üyelerimizin değerlendirme ve beklentilerini ortaya çıkarırken, ankete davet edilen üyelerimizin örneklemi sayesinde sektörün ölçümlenebilmesini gerçekleştiriyoruz. Bu şekilde sektörümüz yakın dönemde lojistikteki eğilimlerin neler olduğunu görebiliyor aynı zamanda ilerisi için de sürdürülebilir politikalarını oluşturmaları için yardımcı bir kaynak sunmuş oluyoruz. 
+                            Bu araştırmanın sonucundaki analizler ile üyelerimizin değerlendirme ve beklentilerini ortaya çıkarırken, ankete davet edilen üyelerimizin örneklemi sayesinde sektörün ölçümlenebilmesini gerçekleştiriyoruz. Bu şekilde sektörümüz yakın dönemde lojistikteki eğilimlerin neler olduğunu görebiliyor aynı zamanda ilerisi için de sürdürülebilir politikalarını oluşturmaları için yardımcı bir kaynak sunmuş oluyoruz.
                         </p>
                         <p class="lead">
-                            Lojistik Sektöründe Eğilimler ve Beklentiler Araştırması’nın üyelerimize ve sektöre faydalı olmasını dilerken, kıymetli vakitlerini ayırarak araştırmaya katkı sağlayan değerli üyelerimize, çalışmayı yürüten Prof. Dr. Okan Tuna ve ekibine bir kez daha teşekkür ediyoruz. 
+                            Lojistik Sektöründe Eğilimler ve Beklentiler Araştırması’nın üyelerimize ve sektöre faydalı olmasını dilerken, kıymetli vakitlerini ayırarak araştırmaya katkı sağlayan değerli üyelerimize, çalışmayı yürüten Prof. Dr. Okan Tuna ve ekibine bir kez daha teşekkür ediyoruz.
                         </p>
                     </div>
                 </div>
@@ -324,7 +437,7 @@
         </section>
     </div>
     <div id="mainDiv">
-        <section id="YöneticiÖzeti" class="bg-white">
+        <section id="YöneticiÖzeti" class="bg-info text-white">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 mx-auto stickyText">
@@ -370,7 +483,7 @@
                 </div>
             </div>
         </section>
-        <section id="LojistikEğilimler" class="bg-info text-white">
+        <!--<section id="LojistikEğilimler" class="bg-info text-white">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 mx-auto stickyText">
@@ -381,7 +494,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <section id="GüvenOrtamı" class="bg-white">
             <div class="container">
                 <div class="row">
@@ -646,8 +759,8 @@
                             <li>Demir Ali AKYAR</li>
                             <li>Gizem KARALI</li>
                         </ul>
-                       <h3>Veri Yönetimi ve Analitik Görselleştirme</h3>
-                       <p><a target="_blank" href="https://www.trafipper.com/dataritim"><img style="height:45px" src="https://static.wixstatic.com/media/232b09_548f89c8e4fe477b979aa824ac1f8687~mv2.png/v1/fill/w_107,h_45,al_c,q_85,usm_0.66_1.00_0.01/dataritim_logo2_b_edited_edited.webp" /></a> by <a href="https://www.trafipper.com/" target="_blank" style="text-decoration:none;color: #fff!important;">Trafipper</a></p>
+                        <h3>Veri Yönetimi ve Analitik Görselleştirme</h3>
+                        <p><a target="_blank" href="https://www.trafipper.com/dataritim"><img style="height:45px" src="https://static.wixstatic.com/media/232b09_548f89c8e4fe477b979aa824ac1f8687~mv2.png/v1/fill/w_107,h_45,al_c,q_85,usm_0.66_1.00_0.01/dataritim_logo2_b_edited_edited.webp" /></a> by <a href="https://www.trafipper.com/" target="_blank" style="text-decoration:none;color: #fff!important;">Trafipper</a></p>
                     </div>
                 </div>
             </div>
