@@ -70,7 +70,7 @@
 
             #navbar a {
                 padding: 2px 2px !important;
-                width: 48%;
+                width: 49%;
             }
 
             #cleanFilters {
@@ -215,6 +215,7 @@
                 //$('.dash').hide();
                 $('#navbar a').removeClass('active');
                 $('#dash2').addClass('active');
+                $('.dropbtn').addClass('active');
                 //$('#my-dashboard-171').show();
             });
 
@@ -240,6 +241,7 @@
                 //$('.dash').hide();
                 $('#navbar a').removeClass('active');
                 $('#dash3').addClass('active');
+                $('.dropbtn').addClass('active');
                 //$('#my-dashboard-571').show();
             });
 
@@ -265,6 +267,7 @@
                 //$('.dash').hide();
                 $('#navbar a').removeClass('active');
                 $('#dash4').addClass('active');
+                $('.dropbtn').addClass('active');
                 //$('#my-dashboard-761').show();
             });
 
@@ -290,6 +293,7 @@
                 //$('.dash').hide();
                 $('#navbar a').removeClass('active');
                 $('#dash5').addClass('active');
+                $('.dropbtn').addClass('active');
                 //$('#my-dashboard-761').show();
             });
 
@@ -371,7 +375,7 @@
     </script>
 </head>
 <body>
-     <!--login html--> 
+    <!--login html-->
     <main id="main-holder">
         <h1 id="login-header">GİRİŞ YAP</h1>
 
@@ -394,12 +398,59 @@
             <p style="cursor:pointer" onClick="window.location.reload();"><b>Dataritim</b> | <span>Barometre</span></p>
         </div>
     </div>
+    <style>
+        .dropbtn {
+            /*background-color: #4CAF50;*/
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor:grab ;
+        }
+
+        .dropdown {
+            /*position: relative;*/
+           /* display: inline-block;*/
+        }
+
+        .dropdown-content {
+            display: none;
+            position: relative;
+            background-color: dimgray;
+        }
+
+            .dropdown-content a {
+                background-color: dimgray;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #333;
+        }
+    </style>
     <div id="navbar">
         <a id="dash1" class="active" href="javascript:void(0)">Demografi</a>
-        <a id="dash2" href="javascript:void(0)">Aşı</a>
-        <a id="dash3" href="javascript:void(0)">Güven</a>
-        <a id="dash4" href="javascript:void(0)">Önlemler</a>
-        <a id="dash5" href="javascript:void(0)">Medya</a>
+        <div class="dropdown">
+            <a class="dropbtn">Standart</a>
+            <div class="dropdown-content">
+                <a id="dash2" href="javascript:void(0)"><i>Aşı</i></a>
+                <a id="dash3" href="javascript:void(0)"><i>Güven</i></a>
+                <a id="dash4" href="javascript:void(0)"><i>Önlemler</i></a>
+                <a id="dash5" href="javascript:void(0)"><i>Medya</i></a>
+            </div>
+        </div>
+       
         <a id="dash6" href="javascript:void(0)">Mega</a>
         <a id="dash7" href="javascript:void(0)">Ultra</a>
         <a id="cleanFilters" style="float: right;color: #00a3da;" href="javascript:void(0)">Tüm Filtreleri Temizle</a>
@@ -486,10 +537,9 @@
             }
 
             .bottombar a.active {
-                background-color: #4CAF50;
+               /* background-color: #4CAF50;*/
                 color: white;
             }
-
     </style>
     <div class="bottombar" id="myNavbar">
         <!--<a style="float:left!important" target="_blank" href="https://konda.com.tr/">&nbsp;&copy; 2021 Tüm hakları saklıdır. &nbsp;<img style="height: 12px;" src="https://konda.com.tr/wp-content/themes/konda/images/konda_logo_yilsiz.png" alt=""></a>-->
