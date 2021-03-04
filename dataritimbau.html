@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>Dataritim BAU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://bau.edu.tr/favicon.ico" type="image/png" />
+    <link rel="apple-touch-icon" href="https://bau.edu.tr/favicon.ico" type="image/png" />
+    <meta>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn-a.cumul.io/js/cumulio.min.js"></script>
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.4;
+            color: #555555;
+            margin: 0px;
+        }
+
+        .header {
+            background-color: lightgray;
+            height: 80px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #navbar {
+            overflow: hidden;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+            #navbar a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                #navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                #navbar a.active {
+                    background-color: #005093;
+                    color: white;
+                }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .sticky + .content {
+                padding-top: 60px;
+            }
+
+        @media screen and (max-width: 814px) {
+
+            #navbar a {
+                padding: 2px 2px !important;
+                width: 23.5%;
+            }
+
+            #cleanFilters {
+                width: 100% !important;
+            }
+        }
+
+
+        /*        html {
+            scroll-behavior: smooth;
+        }*/
+
+        /*login css*/
+        #main-holder {
+            /*padding:50px;*/
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            background-color: white;
+            /*border-radius: 7px;*/
+            /*box-shadow: 0px 0px 5px 2px black;*/
+            position: fixed;
+            z-index: 9999999;
+        }
+
+        #login-error-msg-holder {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        #login-error-msg {
+            width: 23%;
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #8a0000;
+            border: 1px solid #8a0000;
+            background-color: #e58f8f;
+            opacity: 0;
+        }
+
+        #error-msg-second-line {
+            display: block;
+        }
+
+        #login-form {
+            align-self: flex-start;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .login-form-field::placeholder {
+            color: #3a3a3a;
+        }
+
+        .login-form-field {
+            border: none;
+            border-bottom: 1px solid #3a3a3a;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            outline: none;
+            padding: 0px 0px 5px 5px;
+        }
+
+        #login-form-submit {
+            width: 100%;
+            padding: 7px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            background-color: #3a3a3a;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            Cumulio.addDashboard({
+                dashboardId: 'ef939273-ec79-4565-8888-5442d45dca5e',
+                container: '#my-dashboard-1',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor:'#005093'
+                }
+            });
+
+            $('#dash1').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-1' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-2' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-3' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-4' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-5' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-6' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-7' });
+                Cumulio.addDashboard({
+                    dashboardId: 'ef939273-ec79-4565-8888-5442d45dca5e',
+                    container: '#my-dashboard-1',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor:'#005093'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash1').addClass('active');
+                //$('#my-dashboard-171').show();
+            });
+
+            $('#dash2').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-1' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-2' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-3' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-4' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-5' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-6' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-7' });
+                Cumulio.addDashboard({
+                    dashboardId: '6d3e0469-5e26-4a50-b8e2-7c37d2ca4860',
+                    container: '#my-dashboard-2',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor:'#005093'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash2').addClass('active');
+                $('.dropbtn').addClass('active');
+                //$('#my-dashboard-171').show();
+            });
+
+            $('#dash3').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-1' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-2' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-3' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-4' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-5' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-6' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-7' });
+                Cumulio.addDashboard({
+                    dashboardId: '33ad0884-cc04-4245-942f-8f86bf6b5917',
+                    container: '#my-dashboard-3',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor:'#005093'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash3').addClass('active');
+                $('.dropbtn').addClass('active');
+                //$('#my-dashboard-571').show();
+            });
+
+            $('#dash4').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-1' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-2' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-3' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-4' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-5' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-6' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-7' });
+                Cumulio.addDashboard({
+                    dashboardId: '7b0c2fef-2202-4e95-ba1c-455a60381496',
+                    container: '#my-dashboard-4',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor:'#005093'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash4').addClass('active');
+                $('.dropbtn').addClass('active');
+                //$('#my-dashboard-761').show();
+            });
+
+            $('#dash5').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-1' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-2' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-3' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-4' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-5' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-6' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-7' });
+                Cumulio.addDashboard({
+                    dashboardId: '1f24856d-f601-4000-aa59-713060577fce',
+                    container: '#my-dashboard-5',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor:'#005093'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash5').addClass('active');
+                $('.dropbtn').addClass('active');
+                //$('#my-dashboard-761').show();
+            });
+
+            $('#dash6').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-1' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-2' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-3' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-4' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-5' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-6' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-7' });
+                Cumulio.addDashboard({
+                    dashboardId: '04d4d2ce-f114-4ebd-98bd-b6663525a5c0',
+                    container: '#my-dashboard-6',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor:'#005093'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash6').addClass('active');
+                //$('#my-dashboard-761').show();
+            });
+
+            $('#dash7').click(function () {
+                window.scrollTo(0, 0);
+                Cumulio.removeDashboard({ container: '#my-dashboard-1' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-2' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-3' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-4' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-5' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-6' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-7' });
+                Cumulio.addDashboard({
+                    dashboardId: '722ebad4-546f-4b96-bad6-fe083657350d',
+                    container: '#my-dashboard-7',
+                    key: '258531cd-db37-4969-bf36-046692a20827',
+                    token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                    language: 'tr',
+                    loader: {
+                        spinnerColor:'#005093'
+                    }
+                });
+                //$('.dash').hide();
+                $('#navbar a').removeClass('active');
+                $('#dash7').addClass('active');
+                //$('#my-dashboard-761').show();
+            });
+
+
+            $('#cleanFilters').click(function () {
+                Cumulio.reloadDashboard();
+            });
+
+            //login js
+            const loginForm = document.getElementById("login-form");
+            const loginButton = document.getElementById("login-form-submit");
+            const loginErrorMsg = document.getElementById("login-error-msg");
+
+            loginButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                const username = loginForm.username.value;
+                const password = loginForm.password.value;
+
+                if (username === "bau" && password === "2021") {
+                    //alert("You have successfully logged in.");
+                    //location.reload();
+                    window.scrollTo(0, 0);
+                    $('#main-holder').hide();
+                } else {
+                    loginErrorMsg.style.opacity = 1;
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <!--login html-->
+    <main id="main-holder">
+        <h1 id="login-header">GİRİŞ YAP</h1>
+
+        <div id="login-error-msg-holder">
+            <p id="login-error-msg">Hatalı kullanıcı adı <span id="error-msg-second-line">ve/veya şifre</span></p>
+        </div>
+        <br />
+        <form id="login-form">
+            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Kullanıcı adı">
+            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Şifre">
+            <input type="submit" value="Giriş" id="login-form-submit">
+        </form>
+
+    </main>
+    <div class="header">
+        <div style="padding: 20px 0px 20px 20px;height: 40px;float: left">
+            <a target="_blank" href="https://bau.edu.tr/"> <img style="height: 40px" src="https://cdn.bau.edu.tr/public/bau-logo-white.png" alt="BAU" /></a>
+        </div>
+        <div style="float: right;padding-right:10px">
+            <p style="cursor:pointer" onClick="window.location.reload();"><b>Dataritim</b> <span>BAU</span></p>
+        </div>
+    </div>
+    <style>
+        .dropbtn {
+            /*background-color: #4CAF50;*/
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor:grab ;
+        }
+
+        .dropdown {
+            /*position: relative;*/
+           /* display: inline-block;*/
+        }
+
+        .dropdown-content {
+            display: none;
+            position: relative;
+            background-color: dimgray;
+        }
+
+            .dropdown-content a {
+                background-color: dimgray;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #333;
+        }
+    </style>
+    <div id="navbar">
+        <a id="dash1" class="active" href="javascript:void(0)">Demografi</a>
+        <div class="dropdown">
+            <a class="dropbtn">Tema</a>
+            <div class="dropdown-content">
+                <a id="dash2" href="javascript:void(0)"><i>Aşı</i></a>
+                <a id="dash3" href="javascript:void(0)"><i>Güven</i></a>
+                <a id="dash4" href="javascript:void(0)"><i>Önlemler</i></a>
+                <a id="dash5" href="javascript:void(0)"><i>Medya</i></a>
+            </div>
+        </div>
+       
+        <a id="dash6" href="javascript:void(0)">Gündem</a>
+        <a id="dash7" href="javascript:void(0)">Panel</a>
+        <a id="cleanFilters" style="float: right;color: #00a3da;" href="javascript:void(0)">Tüm Filtreleri Temizle</a>
+    </div>
+    <p style="float:right;margin-right:125px;"><i>Not: Veriler gerçeği yansıtmamaktadır!</i></p>
+    <div class="content">
+        <div class="dash" id="my-dashboard-1"></div>
+        <div class="dash" id="my-dashboard-2"></div>
+        <div class="dash" id="my-dashboard-3"></div>
+        <div class="dash" id="my-dashboard-4"></div>
+        <div class="dash" id="my-dashboard-5"></div>
+        <div class="dash" id="my-dashboard-6"></div>
+        <div class="dash" id="my-dashboard-7"></div>
+    </div>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky - 20) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            var mybutton = document.getElementById("myBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+                myNavbar.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+                myNavbar.style.display = "none";
+            }
+        }
+    </script>
+    <style>
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 25px;
+            right: 10px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #005093;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+            opacity: 1;
+        }
+
+            #myBtn:hover {
+                background-color: #005093;
+            }
+    </style>
+    <button onclick="topFunction()" id="myBtn" title="Yukarı">&#8593;</button>
+    <script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <style>
+        .bottombar {
+            overflow: hidden;
+            background-color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 20px;
+        }
+
+            .bottombar div {
+                float: right;
+                display: block;
+                color: dimgrey;
+                text-align: center;
+                padding: 0.5px;
+                text-decoration: none;
+                font-size: 10px;
+                height: 30px;
+                padding: 5px;
+            }
+
+            .bottombar a.active {
+               /* background-color: #4CAF50;*/
+                color: white;
+            }
+    </style>
+    <div class="bottombar" id="myNavbar">
+        <!--<a style="float:left!important" target="_blank" href="https://konda.com.tr/">&nbsp;&copy; 2021 Tüm hakları saklıdır. &nbsp;<img style="height: 12px;" src="https://konda.com.tr/wp-content/themes/konda/images/konda_logo_yilsiz.png" alt=""></a>-->
+        <div><span>Veri kaynağı: "..."</span><!--<img style="height: 10px;" src="https://konda.com.tr/wp-content/themes/konda/images/konda_logo_yilsiz.png" alt="Konda">--></div>
+    </div>
+</body>
+</html>
