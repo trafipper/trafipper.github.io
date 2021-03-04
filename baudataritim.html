@@ -220,7 +220,13 @@
 
             $('#dash3').click(function () {
                 window.scrollTo(0, 0);
-                Cumulio.removeDashboard();
+                Cumulio.removeDashboard({ container: '#my-dashboard-1' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-2' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-3' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-4' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-5' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-6' });
+                Cumulio.removeDashboard({ container: '#my-dashboard-7' });
                 Cumulio.addDashboard({
                     dashboardId: '33ad0884-cc04-4245-942f-8f86bf6b5917',
                     container: '#my-dashboard-3',
