@@ -1,0 +1,490 @@
+﻿
+<!doctype html>
+<html lang="tr">
+<head>
+    <title>Türkiye&#39;de Zaman Kullanımı</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-189045800-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-189045800-3');
+    </script>
+
+    <link rel="shortcut icon" href="https://tr.boell.org/themes/theodor/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://tr.boell.org/themes/theodor/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        header {
+            height: 100vh;
+            padding: 40vh 0 50px;
+        }
+
+        section {
+            padding: 150px 0;
+        }
+
+        @media (min-width: 992px) {
+            .stickyText {
+                height: 100%;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 100px;
+            }
+        }
+
+       /* @media (min-width: 1220px) {
+            iframe {
+                width: 769px !important;
+            }
+        }*/
+
+        .navbar {
+            -webkit-transition: all 0.6s ease-out;
+            -moz-transition: all 0.6s ease-out;
+            -o-transition: all 0.6s ease-out;
+            -ms-transition: all 0.6s ease-out;
+            transition: all 0.6s ease-out;
+            background: rgba(0, 0, 0, 0) !important;
+        }
+
+            .navbar.scrolled {
+                background: rgba(0, 0, 0,0.85) !important;
+            }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -99999;
+        }
+
+        .ml5 {
+            position: relative;
+        }
+
+            .ml5 .text-wrapper {
+                position: relative;
+                display: inline-block;
+                padding-top: 0.1em;
+                padding-right: 0.05em;
+                padding-bottom: 0.15em;
+            }
+
+            .ml5 .line {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 3px;
+                width: 100%;
+                transform-origin: 0.5 0;
+            }
+
+            .ml5 .letters {
+                display: inline-block;
+                opacity: 0;
+            }
+
+        #myBtnToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99999;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 100px;
+            background-color: #dc3545;
+        }
+
+            #myBtnToTop:hover {
+                background-color: #555;
+            }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #mainDiv {
+            background: #fff;
+            position: relative;
+            z-index: 3;
+            margin: -130px 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 100px 800px 800px rgba(27, 27, 27,0.5), 0 100px 100px 100px rgba(27, 27, 27,0.5), 0 -100px 100px 100px rgba(27, 27, 27,0.5);
+            padding: 5px;
+        }
+
+        @media (max-width: 1220px) {
+            #mainDiv {
+                margin: 0px !important;
+                padding: 0px !important;
+            }
+        }
+
+        #navButtonBaslik {
+            color: #dc3545 !important;
+            font-weight: bolder;
+        }
+
+        @media (max-width: 992px) {
+            #navButtonBaslik {
+                display: none;
+            }
+
+            #userDiv {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 992px) {
+            #navButtonBurger {
+                display: none;
+            }
+
+            .navbar-toggler {
+                line-height: 1.25;
+                font-size: 1rem;
+                margin-left: 75px;
+            }
+
+            #myNavDivider {
+                display: none;
+            }
+
+            header > div > p {
+                padding-right: 250px;
+                padding-left: 250px;
+            }
+        }
+
+        #mainBaslik {
+            z-index: 1020 !important;
+            font-size: 1.5rem;
+            line-height: 1.5
+        }
+
+        .dropdown-item.active, .dropdown-item:active {
+            background-color: #a4c401 !important;
+        }
+
+        .lead {
+            font-size: 1.1rem !important;
+        }
+    </style>
+</head>
+<body id="anasayfa" data-spy="scroll" data-target="#navbarResponsive">
+    <video autoplay muted loop id="myVideo">
+        <source src="https://video.wixstatic.com/video/232b09_30f06be061bf498eae17e6dd899720cb/480p/mp4/file.mp4" type="video/mp4">
+    </video>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <!--<div id="userDiv">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jacques_Ellul_crop.jpg/1200px-Jacques_Ellul_crop.jpg" style="height: 25px;border-radius: 50%;" alt="" />&nbsp;&nbsp;<span class="text-white" style="opacity: 0.5 !important">Jacques Joseph Ellul</span>
+            </div>
+            <hr id="myNavDivider" class="solid" style="width:100%;background-color:white;margin:4px">-->
+            <a class="navbar-brand js-scroll-trigger bg-white" href="https://konda.com.tr/tr/anasayfa/" style="font-size: 1rem;border-radius: 5px;">
+                <img src="https://static.wixstatic.com/media/232b09_3c066b9a9f4b47d09df15aca19b3a286~mv2.png" style="height: 40px;padding:5px" alt="|" />
+            </a>
+            <a class="navbar-brand js-scroll-trigger bg-white" href="https://trafipper.com/" style="font-size: 1rem;border-radius: 5px;">
+                <img src="https://static.wixstatic.com/media/232b09_6d3c6e62e77c4b288cc0c6b8ab6fca25~mv2.png" style="height: 40px; padding: 2px" alt="|" />
+            </a>
+            <a class="navbar-brand js-scroll-trigger bg-white" href="https://tr.boell.org/tr" style="font-size: 1rem;border-radius: 5px;">
+                <img src="https://static.wixstatic.com/media/232b09_19cbac557c114fbba7e9bf246cd0aed6~mv2.png" style="height: 40px;padding: 5px" alt="|" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span id="navButtonBaslik">Başlıklar</span>
+                <span id="navButtonBurger" class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive" style="font-size: 0.9rem;">
+                <ul class="navbar-nav ml-auto text-right">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#onsoz">Önsöz&nbsp;&nbsp;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#YöneticiÖzeti">Yönetici Özeti&nbsp;&nbsp;</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Türkiye&#39;de Zaman Kullanımı
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#tab1">
+                                Hanehalkı Demografisi
+                            </a>
+                            <a class="dropdown-item" href="#tab2">
+                                Günlük Akışlar
+                            </a>
+                            <a class="dropdown-item" href="#tab3">
+                                Zaman Kullanımı: Ev İşleri Kimin Üzerinde
+                            </a>
+                            <a class="dropdown-item" href="#tab4">
+                                Zaman Kullanımı: Çalışma Hayatı ve Pandeminin Etkileri
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="background-image:url(https://static.wixstatic.com/media/0da768_4371c7e64a49489bb88c536f515f2040.png/v1/crop/x_0,y_0,w_6,h_6/0da768_4371c7e64a49489bb88c536f515f2040.png);opacity:1">
+
+        <style>
+        </style>
+        <header class="text-white" style="background-image: linear-gradient(rgba(0, 0, 0,0.8),rgba(0, 0, 0,0.8))!important">
+            <div class="container text-center">
+                <h1 class="ml5" id="mainBaslik">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters letters-left">PANDEMİDE EVDE BAKIM VE ZAMAN KULLANIMI ARAŞTIRMASI</span>
+                        <span class="letters ampersand"></span>
+                        <br />
+                        <span class="letters letters-right">İnteraktif Raporu</span>
+                        <span class="line line2"></span>
+                    </span>
+                </h1>
+                <h2 style=" position: absolute; top: 90vh !important; width: 100% !important; padding: 0px !important; margin: 0px !important; left: 0px;" class="nav-link js-scroll-trigger" href="#onsoz"><img style="width:5vh;height:5vh" src="https://static.wixstatic.com/media/232b09_4fee1471c51049d2a22d0f2fe08e728d~mv2.gif" alt="Devam et" /></h2>
+            </div>
+        </header>
+
+        <section id="onsoz" class="text-white text-justify" style=" background-image: linear-gradient(rgba(0, 0, 0,0.8),white) !important;padding-bottom:35vh;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto" style="z-index: 1000">
+                        <h2 class="text-center">ÖNSÖZ</h2>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <p class="lead">
+                            Bu interaktif panonun kaynağı olan araştırma, Heinrich Böll Stiftung Derneği Türkiye
+                            Temsilciliği için, KONDA Araştırma ve Danışmanlık A.Ş. tarafından gerçekleştirilmiştir. Araştırmanın
+                            saha çalışması 22 - 24 Ekim 2021 tarihlerinde Türkiye’deki 18 yaş üstü yetişkin nüfusun, saha
+                            çalışmasının yapıldığı günlerdeki algı, pratik, tercih ve profillerini yansıtmaktadır. Araştırma
+                            kapsamında 32 ilin merkez dahil 99 ilçesine bağlı 145 mahalle ve köyünde 2523 kişiyle hanelerinde
+                            yüz yüze görüşülmüştür.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="mainDiv">
+        <section id="YöneticiÖzeti" class="text-white" style="background-color: #a4c401">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto stickyText">
+                        <h2>Yönetici Özeti</h2>
+                        <p class="lead ">
+                            Raporda hane büyüklüğü ve karakteristiği, hane içi ilişkiler ve iş paylaşımı, hanede
+                            yaşayan ve bakım
+                            ihtiyacı olan bireylerin durumu ve bakımı, pandemide hane içi ilişkiler ve çalışma pratikleri,
+
+                            uzaktan çalışma ve uzaktan eğitim pratikleri ve bu konularda yaşanan zorluklar, zaman
+                            kullanımında demografik farklılaşmalara yer verilmiştir. Bu konular hem kendi içinde hem de
+                            pandemi öncesi ile pandeminin ilk dönemlerindeki bulgularla kıyaslanarak analiz edilip
+                            yorumlanmıştır.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tab1" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto ">
+                    </div>
+                    <div class="col-lg-12 mx-auto">
+                        <div id="my-dashboard-1"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab2" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto ">
+                    </div>
+                    <div class="col-lg-12 mx-auto">
+                        <div id="my-dashboard-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab3" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto ">
+                    </div>
+                    <div class="col-lg-12 mx-auto">
+                        <div id="my-dashboard-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab4" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto ">
+                    </div>
+                    <div class="col-lg-12 mx-auto">
+                        <div id="my-dashboard-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="py-5 bg-dark" style="position:absolute;width:100%">
+        <div class="container">
+            <p class="m-0 text-center text-white" style="line-height: 50px;color: #b9bcbf!important">&copy; 2022 Powered by <a href="https://www.trafipper.com/" target="_blank"><img style="height:50px" src="https://static.wixstatic.com/media/232b09_0f190f9671ea4c87bf6a5377375e77f7~mv2.png/v1/fill/w_98,h_41,al_c,q_85,usm_0.66_1.00_0.01/trf-logo3.webp" alt="Trafipper"></a></p>
+        </div>
+    </footer>
+    <button class="text-white" onclick="topFunction()" id="myBtnToTop" title="Yıkarı çık" style="background-color: #a4c401;border:1px solid white">&#8593;</button>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn-a.cumul.io/js/cumulio.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            Cumulio.addDashboard({
+                dashboardId: '8061a6bb-ae49-4534-9f54-c2247deb070e',
+                container: '#my-dashboard-1',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#a4c401'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '7581e0d3-d0d4-49aa-b6f2-be7ade3550fe',
+                container: '#my-dashboard-2',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#a4c401'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: 'facf97a5-1eab-4baf-9fc5-d19ad9b8b882',
+                container: '#my-dashboard-3',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#a4c401'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '55442548-3b40-4bf1-adc9-98cdf0c33e95',
+                container: '#my-dashboard-4',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#a4c401'
+                }
+            });
+
+
+            $('#cleanFilters').click(function () {
+                Cumulio.reloadDashboard();
+            });
+
+            function checkScroll() {
+                var startY = $('.navbar').height() * 1;
+
+                if ($(window).scrollTop() > startY) {
+                    $('.navbar').addClass("scrolled");
+                } else {
+                    $('.navbar').removeClass("scrolled");
+                }
+            }
+
+            if ($('.navbar').length > 0) {
+                $(window).on("scroll load resize", function () {
+                    checkScroll();
+                });
+            }
+
+            anime.timeline({ loop: false })
+                .add({
+                    targets: '.ml5 .line',
+                    opacity: [0.5, 1],
+                    scaleX: [0, 1],
+                    easing: "easeInOutExpo",
+                    duration: 700
+                }).add({
+                    targets: '.ml5 .line',
+                    duration: 600,
+                    easing: "easeOutExpo",
+                    translateY: (el, i) => (-0.625 + 0.625 * 2 * i) + "em"
+                }).add({
+                    targets: '.ml5 .ampersand',
+                    opacity: [0, 1],
+                    scaleY: [0.5, 1],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=600'
+                }).add({
+                    targets: '.ml5 .letters-left',
+                    opacity: [0, 1],
+                    translateX: ["0.5em", 0],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=300'
+                }).add({
+                    targets: '.ml5 .letters-right',
+                    opacity: [0, 1],
+                    translateX: ["-0.5em", 0],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=600'
+                }).add({
+                    targets: '.ml5',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 99999999999999999
+                });
+
+            $(function () {
+                $(document).click(function (event) {
+                    $('.navbar-collapse').collapse('hide');
+                });
+            });
+        });
+        var mybutton = document.getElementById("myBtnToTop");
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
