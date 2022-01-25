@@ -37,7 +37,7 @@
             }
         }
 
-       /* @media (min-width: 1220px) {
+        /* @media (min-width: 1220px) {
             iframe {
                 width: 769px !important;
             }
@@ -49,11 +49,12 @@
             -o-transition: all 0.6s ease-out;
             -ms-transition: all 0.6s ease-out;
             transition: all 0.6s ease-out;
-            background: rgba(0, 0, 0, 0) !important;
+            background: rgba(255, 255, 255, 255) !important;
         }
 
             .navbar.scrolled {
-                background: rgba(0, 0, 0,0.85) !important;
+                /*background: rgba(255, 255, 255,0.85) !important;*/
+                opacity: 0.85 !important;
             }
 
         #myVideo {
@@ -189,18 +190,18 @@
     <video autoplay muted loop id="myVideo">
         <source src="https://video.wixstatic.com/video/232b09_30f06be061bf498eae17e6dd899720cb/480p/mp4/file.mp4" type="video/mp4">
     </video>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top" id="mainNav">
         <div class="container">
             <!--<div id="userDiv">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jacques_Ellul_crop.jpg/1200px-Jacques_Ellul_crop.jpg" style="height: 25px;border-radius: 50%;" alt="" />&nbsp;&nbsp;<span class="text-white" style="opacity: 0.5 !important">Jacques Joseph Ellul</span>
             </div>
             <hr id="myNavDivider" class="solid" style="width:100%;background-color:white;margin:4px">-->
-            <a class="navbar-brand js-scroll-trigger bg-white" href="https://konda.com.tr/tr/anasayfa/" style="font-size: 1rem;border-radius: 5px;">
+            <!--<a class="navbar-brand js-scroll-trigger bg-white" href="https://konda.com.tr/tr/anasayfa/" style="font-size: 1rem;border-radius: 5px;">
                 <img src="https://static.wixstatic.com/media/232b09_3c066b9a9f4b47d09df15aca19b3a286~mv2.png" style="height: 40px;padding:5px" alt="|" />
             </a>
             <a class="navbar-brand js-scroll-trigger bg-white" href="https://trafipper.com/" style="font-size: 1rem;border-radius: 5px;">
                 <img src="https://static.wixstatic.com/media/232b09_6d3c6e62e77c4b288cc0c6b8ab6fca25~mv2.png" style="height: 40px; padding: 2px" alt="|" />
-            </a>
+            </a>-->
             <a class="navbar-brand js-scroll-trigger bg-white" href="https://tr.boell.org/tr" style="font-size: 1rem;border-radius: 5px;">
                 <img src="https://static.wixstatic.com/media/232b09_19cbac557c114fbba7e9bf246cd0aed6~mv2.png" style="height: 40px;padding: 5px" alt="|" />
             </a>
@@ -208,16 +209,16 @@
                 <span id="navButtonBaslik">Başlıklar</span>
                 <span id="navButtonBurger" class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive" style="font-size: 0.9rem;">
+            <div class="collapse navbar-collapse" id="navbarResponsive" style="font-size: 1rem; ">
                 <ul class="navbar-nav ml-auto text-right">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#onsoz">Önsöz&nbsp;&nbsp;</a>
+                        <a class="nav-link js-scroll-trigger font-weight-bold" style="color: rgb(164, 196, 1) !important;" href="#onsoz">Önsöz&nbsp;&nbsp;</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#YöneticiÖzeti">Yönetici Özeti&nbsp;&nbsp;</a>
+                        <a class="nav-link js-scroll-trigger font-weight-bold" style="color: rgb(164, 196, 1) !important;" href="#YöneticiÖzeti">Araştırma Hakkında&nbsp;&nbsp;</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle font-weight-bold" style="color: rgb(164, 196, 1) !important;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Türkiye&#39;de Zaman Kullanımı
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -249,14 +250,17 @@
                 <h1 class="ml5" id="mainBaslik">
                     <span class="text-wrapper">
                         <span class="line line1"></span>
-                        <span class="letters letters-left">PANDEMİDE EVDE BAKIM VE ZAMAN KULLANIMI ARAŞTIRMASI</span>
+                        <span class="letters letters-right text-danger" style="font-size:3.5rem;">Pandemi</span>
+                        <div class="dropdown-divider" style="width: 30vw; margin-top: -17.5px; margin-bottom: 0px; opacity:0.3;min-width:300px!important;"></div>
                         <span class="letters ampersand"></span>
                         <br />
-                        <span class="letters letters-right">İnteraktif Raporu</span>
+                        <span class="letters letters-left">Zaman Kullanımı</span><br />
+                        <span class="letters letters-left">ve</span><br />
+                        <span class="letters letters-left">Evde Bakım</span>
                         <span class="line line2"></span>
                     </span>
                 </h1>
-                <h2 style=" position: absolute; top: 90vh !important; width: 100% !important; padding: 0px !important; margin: 0px !important; left: 0px;" class="nav-link js-scroll-trigger" href="#onsoz"><img style="width:5vh;height:5vh" src="https://static.wixstatic.com/media/232b09_4fee1471c51049d2a22d0f2fe08e728d~mv2.gif" alt="Devam et" /></h2>
+                <a style=" position: absolute; top: 90vh !important; width: 100% !important; padding: 0px !important; margin: 0px !important; left: 0px;" class="nav-link js-scroll-trigger" href="#onsoz"><img style="width:5vh;height:5vh" src="https://static.wixstatic.com/media/232b09_4fee1471c51049d2a22d0f2fe08e728d~mv2.gif" alt="Devam et" /></a>
             </div>
         </header>
 
@@ -264,18 +268,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 mx-auto" style="z-index: 1000">
-                        <h2 class="text-center">ÖNSÖZ</h2>
+                        <!--<h2 class="text-center">ÖNSÖZ</h2>-->
                         <br>
                         <br>
                         <br>
                         <br>
                         <p class="lead">
-                            Bu interaktif panonun kaynağı olan araştırma, Heinrich Böll Stiftung Derneği Türkiye
-                            Temsilciliği için, KONDA Araştırma ve Danışmanlık A.Ş. tarafından gerçekleştirilmiştir. Araştırmanın
-                            saha çalışması 22 - 24 Ekim 2021 tarihlerinde Türkiye’deki 18 yaş üstü yetişkin nüfusun, saha
-                            çalışmasının yapıldığı günlerdeki algı, pratik, tercih ve profillerini yansıtmaktadır. Araştırma
-                            kapsamında 32 ilin merkez dahil 99 ilçesine bağlı 145 mahalle ve köyünde 2523 kişiyle hanelerinde
-                            yüz yüze görüşülmüştür.
+                            Bu interaktif özet ile araştırma Heinrich Böll Stiftung Derneği Türkiye Temsilciliği için, KONDA Araştırma ve Danışmanlık A.Ş. tarafından gerçekleştirilmiştir.
                         </p>
                     </div>
                 </div>
@@ -287,16 +286,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 mx-auto stickyText">
-                        <h2>Yönetici Özeti</h2>
-                        <p class="lead ">
-                            Raporda hane büyüklüğü ve karakteristiği, hane içi ilişkiler ve iş paylaşımı, hanede
-                            yaşayan ve bakım
-                            ihtiyacı olan bireylerin durumu ve bakımı, pandemide hane içi ilişkiler ve çalışma pratikleri,
-
-                            uzaktan çalışma ve uzaktan eğitim pratikleri ve bu konularda yaşanan zorluklar, zaman
-                            kullanımında demografik farklılaşmalara yer verilmiştir. Bu konular hem kendi içinde hem de
-                            pandemi öncesi ile pandeminin ilk dönemlerindeki bulgularla kıyaslanarak analiz edilip
-                            yorumlanmıştır.
+                        <h2>Araştırma Hakkında</h2>
+                        <p class="lead font-weight-normal">
+                            Bu araştırma, Heinrich Böll Stiftung Derneği Türkiye Temsilciliği için 18 yaş ve üzeri Türkiye nüfusunun Koronavirüs Pademisi sırasında ev içi işler, evde bakım, çalışma pratikleri ve zaman kullanımlarını anlamak, pandemi öncesi ve pandeminin farklı dönemlerindeki farklılaşmaları incelemek amacı ile KONDA Araştırma ve Danışmanlık A.Ş. tarafından hazırlanmıştır.
+                        </p>
+                        <p class="lead font-weight-normal">
+                            Araştırmada hane büyüklüğü ve karakteristiği, hane içi ilişkiler ve iş paylaşımı, hanede yaşayan ve bakım ihtiyacı olan bireylerin durumu ve bakımı, pandemide hane içi ilişkiler ve çalışma pratikleri, uzaktan çalışma ve uzaktan eğitim pratikleri ve bu konularda yaşanan zorluklar ile zaman kullanımında demografik farklılaşmalara yer verilmiştir.
+                        </p>
+                        <p class="lead font-weight-normal">
+                            Araştırmanın saha çalışması 22 - 24 Ekim 2021 tarihlerinde Türkiye’deki 18 yaş üstü yetişkin nüfusun, saha çalışmasının yapıldığı günlerdeki algı, pratik, tercih ve profillerini yansıtmaktadır. Araştırma kapsamında 32 ilin merkez dahil 99 ilçesine bağlı 145 mahalle ve köyünde 2523 kişiyle hanelerinde yüz yüze görüşülmüştür.
+                        </p>
+                        <p class="lead font-weight-normal">
+                            Araştırma bulguları Dataritim İnteraktif Veri Medyası tarafından görselleştirilerek interaktif panolar hâlinde kullanıcılara sunulmaktadır. Aşağıda bulunan interaktif panoları kullanarak bulguları inceleyebilirsiniz. Panolarda bulunan grafikler birbirleriyle ilişkilendirilmiştir. Araştırma sonuçlarını panolarda verilen değişkenler ile filtreleyerek görüntüleyebilirsiniz.
                         </p>
                     </div>
                 </div>
@@ -347,6 +348,12 @@
                         <div id="my-dashboard-4"></div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="tab5" class="bg-dark text-light" style="background-color: rgb(164, 196, 1) !important; padding-top: 70px; padding-bottom: 70px; ">
+            <div class="container text-center">
+                    <h2>Ekim,2021</h2>
             </div>
         </section>
     </div>
