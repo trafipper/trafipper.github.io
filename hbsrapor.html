@@ -25,7 +25,7 @@
         }
 
         section {
-            padding: 150px 0;
+            padding: 80px 0;
         }
 
         @media (min-width: 992px) {
@@ -149,6 +149,15 @@
                 width: 100%;
                 text-align: center;
             }
+
+            .logoHbs{
+                max-width:70%;
+                padding:0px;    
+            }
+        }
+
+        .navbar-toggler {
+            background-color: #97d700;
         }
 
         @media (min-width: 992px) {
@@ -179,7 +188,7 @@
         }
 
         .dropdown-item.active, .dropdown-item:active {
-            background-color: #a4c401 !important;
+            background-color: #97d700 !important;
         }
 
         .lead {
@@ -187,15 +196,15 @@
         }
         /*login css*/
         #main-holder {
-            /*padding:50px;*/
+            padding:50px;
             width: 100%;
             height: 100%;
             display: grid;
             justify-items: center;
             align-items: center;
             background-color: white;
-            /*border-radius: 7px;*/
-            /*box-shadow: 0px 0px 5px 2px black;*/
+            border-radius: 7px;
+            box-shadow: 0px 0px 5px 2px black;
             position: fixed;
             z-index: 9999999;
         }
@@ -260,7 +269,7 @@
   
 </head>
 <body id="anasayfa" data-spy="scroll" data-target="#navbarResponsive">
-    <!-- login html -->
+     <!--login html--> 
     <main id="main-holder">
         <h1 id="login-header">GİRİŞ YAP</h1>
 
@@ -276,9 +285,9 @@
 
     </main>
     <video autoplay muted loop id="myVideo">
-        <source src="https://video.wixstatic.com/video/232b09_30f06be061bf498eae17e6dd899720cb/480p/mp4/file.mp4" type="video/mp4">
+        <source src="https://video.wixstatic.com/video/232b09_03da0591a007479e94a5116e47b16ba6/480p/mp4/file.mp4" type="video/mp4">
     </video>
-    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" id="mainNav">
         <div class="container">
             <!--<div id="userDiv">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jacques_Ellul_crop.jpg/1200px-Jacques_Ellul_crop.jpg" style="height: 25px;border-radius: 50%;" alt="" />&nbsp;&nbsp;<span class="text-white" style="opacity: 0.5 !important">Jacques Joseph Ellul</span>
@@ -291,23 +300,23 @@
                 <img src="https://static.wixstatic.com/media/232b09_6d3c6e62e77c4b288cc0c6b8ab6fca25~mv2.png" style="height: 40px; padding: 2px" alt="|" />
             </a>-->
 
-            <a class="navbar-brand js-scroll-trigger bg-white" href="https://tr.boell.org/tr" style="font-size: 1rem;border-radius: 5px;">
-                <img src="https://static.wixstatic.com/media/232b09_19cbac557c114fbba7e9bf246cd0aed6~mv2.png" style="height: 40px;padding: 5px" alt="|" />
+            <a class="navbar-brand js-scroll-trigger bg-white logoHbs" href="https://tr.boell.org/tr" style="font-size: 1rem;border-radius: 5px;">
+                <img class="logoHbs" src="https://static.wixstatic.com/media/232b09_19cbac557c114fbba7e9bf246cd0aed6~mv2.png" alt="|" />
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span id="navButtonBaslik">Başlıklar</span>
                 <span id="navButtonBurger" class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive" style="font-size: 1rem; ">
                 <ul class="navbar-nav ml-auto text-right">
+                    <!--<li class="nav-item">
+                        <a class="nav-link js-scroll-trigger font-weight-bold" style="color: #97d700 !important;" href="#onsoz">Önsöz&nbsp;&nbsp;</a>
+                    </li>-->
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger font-weight-bold" style="color: rgb(164, 196, 1) !important;" href="#onsoz">Önsöz&nbsp;&nbsp;</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger font-weight-bold" style="color: rgb(164, 196, 1) !important;" href="#YöneticiÖzeti">Araştırma Hakkında&nbsp;&nbsp;</a>
+                        <a class="nav-link js-scroll-trigger font-weight-bold" style="color: #97d700 !important;" href="#onsoz">Araştırma Hakkında&nbsp;&nbsp;</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle font-weight-bold" style="color: rgb(164, 196, 1) !important;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle font-weight-bold" style="color: #97d700 !important;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Türkiye&#39;de Zaman Kullanımı
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -334,7 +343,7 @@
 
         <style>
         </style>
-        <header class="text-white" style="background-image: linear-gradient(rgba(0, 0, 0,0.8),rgba(0, 0, 0,0.8))!important">
+        <header class="text-white" style="background-image: linear-gradient(rgba(0, 0, 0,0.5),rgba(0, 0, 0,0.5))!important">
             <div class="container text-center">
                 <h1 class="ml5" id="mainBaslik">
                     <span class="text-wrapper">
@@ -353,7 +362,7 @@
             </div>
         </header>
 
-        <section id="onsoz" class="text-white text-justify" style=" background-image: linear-gradient(rgba(0, 0, 0,0.8),white) !important;padding-bottom:35vh;">
+        <section id="onsoz" class="text-white text-justify" style=" background-image: linear-gradient(rgba(0, 0, 0,0.5),white) !important;padding-bottom:5vh;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 mx-auto" style="z-index: 1000">
@@ -363,7 +372,7 @@
                         <br>
                         <br>
                         <p class="lead text-center">
-                            Bu araştırma Heinrich Böll Stiftung Derneği Türkiye Temsilciliği için, KONDA Araştırma ve Danışmanlık A.Ş. tarafından gerçekleştirilmiştir.
+                            <!--Bu araştırma Heinrich Böll Stiftung Derneği Türkiye Temsilciliği için, KONDA Araştırma ve Danışmanlık A.Ş. tarafından gerçekleştirilmiştir.-->
                         </p>
                     </div>
                 </div>
@@ -371,7 +380,7 @@
         </section>
     </div>
     <div id="mainDiv">
-        <section id="YöneticiÖzeti" class="text-white" style="background-color: #a4c401">
+        <section id="YöneticiÖzeti" class="text-white" style="background-color: #97d700">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 mx-auto stickyText">
@@ -440,9 +449,9 @@
             </div>
         </section>
 
-        <section id="tab5" class="bg-dark text-light" style="background-color: rgb(164, 196, 1) !important; padding-top: 70px; padding-bottom: 70px; ">
+        <section id="tab5" class="bg-dark text-light" style="background-color: #97d700 !important; padding-top: 70px; padding-bottom: 70px; ">
             <div class="container text-center">
-                <a href="https://trafipper.com/">
+                <a href="https://www.trafipper.com/dataritimcountdown">
                     <img src="https://static.wixstatic.com/media/232b09_6d3c6e62e77c4b288cc0c6b8ab6fca25~mv2.png" style="height: 50px" />
                 </a>
             </div>
@@ -454,7 +463,7 @@
             <p class="m-0 text-center text-white" style="line-height: 50px;color: #b9bcbf!important">&copy; 2022 Powered by <a href="https://www.trafipper.com/" target="_blank"><img style="height:50px" src="https://static.wixstatic.com/media/232b09_0f190f9671ea4c87bf6a5377375e77f7~mv2.png/v1/fill/w_98,h_41,al_c,q_85,usm_0.66_1.00_0.01/trf-logo3.webp" alt="Trafipper"></a></p>
         </div>
     </footer>
-    <button class="text-white" onclick="topFunction()" id="myBtnToTop" title="Yıkarı çık" style="background-color: #a4c401;border:1px solid white">&#8593;</button>
+    <button class="text-white" onclick="topFunction()" id="myBtnToTop" title="Yıkarı çık" style="background-color: #97d700; border: 1px solid white">&#8593;</button>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn-a.cumul.io/js/cumulio.min.js"></script>
@@ -464,41 +473,41 @@
             Cumulio.addDashboard({
                 dashboardId: '8061a6bb-ae49-4534-9f54-c2247deb070e',
                 container: '#my-dashboard-1',
-                key: '258531cd-db37-4969-bf36-046692a20827',
-                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                key: '2ef5e0a4-5294-460f-9257-e8cafeadc959',
+                token: 'PFhPVBYWTQsait1WJvnhW6K7AnNPDo4opao4MUsyIoVzK8DAWoSx6izZSgnBvwh6bkXpsybEdhUhXrWgs7QPnKrLGby5UyKB5rteLIvVuGqAi6Bs2anlMcG5cKbgVWTX58Um8qqm3KQWTtVhFkGbUl',
                 language: 'tr',
                 loader: {
-                    spinnerColor: '#a4c401'
+                    spinnerColor: '#97d700'
                 }
             });
             Cumulio.addDashboard({
                 dashboardId: '7581e0d3-d0d4-49aa-b6f2-be7ade3550fe',
                 container: '#my-dashboard-2',
-                key: '258531cd-db37-4969-bf36-046692a20827',
-                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                key: '2ef5e0a4-5294-460f-9257-e8cafeadc959',
+                token: 'PFhPVBYWTQsait1WJvnhW6K7AnNPDo4opao4MUsyIoVzK8DAWoSx6izZSgnBvwh6bkXpsybEdhUhXrWgs7QPnKrLGby5UyKB5rteLIvVuGqAi6Bs2anlMcG5cKbgVWTX58Um8qqm3KQWTtVhFkGbUl',
                 language: 'tr',
                 loader: {
-                    spinnerColor: '#a4c401'
+                    spinnerColor: '#97d700'
                 }
             });
             Cumulio.addDashboard({
                 dashboardId: 'facf97a5-1eab-4baf-9fc5-d19ad9b8b882',
                 container: '#my-dashboard-3',
-                key: '258531cd-db37-4969-bf36-046692a20827',
-                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                key: '2ef5e0a4-5294-460f-9257-e8cafeadc959',
+                token: 'PFhPVBYWTQsait1WJvnhW6K7AnNPDo4opao4MUsyIoVzK8DAWoSx6izZSgnBvwh6bkXpsybEdhUhXrWgs7QPnKrLGby5UyKB5rteLIvVuGqAi6Bs2anlMcG5cKbgVWTX58Um8qqm3KQWTtVhFkGbUl',
                 language: 'tr',
                 loader: {
-                    spinnerColor: '#a4c401'
+                    spinnerColor: '#97d700'
                 }
             });
             Cumulio.addDashboard({
                 dashboardId: '55442548-3b40-4bf1-adc9-98cdf0c33e95',
                 container: '#my-dashboard-4',
-                key: '258531cd-db37-4969-bf36-046692a20827',
-                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                key: '2ef5e0a4-5294-460f-9257-e8cafeadc959',
+                token: 'PFhPVBYWTQsait1WJvnhW6K7AnNPDo4opao4MUsyIoVzK8DAWoSx6izZSgnBvwh6bkXpsybEdhUhXrWgs7QPnKrLGby5UyKB5rteLIvVuGqAi6Bs2anlMcG5cKbgVWTX58Um8qqm3KQWTtVhFkGbUl',
                 language: 'tr',
                 loader: {
-                    spinnerColor: '#a4c401'
+                    spinnerColor: '#97d700'
                 }
             });
 
