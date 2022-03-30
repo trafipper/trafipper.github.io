@@ -1,0 +1,620 @@
+﻿<!doctype html>
+<html lang="tr">
+<head>
+    <title>Konda Barometresi Mart'22</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112988863-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "UA-112988863-1");
+    </script>
+    <link rel="shortcut icon" href="https://konda.com.tr/wp-content/themes/konda/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://konda.com.tr/wp-content/themes/konda/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        header {
+            height: 100vh;
+            padding: 45vh 0 100px;
+        }
+
+        section {
+            padding: 150px 0;
+        }
+
+        @media (min-width: 992px) {
+            .stickyText {
+                height: 100%;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 100px;
+            }
+        }
+
+        @media (min-width: 1220px) {
+            iframe {
+                width: 769px !important;
+                max-height: 1500px !important;
+            }
+        }
+
+        .navbar {
+            -webkit-transition: all 0.6s ease-out;
+            -moz-transition: all 0.6s ease-out;
+            -o-transition: all 0.6s ease-out;
+            -ms-transition: all 0.6s ease-out;
+            transition: all 0.6s ease-out;
+            background: rgba(0, 0, 0, 0) !important;
+        }
+
+            .navbar.scrolled {
+                background: rgba(0, 0, 0,0.85) !important;
+            }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -99999;
+        }
+
+        .ml5 {
+            position: relative;
+        }
+
+            .ml5 .text-wrapper {
+                position: relative;
+                display: inline-block;
+                padding-top: 0.1em;
+                padding-right: 0.05em;
+                padding-bottom: 0.15em;
+            }
+
+            .ml5 .line {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 3px;
+                width: 100%;
+                transform-origin: 0.5 0;
+            }
+
+            .ml5 .letters {
+                display: inline-block;
+                opacity: 0;
+            }
+
+        #myBtnToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99999;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 100px;
+            background-color: #dc3545;
+        }
+
+            #myBtnToTop:hover {
+                background-color: #555;
+            }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #mainDiv {
+            background: #fff;
+            position: relative;
+            z-index: 3;
+            margin: -130px 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 100px 800px 800px rgba(27, 27, 27,0.5), 0 100px 100px 100px rgba(27, 27, 27,0.5), 0 -100px 100px 100px rgba(27, 27, 27,0.5);
+            padding: 5px;
+        }
+
+        @media (max-width: 1220px) {
+            #mainDiv {
+                margin: 0px !important;
+                padding: 0px !important;
+            }
+        }
+
+        #navButtonBaslik {
+            color: #dc3545 !important;
+            font-weight: bolder;
+        }
+
+        @media (max-width: 992px) {
+            #navButtonBaslik {
+                display: none;
+            }
+
+            #userDiv {
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .topDivs:nth-child(1) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 992px) {
+            #navButtonBurger {
+                display: none;
+            }
+
+            .navbar-toggler {
+                line-height: 1.25;
+                font-size: 1rem;
+            }
+
+            #myNavDivider {
+                display: none;
+            }
+
+            header > div > p {
+                padding-right: 250px;
+                padding-left: 250px;
+            }
+
+
+            .topDivs {
+                width: 33.3%;
+            }
+
+            #mainNav > div > div:nth-child(1) {
+                text-align: left;
+            }
+
+            #mainNav > div > div:nth-child(3) {
+                text-align: center;
+            }
+
+            #mainNav > div > div:nth-child(4) {
+                text-align: right;
+            }
+        }
+
+        #mainBaslik {
+            z-index: 1020 !important;
+            font-size: 2.0rem;
+            line-height: 1.5
+        }
+
+        .lead {
+            font-size: 1.1rem !important;
+        }
+    </style>
+</head>
+<body id="anasayfa" data-spy="scroll" data-target="#navbarResponsive">
+    <video autoplay muted loop id="myVideo">
+        <source src="https://video.wixstatic.com/video/232b09_1e84a6b544704ffbafb1c2c444bf9e0a/360p/mp4/file.mp4" type="video/mp4">
+    </video>
+    <nav class="navbar navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <div class="topDivs">
+                <div id="userDiv">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jacques_Ellul_crop.jpg/1200px-Jacques_Ellul_crop.jpg" style="height: 25px;border-radius: 50%;" alt="" />&nbsp;&nbsp;<span class="text-white" style="opacity: 0.5 !important">Jacques Joseph Ellul</span>
+                </div>
+            </div>
+            <hr id="myNavDivider" class="solid" style="width:100%;background-color:white;margin:4px">
+            <div class="topDivs">
+
+                <a class="navbar-brand js-scroll-trigger" href="#anasayfa" style="font-size:1rem">
+                    <img src="https://konda.com.tr/wp-content/themes/konda/images/icon/hizmet-kurumsal.png" style="height: 25px;" alt="|" />&nbsp;&nbsp;Konda Barometresi Mart'22
+                </a>
+            </div>
+            <div class="topDivs">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span id="navButtonBaslik">Başlıklar</span>
+                    <span id="navButtonBurger" class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse text-right" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab1">SİYASİ TERCİHLER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab2">MUHALEFET ADAYI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab3">TEMA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab4">YARDIMLAŞMA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab5">SALGIN DAVRANIŞLARI</a>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="background-image:url(https://static.wixstatic.com/media/0da768_4371c7e64a49489bb88c536f515f2040.png/v1/crop/x_0,y_0,w_6,h_6/0da768_4371c7e64a49489bb88c536f515f2040.png);opacity:1">
+
+        <style>
+        </style>
+        <header class="text-white" style="background-image: linear-gradient(rgba(0, 0, 0,0.8),rgba(0, 0, 0,0.8))!important">
+            <div class="container text-center">
+                <h1 class="ml5" id="mainBaslik">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters letters-left">Konda Barometresi</span>
+                        <span class="letters ampersand"></span>
+                        <br />
+                        <span class="letters letters-right">İnteraktif Yönetici Özeti</span>
+                        <span class="line line2"></span>
+                    </span>
+                </h1>
+                <p style="z-index: 9999 !important;padding:unset!important">
+                    Aşağıda inceleyebileceğiniz KONDA Mart’22 Barometresi Raporu’nun İnteraktif Yönetici Özeti 8-9 Mart 2022 tarihlerinde gerçekleştirilmiş saha çalışmasının verilerine ve 2019’dan beri yapılmış 34 Barometre araştırmasının bulgularına dayanmaktadır. 33 ilin 170 mahalle ve köyünde 3506 kişiyle hanelerinde yüz yüze görüşülerek gerçekleştirilmiş bu ayın saha çalışması Türkiye’nin 15 yaş üstü yetişkin nüfusunun siyasal eğilimlerini, tercihleri ve profillerini yansıtmaktadır.
+                </p>
+                <!--<p style="z-index: 9999 !important;padding: unset !important">
+                    <i>
+                        <h4 style=" color: #dc3545 !important; font-weight: bolder;">Siyaseti siyasi tercih ötesinde açıklamak…</h4>
+                        Siyasete ağırlık verdiğimiz bu ayki araştırmamızı birkaç aydır yaptığımız çeşitli analizlerin
+                        sonucunda ulaştığımız temel bir tespitimize dayandırdık. Bu tespitimize göre, seçmeni
+                        parti tercihleri veya Erdoğan yandaşlığı-karşıtlığı üzerinden ele almak halihazırdaki siyasi
+                        durumu anlamakta açıklayıcı olsa da gittikçe daha yetersiz kalıyor ve muhalif tarafta
+                        duranları, iktidar tarafında durup da muhalefet edenleri ve muhalefete bakışı, beklentileri
+                        anlamaya gayret etmek, seçmenin ileriye dönük tahayyüllerini anlamaya, öngörülerde
+                        bulunmaya daha fazla katkıda bulunuyor.
+                    </i>
+                </p>-->
+                <a style=" position: absolute; top: 90vh !important; width: 100% !important; padding: 0px !important; margin: 0px !important; left: 0px;" class="nav-link js-scroll-trigger" href="#tab1"><img style="width:5vh;height:5vh" src="https://static.wixstatic.com/media/232b09_4fee1471c51049d2a22d0f2fe08e728d~mv2.gif" alt="Devam et" /></a>
+            </div>
+        </header>
+
+        <section class="text-white" style=" background-image: linear-gradient(rgba(0, 0, 0,0.8),white) !important;">
+            <!--<div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto" style="z-index: 9999">
+                        <h2></h2>
+                        <p class="lead ">
+                        </p>
+                    </div>
+                </div>
+            </div>-->
+        </section>
+    </div>
+    <div id="mainDiv">
+        <section id="tab1" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>SİYASİ TERCİHLER</h2>
+                        <h4 class="text-danger">
+                            Kararsızlar hâlen en büyük blok.
+                        </h4>
+                        <p class="lead">
+                            Toplumun hâlen üçte birinden fazlasının bir parti tercihi yok. Yüzde 25’i kararsız, yüzde 11’i de oy kullanmayacağını belirtiyor. Bu oran da aydan aya değişebiliyor. İyi Parti’nin yükselişi öncesi kararsızlarla Ak Parti seçmenleri arasında bir ters orantı seyri bulunuyordu. Kararsız oranı arttığında Ak Parti oyu düşüyor veya tam tersi oluyordu. Ancak İyi Parti’nin oyları yüzde 15 bandının üzerine çıktığından beri kararsızlardan eksilenin hangi partiye gittiğini iddia etmek zor.
+                        </p>
+                        <p class="lead font-italic">
+                            Bu durumu daha iyi inceleyebilmek için grafiğin lejant bölümünden kararsız ve oy kullanmazları işaretleyerek parti tercihi yapanların kendi içinde dağılmasını sağlayabilirsiniz.
+                        </p>
+                        <h4 class="text-danger">
+                            HDP’siz muhalefet bıçak sırtında.
+                        </h4>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <p class="lead">
+                            CHP ve İyi Parti’nin toplamı 42,7 oluyor. Bu oran Cumhur İttifakı’ndan yalnızca 1,3 puan yukarıda. Ancak bu iki partinin toplamı gene 2018 başında sadece yüzde 30’du. Bu oranlara baktığımızda Millet İttifakı’nın HDP seçmenini denkleme dahil etmeden bıçak sırtı bir noktada kalacağını söyleyebiliriz.
+                        </p>
+                        <h4 class="text-danger">
+                            Gençlerde siyasi tercih değişimi daha hızlı.
+                        </h4>
+                        <p class="lead">
+                            Pandemi başlamadan önceki durumla karşılaştırdığımızda kararsız ve oy kullanmayacağını söyleyen seçmenlerden daha çok gençlerin oy tercihlerinde değişim gözleniyor. İktidar bloku partilerinin son iki yılda gençlerdeki oy kayıpları 8 puana ulaşmış durumda. Yaş ilerledikçe kayıp sürse de oranı gençlere kıyasla biraz daha az.
+                        </p>
+                        <h4 class="text-danger">
+                            Kriz beklemeyenler iktidar seçmeni
+                        </h4>
+                        <p class="lead">
+                            Ülkede yaşayanların sadece yüzde 22’si kriz beklemiyor. Üstteki filtreden “kriz beklemeyenleri” seçtiğimizde Ak parti oranının yüzde 71’e MHP oranının ise yüzde 17’ye çıktığını görüyoruz. Bu bulguya bakarak  ülkede kriz beklemeyen beşte birin iktidarı desteklediği için bu cevabı verdiği sonucunu çıkartabiliriz.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-1"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="tab2" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>MUHALEFET ADAYI</h2>
+                        <h4 class="text-danger">
+                            Beşte birden fazlasının yakın hissettiği parti yok.
+                        </h4>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <p class="lead">
+                            Bu ay görüştüğümüz kişilere, “Hangi siyasi partilere kendinizi yakın hissediyorsunuz?” sorusunu sorduk. Aynı soruyu Kasım’21 araştırmamızda da sormuştuk. Bu iki araştırmayı kıyaslayınca en dikkat çekici bulgunun “hiçbiri” cevabını verenlerdeki artış olduğunu söyleyebiliriz. İkinci temel bulgu da neredeyse tüm siyasi partilere yakın hissetme oranında azalma olması.
+                        </p>
+                        <p class="lead">
+                            Ekonomik sorunların tartışıldığı bir ortamda yakın hissedilen parti oranları azalıyorsa, bu durum siyasi partilerin sorunları çözme kapasitesine dair toplumu ikna edemediğini gösteriyor diyebiliriz.
+                        </p>
+                        <h4 class="text-danger">
+                            Kararsızların yüzde 44’ü hiçbir partiye yakın hissetmiyor
+                        </h4>
+                        <p class="lead">
+                            Kararsızların ve oy kullanmayanların kendilerini yakın hissettikleri partileri incelediğimizde kararsızların yarıya yakının, oy kullanmayanların ise üçte ikisinin “hiçbiri” cevabını verdiğini görüyoruz. Ayrıca kararsızlar arasında da tüm partilere birden yakın hissetme oranı azalmış görülüyor. Türkiye geneline göre, bu kümeler içerisinde MHP’ye yakın hissedenlerin daha fazla, HDP’ye yakın hissedenlerin ise daha az olduğunu söyleyebiliriz.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab3" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>TEMA</h2>
+                        <h4 class="text-danger">
+                            Karne notu olarak bakarsak bu ay en düşük notu ölçtük
+                        </h4>
+                        <p class="lead">
+                            Görüştüğümüz kişilere Eylül’18 tarihinden beri Cumhurbaşkanı Recep Tayyip Erdoğan’ın karnesini soruyoruz. Bu ayki bulgularımıza göre Erdoğan’ın karne notu ortalaması 2,5. Erdoğan’ın bu not ortalaması Aralık’21 tarihindeki not ortalamasıyla birlikte, 2018’den beri ölçtüğümüz en düşük karne notu.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <p class="lead">
+                            “İyi-pekiyi” notu verenlerin ölçtüğümüz en düşük orana indiğini, “çok zayıf-zayıf” notunu verenlerin ise Aralık’21 bulgumuzla birlikte en yüksek orana çıktığını görüyoruz.
+                        </p>
+                        <p class="lead">
+                            Uzun dönemli baktığımızda Nisan’21 tarihine kadar Erdoğan’a iyi not verenler ile kötü not verenlerin birbirine denk olduğunu, Nisan’21 tarihinden beri ise bu iki küme arasındaki makasın Erdoğan’a zayıf not verenler lehine açıldığını görüyoruz. Küçük oynamalar dışında Nisan’21 tarihinden beri bu örüntü devam ediyor.
+                        </p>
+                        <h4 class="text-danger">
+                            Erdoğan’ın karne notu Cumhur İttifakı seçmeninde de azaldı.
+                        </h4>
+                        <p class="lead">
+                            Parti tercihine göre incelediğimizde, bu ay Erdoğan’ın notunun Ak Parti seçmenleri nezdinde de azaldığını görüyoruz. Ak Parti ve MHP seçmenleri dışındaki seçmenlerden pek de yüksek not alamayan Erdoğan’ın Ak Parti seçmenlerinden aldığı not gelecek seçimler için oldukça kritik.
+                        </p>
+
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab4" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>YARDIMLAŞMA</h2>
+                        <p class="lead">
+                            Bu temada farklı toplumsal kesimlerin geçmişle yüzleşmeye nasıl baktığını, kimlerin hangi acıların sahiplenilmesini önemli gördüğünü anlamaya çalıştık. Yine farklı grupların bu acıların yaşanmaması için önerdikleri ve kabul etmeye hazır oldukları yöntemlerin neler olduğuna mercek tuttuk.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h4 class="text-danger">
+                            Üçte bir, bir şekilde ayrımcılığa uğramış.
+                        </h4>
+                        <p class="lead">
+                            İlk olarak kişilerin herhangi bir sebepten ayrımcılığa uğrayıp uğramadığını ölçmeye çalıştık. Toplumun yüzde 32’si bir sebepten ayrımcılığa uğradığını söylüyor. Bu oran ateistlerde, örtünmeyen kadınlarda, Alevilerde ve Kürtlerde görünür artış gösteriyor. HDP’lilerin yüzde 45’i, Kürtlerin ise yüzde 32’si etnik kimliğinden dolayı ayrımcılığa uğradığını belirtiyor.
+                        </p>
+                        <p class="lead">
+                            Cinsiyetinden dolayı ayrımcılığa uğradığını düşünenleri, kadınlar; özellikle başını örtmeyen kadınlar oluşturuyor. Bu kişileri, Modern hayat tarzına sahip kişilerle ateist ve inançsızlar takip ediyor.
+                        </p>
+                        <p class="lead">
+                            Fikirlerinden dolayı ayrımcılığa uğradığını düşünenlerde dindarlık ve siyasi tercihlerin ayrıştırıcı özelliği göze çarpıyor. Görüştüğümüz kişiler HDP, CHP veya diğer partilerin seçmenleriyse, ateist veya inançsızsa fikirleri sebebiyle toplumun genelinden daha yüksek oranda ayrımcılığa uğradıklarını düşünüyorlar.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab5" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>SALGIN DAVRANIŞLARI</h2>
+                        <h4 class="text-danger">
+                            Üçte bir, ailem gayrimüslim birini kabul etmez, diyor.
+                        </h4>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <p class="lead">
+                            Bu tema kapsamında toplumdaki hoşgörü oranını saptamak için görüştüğümüz kişilere, “Aşağıdaki profildeki kişilerden hangilerini aileniz kabul etmez, istemezler?” sorusunu yönelttik.  Kişilerin aileleri tarafından en yüksek oranda reddedilen küme gayrimüslimler. <b>Toplumda her üç kişiden biri, ailesinin bir gayrimüslimi kabul etmeyeceğini düşünüyor.</b> Kişilerin dindarlık ve muhafazakârlık seviyeleri arttıkça bu istememe oranı da yükseliyor.
+                        </p>
+                        <p class="lead">
+                            Toplumda aileye Alevileri kabul etmeme oranı yüzde 17 iken, Sünnileri kabul etmeme oranı yüzde 7 olarak görülüyor.
+                        </p>
+                        <p class="lead">
+                            Ak Parti ve MHP seçmenleriyle, kırda yaşayanların dörtte biri ailesinde Alevi istemiyor. Eğitim yükseldikçe, dindarlık ve muhafazakârlık azaldıkça bu oran da düşüyor.
+                        </p>
+                        <p class="lead">
+                            Türklerin ve Ak Partili’lerin yüzde 13’ü ailesinin Kürtleri kabul etmeyeceğini söylüyor. <b>MHP seçmenlerinde bu oran yüzde 23.</b> Yine hiç göçmemiş, metropolde yaşamayan, düşük eğitimli, yaşlı, dindar kesimde Kürtleri kabul etmeme oranı da yükseliyor.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-5"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="py-5 bg-dark" style="position:absolute;width:100%">
+        <div class="container">
+            <p class="m-0 text-center text-white" style="line-height: 50px;color: #b9bcbf!important">Powered by <a href="https://www.trafipper.com/" target="_blank"><img style="height:50px" src="https://static.wixstatic.com/media/232b09_0f190f9671ea4c87bf6a5377375e77f7~mv2.png/v1/fill/w_98,h_41,al_c,q_85,usm_0.66_1.00_0.01/trf-logo3.webp" alt="Trafipper" /></a></p>
+        </div>
+    </footer>
+    <button class="btn-danger text-white" onclick="topFunction()" id="myBtnToTop" title="Yıkarı çık">&#8593;</button>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn-a.cumul.io/js/cumulio.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            Cumulio.addDashboard({
+                dashboardId: 'f447c465-4089-4e4b-91dd-b6ad26b1a186',
+                container: '#my-dashboard-1',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '73aa1321-58e7-42ba-b1e4-97d084d7452f',
+                container: '#my-dashboard-2',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '1118f0a1-05ea-48ab-9817-d3154219505f',
+                container: '#my-dashboard-3',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '6d119ce1-e679-4e44-abdd-d20a5b5201e5',
+                container: '#my-dashboard-4',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: 'c575d417-97eb-4a14-871e-277a1b6514fa',
+                container: '#my-dashboard-5',
+                key: '258531cd-db37-4969-bf36-046692a20827',
+                token: 'zuLLfvOFWEtnnc5ZQ9RVyl0dyN6pyGrbWEHv18jpbxw6oGnGZKiEZ1NHewDS7bsvtBg5gkNB6hExekCsozjx3xYec58k9bzGFXQpCIFarYM7POVW9yqFh0rW1TfbymISWDYmDc59JEpdSNVgO05dEJ',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+           
+
+
+            $('#cleanFilters').click(function () {
+                Cumulio.reloadDashboard();
+            });
+
+            function checkScroll() {
+                var startY = $('.navbar').height() * 2;
+
+                if ($(window).scrollTop() > startY) {
+                    $('.navbar').addClass("scrolled");
+                } else {
+                    $('.navbar').removeClass("scrolled");
+                }
+            }
+
+            if ($('.navbar').length > 0) {
+                $(window).on("scroll load resize", function () {
+                    checkScroll();
+                });
+            }
+
+            anime.timeline({ loop: false })
+                .add({
+                    targets: '.ml5 .line',
+                    opacity: [0.5, 1],
+                    scaleX: [0, 1],
+                    easing: "easeInOutExpo",
+                    duration: 700
+                }).add({
+                    targets: '.ml5 .line',
+                    duration: 600,
+                    easing: "easeOutExpo",
+                    translateY: (el, i) => (-0.625 + 0.625 * 2 * i) + "em"
+                }).add({
+                    targets: '.ml5 .ampersand',
+                    opacity: [0, 1],
+                    scaleY: [0.5, 1],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=600'
+                }).add({
+                    targets: '.ml5 .letters-left',
+                    opacity: [0, 1],
+                    translateX: ["0.5em", 0],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=300'
+                }).add({
+                    targets: '.ml5 .letters-right',
+                    opacity: [0, 1],
+                    translateX: ["-0.5em", 0],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=600'
+                }).add({
+                    targets: '.ml5',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 99999999999999999
+                });
+
+        });
+        var mybutton = document.getElementById("myBtnToTop");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        $(document).ready(function () {
+            $(function () {
+                $(document).click(function (event) {
+                    $('.navbar-collapse').collapse('hide');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
