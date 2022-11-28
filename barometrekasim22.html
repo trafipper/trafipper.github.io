@@ -1,0 +1,596 @@
+﻿<!doctype html>
+<html lang="tr">
+<head>
+    <title>Konda Barometresi Kasım'22</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112988863-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "UA-112988863-1");
+    </script>
+    <link rel="shortcut icon" href="https://konda.com.tr/favicon-32x32.png" type="image/x-icon">
+    <link rel="icon" href="https://konda.com.tr/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        header {
+            height: 100vh;
+            padding: 45vh 0 100px;
+        }
+
+        section {
+            padding: 150px 0;
+        }
+
+        @media (min-width: 992px) {
+            .stickyText {
+                height: 100%;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 100px;
+            }
+        }
+
+        @media (min-width: 1220px) {
+            iframe {
+                width: 769px !important;
+                max-height: 1500px !important;
+            }
+        }
+
+        .navbar {
+            -webkit-transition: all 0.6s ease-out;
+            -moz-transition: all 0.6s ease-out;
+            -o-transition: all 0.6s ease-out;
+            -ms-transition: all 0.6s ease-out;
+            transition: all 0.6s ease-out;
+            background: rgba(0, 0, 0, 0) !important;
+        }
+
+            .navbar.scrolled {
+                background: rgba(0, 0, 0,0.85) !important;
+            }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -99999;
+        }
+
+        .ml5 {
+            position: relative;
+        }
+
+            .ml5 .text-wrapper {
+                position: relative;
+                display: inline-block;
+                padding-top: 0.1em;
+                padding-right: 0.05em;
+                padding-bottom: 0.15em;
+            }
+
+            .ml5 .line {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 3px;
+                width: 100%;
+                transform-origin: 0.5 0;
+            }
+
+            .ml5 .letters {
+                display: inline-block;
+                opacity: 0;
+            }
+
+        #myBtnToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99999;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 100px;
+            background-color: #dc3545;
+        }
+
+            #myBtnToTop:hover {
+                background-color: #555;
+            }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #mainDiv {
+            background: #fff;
+            position: relative;
+            z-index: 3;
+            margin: -130px 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 100px 800px 800px rgba(27, 27, 27,0.5), 0 100px 100px 100px rgba(27, 27, 27,0.5), 0 -100px 100px 100px rgba(27, 27, 27,0.5);
+            padding: 5px;
+        }
+
+        @media (max-width: 1220px) {
+            #mainDiv {
+                margin: 0px !important;
+                padding: 0px !important;
+            }
+        }
+
+        #navButtonBaslik {
+            color: #dc3545 !important;
+            font-weight: bolder;
+        }
+
+        @media (max-width: 992px) {
+            #navButtonBaslik {
+                display: none;
+            }
+
+            #userDiv {
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .topDivs:nth-child(1) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 992px) {
+            #navButtonBurger {
+                display: none;
+            }
+
+            .navbar-toggler {
+                line-height: 1.25;
+                font-size: 1rem;
+            }
+
+            #myNavDivider {
+                display: none;
+            }
+
+            header > div > p {
+                padding-right: 250px;
+                padding-left: 250px;
+            }
+
+
+            .topDivs {
+                width: 33.3%;
+            }
+
+            #mainNav > div > div:nth-child(1) {
+                text-align: left;
+            }
+
+            #mainNav > div > div:nth-child(3) {
+                text-align: center;
+            }
+
+            #mainNav > div > div:nth-child(4) {
+                text-align: right;
+            }
+        }
+
+        #mainBaslik {
+            z-index: 1020 !important;
+            font-size: 2.0rem;
+            line-height: 1.5
+        }
+
+        .lead {
+            font-size: 1.1rem !important;
+        }
+    </style>
+</head>
+<body id="anasayfa" data-spy="scroll" data-target="#navbarResponsive">
+    <video autoplay muted loop id="myVideo">
+        <source src="https://video.wixstatic.com/video/232b09_976144d570624409b280f26cde6f440f/360p/mp4/file.mp4" type="video/mp4">
+    </video>
+    <nav class="navbar navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <div class="topDivs">
+                <div id="userDiv">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jacques_Ellul_crop.jpg/1200px-Jacques_Ellul_crop.jpg" style="height: 25px;border-radius: 50%;" alt="" />&nbsp;&nbsp;<span class="text-white" style="opacity: 0.5 !important">Jacques Joseph Ellul</span>
+                </div>
+            </div>
+            <hr id="myNavDivider" class="solid" style="width:100%;background-color:white;margin:4px">
+            <div class="topDivs">
+
+                <a class="navbar-brand js-scroll-trigger" href="#anasayfa" style="font-size:1rem">
+                    <img src="https://konda.com.tr/favicon-32x32.png" style="" alt="|" />&nbsp;&nbsp;Konda Barometresi Kasım'22
+                </a>
+            </div>
+            <div class="topDivs">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span id="navButtonBaslik">Başlıklar</span>
+                    <span id="navButtonBurger" class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse text-right" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab1">SİYASİ TERCİHLER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab2">CUMHURBAŞKANLIĞI ADAYLIĞI SENARYOLARI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab3">
+                            HARCAMA ZORLUĞU DURUMU
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab4">
+                            AYIN TEMASI: MADDİ YOKSUNLUK
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab5">MORAL ENDEKSİ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="background-image:url(https://static.wixstatic.com/media/0da768_4371c7e64a49489bb88c536f515f2040.png/v1/crop/x_0,y_0,w_6,h_6/0da768_4371c7e64a49489bb88c536f515f2040.png);opacity:1">
+
+        <style>
+        </style>
+        <header class="text-white" style="background-image: linear-gradient(rgba(0, 0, 0,0.8),rgba(0, 0, 0,0.8))!important">
+            <div class="container text-center">
+                <h1 class="ml5" id="mainBaslik">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters letters-left">Konda Barometresi</span>
+                        <span class="letters ampersand"></span>
+                        <br />
+                        <span class="letters letters-right">İnteraktif Yönetici Özeti</span>
+                        <span class="line line2"></span>
+                    </span>
+                </h1>
+                <p style="z-index: 9999 !important;padding:unset!important">
+                    Aşağıda inceleyebileceğiniz KONDA Ekim’22 Barometresi Raporu’nun İnteraktif Yönetici Özeti 8-9 Ekim 2022 tarihlerinde gerçekleştirilmiş saha çalışmasının verilerine ve 2019’dan beri yapılmış 42 Barometre araştırmasının bulgularına dayanmaktadır. 34 ilin 202 mahalle ve köyünde 3407 kişiyle hanelerinde yüz yüze görüşülerek gerçekleştirilmiş bu ayın saha çalışması Türkiye’nin 15 yaş üstü yetişkin nüfusunun siyasal eğilimlerini, tercihleri ve profillerini yansıtmaktadır.
+                </p>
+                <a style=" position: absolute; top: 90vh !important; width: 100% !important; padding: 0px !important; margin: 0px !important; left: 0px;" class="nav-link js-scroll-trigger" href="#tab1"><img style="width:5vh;height:5vh" src="https://static.wixstatic.com/media/232b09_4fee1471c51049d2a22d0f2fe08e728d~mv2.gif" alt="Devam et" /></a>
+            </div>
+        </header>
+
+        <section class="text-white" style=" background-image: linear-gradient(rgba(0, 0, 0,0.8),white) !important;">
+        </section>
+    </div>
+    <div id="mainDiv">
+        <section id="tab1" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>SİYASİ TERCİHLER</h2>
+                        <h4 class="text-danger">
+                            Doğrudan siyasi tercihlerdeki değişim eğilimi Ak Parti ve CHP oyundaki artışı gösteriyor.
+                        </h4>
+                        <p class="lead">
+                            Doğrudan söylenen siyasi tercihlerde Ak Parti’ye oy vereceğini söyleyenler yüzde 23,9; MHP diyenler yüzde 5,2; CHP diyenler yüzde 18; HDP diyenler yüzde 9,3, İyi Parti diyenler yüzde 10,2; diğer partiler diyenler ise yüzde 4,3. Buna karşın kararsızlar yüzde 22,4; oy kullanmazlar yüzde 6,8 düzeyinde ölçülüyor. Doğrudan siyasi tercihlerin son 1 yıldaki değişim eğilimine baktığımızdaysa, Mayıs ayından bu yana Ak Parti ve CHP tercihinde artış görüyoruz.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h4 class="text-danger">
+                            Son 2 ayda ittifak içi oy dağılımları değişse de ittifakların toplam oyu çok değişmiyor.
+                        </h4>
+                        <p class="lead">
+                            Grafiğin lejant kısmında yer alan kararsız ve oy kullanmaz seçeneklerine tıklayarak, kararsızlar dağıtılmış şekilde parti oy oranlarındaki dağılımlara bakalım.
+                        </p>
+                        <p class="lead">
+                            Ak Parti yüzde 33,7; MHP yüzde 7,3; CHP yüzde 25,4; HDP yüzde 13,1; İyi Parti yüzde 14,4, diğer partiler ise yüzde 6’lık bir büyüklüğe erişiyorlar. Geçen ay ile karşılaştırdığımızda, Ak Parti oyunda 1,3 puan artış, MHP oyunda 1,4 puan azalış görüyoruz. CHP oyu neredeyse değişmemiş, İyi Parti oyu 1,6 puan azalmış, HDP oyuysa 2 puan artmış durumda.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-1"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="tab2" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>CUMHURBAŞKANLIĞI ADAYLIĞI SENARYOLARI</h2>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h4 class="text-danger">
+                            Cumhurbaşkanı Adaylığı Senaryoları: Erdoğan mı Kılıçdaroğlu mu?
+                        </h4>
+                        <p class="lead">
+                            “Kemal Kılıçdaroğlu ve Recep Tayyip Erdoğan arasında yapılacak bir Cumhurbaşkanlığı seçiminde hangisine oy verirsiniz?” sorusunu sorduğumuzda görüştüğümüz kişilerin yüzde 36,2’si Erdoğan, yüzde 35,3’ü Kılıçdaroğlu diyor. Geçen aydan bu yana çok değişmeyen bu oranlar karşısında Erdoğan’ın asıl olarak kararsız seçmenlerden oy alma eğilimi kazandığını görüyoruz. Anlamlı sonuçlar çıkarabilmek için bu eğilimi önümüzdeki aylarda takip etmemiz gerekiyor.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab3" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>HARCAMA ZORLUĞU DURUMU</h2>
+                        <h4 class="text-danger">
+                            Toplumun yüzde 41’i demokrasinin işleyişinden “hiç memnun değil”.
+                        </h4>
+                        <p class="lead">
+                            Görüştüğümüz kişilerin yüzde 41’i demokrasinin işleyişinden hiç memnun olmadığını söylüyor. 10 üzerinden 5 puan ve altı puan verenlerin oranına bakarsak da Türkiye’de demokrasinin işleyişinden memnun olmayanların oranının yüzde 74 düzeyinde olduğunu görüyoruz. Bu oran bugüne kadar ölçtüğümüz en yüksek seviyesinde.
+                        </p>
+                        <h4 class="text-danger">
+                            Toplumun yüzde 50’si ekonomi politikalarının işleyişinden “hiç memnun değil”.
+                        </h4>
+                        <p class="lead">
+                            Toplumun yüzde 50’si ekonomi politikalarının işleyişinden hiç memnun olmadığını söylüyor. 10 üzerinden 5 puan ve altı puan verenlerin oranına bakarsak da Türkiye’de ekonomi politikalarının işleyişinden memnun olmayanların oranının yüzde 82 düzeyinde olduğunu görüyoruz. Demokrasinin işleyişinde olduğu gibi bu oran da bir önceki ölçümümüze göre (Kasım’21) daha yüksek bir seviyede yer alıyor.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h4 class="text-danger">
+                            Siyasi tercih, hayat tarzı ve yaşın belirleyiciliği…
+                        </h4>
+                        <p class="lead">
+                            İnteraktif Yönetici Özetimizin bu modülünde siyasi tercih, hayat tarzı ve yaş filtrelerine yer verdik çünkü toplumu bu konuda farklılaştıran en temel değişkenler bunlar oldu. Demokrasinin ve ekonomi politikalarının işleyişinden memnun olanlar hayatın muhafazakarlaşması ve yaşın yükselmesiyle artıyor.
+                        </p>
+                        <p class="lead">
+                            Siyasi tercihlere göreyse, Ak Parti ve MHP’lilerin görüşleri farklılaşıyor. Demokrasinin işleyişinden iki partinin seçmen kümesi de memnunken, MHP’lilerde memnun olmayanlar daha fazla bulunuyor. Ekonomi politikalarının işleyişindense Ak Partililer memnunken, MHP’liler genel olarak memnun görünmüyor.
+                        </p>
+
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab4" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>AYIN TEMASI: MADDİ YOKSUNLUK</h2>
+                        <h4 class="text-danger">
+                            Toplum, devletin konut politikalarına nasıl bakıyor?
+                        </h4>
+                        <p class="lead">
+                            Toplum genel olarak, devletin dar gelirli vatandaşlar için daha çok konut inşa etmesi ve öncelikli hedefin kentsel dönüşüm projeleri olması gerektiği gibi yargılarda daha az ayrışıyor. Buna karşın TOKİ konutlarının dar gelirli vatandaşların ev edinmesini sağladığı ve Ak Parti döneminde ev edinme imkânlarının iyiye gittiği gibi somut durumlara dair algıda toplum kutuplaşıyor.
+                        </p>
+                        <h4 class="text-danger">
+                            İktidar bloku seçmenlerinin somut durumlar karşısında konut politikaları algıları olumlu yönde.
+                        </h4>
+                        <p class="lead">
+                            “TOKİ konutları dar gelirli vatandaşların ev edinmesini sağlar,” yargısını Ak Partili ve MHP’liler, muhalif seçmenlere göre daha yüksek oranda doğru buluyor. Ayrıca ev kadınları yüzde 48 ile, emekliler yüzde 45 ile TOKİ’nin dar gelirli vatandaşların ev edinmesini sağladığını düşünüyor.
+                        </p>
+                        <h4 class="text-danger">
+                            Sosyal konut projelerine her gelirden insanın başvurabilmesi konusunda toplum yarı yarıya ayrışıyor.
+                        </h4> 
+                        <p class="lead">
+                            Görüştüğümüz kişilerin konut politikalarına ilişkin yargılarda en çok ayrıştıkları yargı, “Sosyal konut projelerine her gelirden insan başvurabilmelidir” yargısı oldu. Toplumun yüzde 45’i bu yargıyı yanlış, yüzde 43’ü doğru buluyor.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h4 class="text-danger">
+                            Her 10 kişiden 1’i, Cumhurbaşkanı Erdoğan tarafından açıklanan Sosyal Konut Projesi’ne başvurmuş.
+                        </h4>
+                        <p class="lead">
+                            Toplumdaki her 10 kişiden 1’inin Cumhurbaşkanı Erdoğan tarafından açıklanan Sosyal Konut Projesi’ne başvurduğunu görüyoruz. Toplumda yüzde 3’lük bir kesim de projeye başvurmayı düşünüyor.
+                        </p>
+                        <p class="lead font-italic">
+                            Siz de grafiğin üst kısmında yer alan sosyal konut projesine başvuru durumunu gösteren grafiği filtre olarak kullanarak, konut politikaları algısının projeye başvuru durumuna göre nasıl değiştiğini görebilirsiniz.
+                        </p>
+                        <p class="lead">
+                            Sosyal Konut Projesi’ne başvuranların somut durumlar karşısında konut politikaları algısının toplum geneline göre daha olumlu yönde olduğu görülüyor.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab5" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>MORAL ENDEKSİ</h2>
+                        <h4 class="text-danger">
+                            Kriz beklentisi stabil: Toplumun yüzde 77’si kriz bekliyor; yüzde 84’ü, “Krizdeyiz,” diyor.
+                        </h4>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <p class="lead">
+                            Ekonomik kriz beklentisinin geçen aya göre değişmemiş olduğunu görüyoruz. Yaz aylarına göre kriz beklentisi düşse de son 1 yılda 6 puan yükselmiş görünüyor. Asıl olarak toplumun yüzde 84’ü ülkenin zaten bir krizde olduğunu düşünüyor ve bu da son 1 yılda 9 puan yükselmiş görünüyor.
+                        </p>
+                        <h4 class="text-danger">
+                            Her 2 kişiden 1’i kıt kanaat geçiniyor; her 2 kişiden 1’i ancak borçlanarak geçinebiliyor.
+                        </h4>
+                        <p class="lead">
+                            Bu ayki araştırmamızda, toplumdaki her 2 kişiden 1’inin geçtiğimiz ay kıt kanaat geçindiğini görüyoruz. Borçlanarak geçinebildiğini söyleyenlerin oranıysa beşte bir düzeyinde ölçülüyor. Toplum, ardışık aylar içinde kıt kanaat ve borçlanarak geçinebilme arasında gidip geliyor.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-5"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="py-5 bg-dark" style="position:absolute;width:100%">
+        <div class="container">
+            <p class="m-0 text-center text-white" style="line-height: 50px;color: #b9bcbf!important">Powered by <a href="https://www.trafipper.com/" target="_blank"><img style="height:50px" src="https://static.wixstatic.com/media/232b09_0f190f9671ea4c87bf6a5377375e77f7~mv2.png/v1/fill/w_98,h_41,al_c,q_85,usm_0.66_1.00_0.01/trf-logo3.webp" alt="Trafipper" /></a></p>
+        </div>
+    </footer>
+    <button class="btn-danger text-white" onclick="topFunction()" id="myBtnToTop" title="Yıkarı çık">&#8593;</button>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn-a.cumul.io/js/cumulio.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            Cumulio.addDashboard({
+                dashboardId: 'da627e9e-e4ef-4ef9-bc67-623491de89ce',
+                container: '#my-dashboard-1',
+                key: '240c47a6-e9c2-41f0-a927-56944b42ab61',
+                token: 'qJAUJZX0adJ4beuMUSKGIGRIRGeEgRC3aZe9yg0pZPwSKFRwr20nNacSIhqdrrJJmKxtAQhH9MIa3Vf7WOtfzOUkIFHAQd4OBCyDHk5znspPQ30TbXH1NJRodZRuHKPIl38cQWLR66fQtBqCaYb8gY',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: 'c646bc25-9a75-498e-bbf1-562bc1995ca5',
+                container: '#my-dashboard-2',
+                key: '240c47a6-e9c2-41f0-a927-56944b42ab61',
+                token: 'qJAUJZX0adJ4beuMUSKGIGRIRGeEgRC3aZe9yg0pZPwSKFRwr20nNacSIhqdrrJJmKxtAQhH9MIa3Vf7WOtfzOUkIFHAQd4OBCyDHk5znspPQ30TbXH1NJRodZRuHKPIl38cQWLR66fQtBqCaYb8gY',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '042b5628-486d-4717-8699-d8a80c7c9c7c',
+                container: '#my-dashboard-3',
+                key: '240c47a6-e9c2-41f0-a927-56944b42ab61',
+                token: 'qJAUJZX0adJ4beuMUSKGIGRIRGeEgRC3aZe9yg0pZPwSKFRwr20nNacSIhqdrrJJmKxtAQhH9MIa3Vf7WOtfzOUkIFHAQd4OBCyDHk5znspPQ30TbXH1NJRodZRuHKPIl38cQWLR66fQtBqCaYb8gY',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '0069e579-27e6-45ac-a65f-9170d1fa40e6',
+                container: '#my-dashboard-4',
+                key: '240c47a6-e9c2-41f0-a927-56944b42ab61',
+                token: 'qJAUJZX0adJ4beuMUSKGIGRIRGeEgRC3aZe9yg0pZPwSKFRwr20nNacSIhqdrrJJmKxtAQhH9MIa3Vf7WOtfzOUkIFHAQd4OBCyDHk5znspPQ30TbXH1NJRodZRuHKPIl38cQWLR66fQtBqCaYb8gY',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '754abcd1-ff27-4c73-97b1-e437d8afdbf0',
+                container: '#my-dashboard-5',
+                key: '240c47a6-e9c2-41f0-a927-56944b42ab61',
+                token: 'qJAUJZX0adJ4beuMUSKGIGRIRGeEgRC3aZe9yg0pZPwSKFRwr20nNacSIhqdrrJJmKxtAQhH9MIa3Vf7WOtfzOUkIFHAQd4OBCyDHk5znspPQ30TbXH1NJRodZRuHKPIl38cQWLR66fQtBqCaYb8gY',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+
+
+
+            $('#cleanFilters').click(function () {
+                Cumulio.reloadDashboard();
+            });
+
+            function checkScroll() {
+                var startY = $('.navbar').height() * 2;
+
+                if ($(window).scrollTop() > startY) {
+                    $('.navbar').addClass("scrolled");
+                } else {
+                    $('.navbar').removeClass("scrolled");
+                }
+            }
+
+            if ($('.navbar').length > 0) {
+                $(window).on("scroll load resize", function () {
+                    checkScroll();
+                });
+            }
+
+            anime.timeline({ loop: false })
+                .add({
+                    targets: '.ml5 .line',
+                    opacity: [0.5, 1],
+                    scaleX: [0, 1],
+                    easing: "easeInOutExpo",
+                    duration: 700
+                }).add({
+                    targets: '.ml5 .line',
+                    duration: 600,
+                    easing: "easeOutExpo",
+                    translateY: (el, i) => (-0.625 + 0.625 * 2 * i) + "em"
+                }).add({
+                    targets: '.ml5 .ampersand',
+                    opacity: [0, 1],
+                    scaleY: [0.5, 1],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=600'
+                }).add({
+                    targets: '.ml5 .letters-left',
+                    opacity: [0, 1],
+                    translateX: ["0.5em", 0],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=300'
+                }).add({
+                    targets: '.ml5 .letters-right',
+                    opacity: [0, 1],
+                    translateX: ["-0.5em", 0],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=600'
+                }).add({
+                    targets: '.ml5',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 99999999999999999
+                });
+
+        });
+        var mybutton = document.getElementById("myBtnToTop");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        $(document).ready(function () {
+            $(function () {
+                $(document).click(function (event) {
+                    $('.navbar-collapse').collapse('hide');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
