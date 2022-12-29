@@ -1,0 +1,645 @@
+﻿<!doctype html>
+<html lang="tr">
+<head>
+    <title>Konda Barometresi Aralık'22</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112988863-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "UA-112988863-1");
+    </script>
+    <link rel="shortcut icon" href="https://konda.com.tr/favicon-32x32.png" type="image/x-icon">
+    <link rel="icon" href="https://konda.com.tr/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        header {
+            height: 100vh;
+            padding: 45vh 0 100px;
+        }
+
+        section {
+            padding: 150px 0;
+        }
+
+        @media (min-width: 992px) {
+            .stickyText {
+                height: 100%;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 100px;
+            }
+        }
+
+        @media (min-width: 1220px) {
+            iframe {
+                width: 769px !important;
+                max-height: 1500px !important;
+            }
+        }
+
+        .navbar {
+            -webkit-transition: all 0.6s ease-out;
+            -moz-transition: all 0.6s ease-out;
+            -o-transition: all 0.6s ease-out;
+            -ms-transition: all 0.6s ease-out;
+            transition: all 0.6s ease-out;
+            background: rgba(0, 0, 0, 0) !important;
+        }
+
+            .navbar.scrolled {
+                background: rgba(0, 0, 0,0.85) !important;
+            }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -99999;
+        }
+
+        .ml5 {
+            position: relative;
+        }
+
+            .ml5 .text-wrapper {
+                position: relative;
+                display: inline-block;
+                padding-top: 0.1em;
+                padding-right: 0.05em;
+                padding-bottom: 0.15em;
+            }
+
+            .ml5 .line {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 3px;
+                width: 100%;
+                transform-origin: 0.5 0;
+            }
+
+            .ml5 .letters {
+                display: inline-block;
+                opacity: 0;
+            }
+
+        #myBtnToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99999;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 100px;
+            background-color: #dc3545;
+        }
+
+            #myBtnToTop:hover {
+                background-color: #555;
+            }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #mainDiv {
+            background: #fff;
+            position: relative;
+            z-index: 3;
+            margin: -130px 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 100px 800px 800px rgba(27, 27, 27,0.5), 0 100px 100px 100px rgba(27, 27, 27,0.5), 0 -100px 100px 100px rgba(27, 27, 27,0.5);
+            padding: 5px;
+        }
+
+        @media (max-width: 1220px) {
+            #mainDiv {
+                margin: 0px !important;
+                padding: 0px !important;
+            }
+        }
+
+        #navButtonBaslik {
+            color: #dc3545 !important;
+            font-weight: bolder;
+        }
+
+        @media (max-width: 992px) {
+            #navButtonBaslik {
+                display: none;
+            }
+
+            #userDiv {
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .topDivs:nth-child(1) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 992px) {
+            #navButtonBurger {
+                display: none;
+            }
+
+            .navbar-toggler {
+                line-height: 1.25;
+                font-size: 1rem;
+            }
+
+            #myNavDivider {
+                display: none;
+            }
+
+            header > div > p {
+                padding-right: 250px;
+                padding-left: 250px;
+            }
+
+
+            .topDivs {
+                width: 33.3%;
+            }
+
+            #mainNav > div > div:nth-child(1) {
+                text-align: left;
+            }
+
+            #mainNav > div > div:nth-child(3) {
+                text-align: center;
+            }
+
+            #mainNav > div > div:nth-child(4) {
+                text-align: right;
+            }
+        }
+
+        #mainBaslik {
+            z-index: 1020 !important;
+            font-size: 2.0rem;
+            line-height: 1.5
+        }
+
+        .lead {
+            font-size: 1.1rem !important;
+        }
+    </style>
+</head>
+<body id="anasayfa" data-spy="scroll" data-target="#navbarResponsive">
+    <video autoplay muted loop id="myVideo">
+        <source src="https://video.wixstatic.com/video/232b09_976144d570624409b280f26cde6f440f/360p/mp4/file.mp4" type="video/mp4">
+    </video>
+    <nav class="navbar navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <div class="topDivs">
+                <div id="userDiv">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jacques_Ellul_crop.jpg/1200px-Jacques_Ellul_crop.jpg" style="height: 25px;border-radius: 50%;" alt="" />&nbsp;&nbsp;<span class="text-white" style="opacity: 0.5 !important">Jacques Joseph Ellul</span>
+                </div>
+            </div>
+            <hr id="myNavDivider" class="solid" style="width:100%;background-color:white;margin:4px">
+            <div class="topDivs">
+
+                <a class="navbar-brand js-scroll-trigger" href="#anasayfa" style="font-size:1rem">
+                    <img src="https://konda.com.tr/favicon-32x32.png" style="" alt="|" />&nbsp;&nbsp;Konda Barometresi Aralık'22
+                </a>
+            </div>
+            <div class="topDivs">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span id="navButtonBaslik">Başlıklar</span>
+                    <span id="navButtonBurger" class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse text-right" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab1">SİYASİ TERCİHLER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab2">CUMHURBAŞKANLIĞI ADAYLIĞI SENARYOLARI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab3">
+                            TÜRKİYE’DE NEGATİF PARTİ KİMLİĞİ: SİYASİ PARTİLER
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab4">
+                            TÜRKİYE’DE NEGATİF PARTİ KİMLİĞİ: OLASI ADAYLAR
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tab5">GÜNCEL SİYASET</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="background-image:url(https://static.wixstatic.com/media/0da768_4371c7e64a49489bb88c536f515f2040.png/v1/crop/x_0,y_0,w_6,h_6/0da768_4371c7e64a49489bb88c536f515f2040.png);opacity:1">
+
+        <style>
+        </style>
+        <header class="text-white" style="background-image: linear-gradient(rgba(0, 0, 0,0.8),rgba(0, 0, 0,0.8))!important">
+            <div class="container text-center">
+                <h1 class="ml5" id="mainBaslik">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters letters-left">Konda Barometresi</span>
+                        <span class="letters ampersand"></span>
+                        <br />
+                        <span class="letters letters-right">İnteraktif Yönetici Özeti</span>
+                        <span class="line line2"></span>
+                    </span>
+                </h1>
+                <p style="z-index: 9999 !important;padding:unset!important">
+                    Aşağıda inceleyebileceğiniz KONDA Kasım’22 Barometresi Raporu’nun İnteraktif Yönetici Özeti
+                    5-6 Kasım 2022 tarihlerinde gerçekleştirilmiş saha çalışmasının verilerine ve 2019’dan beri
+                    yapılmış 43 Barometre araştırmasının bulgularına dayanmaktadır. 33 ilin 201 mahalle ve
+                    köyünde 3641 kişiyle hanelerinde yüz yüze görüşülerek gerçekleştirilmiş bu ayın saha çalışması
+                    Türkiye’nin 15 yaş üstü yetişkin nüfusunun siyasal eğilimlerini, tercihleri ve profillerini
+                    yansıtmaktadır.
+                </p>
+                <a style=" position: absolute; top: 90vh !important; width: 100% !important; padding: 0px !important; margin: 0px !important; left: 0px;" class="nav-link js-scroll-trigger" href="#tab1"><img style="width:5vh;height:5vh" src="https://static.wixstatic.com/media/232b09_4fee1471c51049d2a22d0f2fe08e728d~mv2.gif" alt="Devam et" /></a>
+            </div>
+        </header>
+
+        <section class="text-white" style=" background-image: linear-gradient(rgba(0, 0, 0,0.8),white) !important;">
+        </section>
+    </div>
+    <div id="mainDiv">
+        <section id="tab1" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>SİYASİ TERCİHLER</h2>
+                        <h4 class="text-danger">
+                            Siyasi tercihler son 3 aydır stabil seyrediyor, halen yüzde 23 kararsız.
+                        </h4>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <p class="lead">
+                            Son 3 aydır siyasi tercihler küçük farklar dışında değişmiyor. Doğrudan tercihlerde Ak
+                            Parti’nin oyu yüzde 24, MHP yüzde 6 oranında ölçülüyor. CHP diyenler yüzde 17,
+                            HDP diyenler yüzde 8, İyi Parti diyenlerin oranıysa yüzde 12.
+                        </p>
+                        <h4 class="text-danger">
+                            Kararsızlar dağıtıldığında, Ak Parti ve MHP’nin oy toplamı yüzde 42, CHP ve İyi Parti’nin
+                            oy toplamı yüzde 41.
+                        </h4>
+                        <p class="lead">
+                            Kararsızlar dağıtıldığında, Ak Parti yüzde 34, MHP yüzde 8 oy alıyor. CHP’nin oyu yüzde 24,
+                            HDP’nin oyu yüzde 12, İyi Parti’nin oyu 17 seviyesine geliyor. Cumhur İttifakı ve Millet
+                            İttifakı oy oranları arasındaki fark böylelikle 1 puan oluyor.
+                        </p>
+                        <p class="lead font-italic">
+                            Grafiğin altındaki kararsız ve oy kullanmaz seçeneklerinin üstüne tıklayarak, kararsızlar
+                            dağıtılmış şekilde oy tercihlerini inceleyebilirsiniz.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-1"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="tab2" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>CUMHURBAŞKANLIĞI ADAYLIĞI SENARYOLARI</h2>
+                        <h4 class="text-danger">
+                            Cumhurbaşkanı Adaylığı Senaryoları: Erdoğan mı Kılıçdaroğlu mu?
+                        </h4>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <p class="lead">
+                            Geçtiğimiz aylarda olduğu gibi bu ay da görüştüğümüz kişilere, “Kemal Kılıçdaroğlu ve Recep
+                            Tayyip Erdoğan arasında yapılacak bir cumhurbaşkanlığı seçiminde hangisine oy
+                            verirsiniz?” sorusunu yönelttik.
+                        </p>
+                        <h4 class="text-danger">
+                            Erdoğan diyenler 1 puan artmış görünüyor.
+                        </h4>
+                        <p class="lead">
+                            Bu ay bu soruya “Erdoğan” cevabını verenlerin oranı, geçen aya göre yaklaşık olarak 1 puan
+                            artışla yüzde 37’ye geliyor. “Kılıçdaroğlu” diyenler ise yüzde 35 ile aynı seviyede
+                            kalıyor.
+                        </p>
+                        <p class="lead">
+                            Eylül’22 tarihinden beri bu soruya aldığımız cevaplar, oy tercihine göre pek değişmiyor. Son
+                            iki ayda Kılıçdaroğlu’nun HDP’liler içindeki oyu artarken İyi Parti oyunun azalmış
+                            olması dikkat çekiyor.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab3" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>TÜRKİYE’DE NEGATİF PARTİ KİMLİĞİ: SİYASİ PARTİLER</h2>
+                        <h4 class="text-danger">
+                            Toplumun yüzde 58’i faturalarını öderken zorluk yaşıyor.
+                        </h4>
+                        <p class="lead">
+                            Toplumun yüzde 58’i faturalarını öderken zorlandığını söylüyor. Bu oran beyaz yakalılarda
+                            yüzde 5, hanesinde 18 yaş altı çocuk bulunanlarda yüzde 61 oluyor.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <h4 class="text-danger">
+                            Toplumun yarısından fazlası mutfak harcamalarını karşılarken, üçte biri kredi kartı borcu öderken zorlanıyor.
+                        </h4>
+                        <p class="lead">
+                            Toplumun yüzde 54’ü mutfak harcamalarında, yüzde 32’si kredi kartı borcunu ödemelerinde
+                            zorluk yaşadığını söylerken, herhangi bir ödeme zorluğu yaşamadığını söyleyenlerin
+                            oranı yalnızca yüzde 13 seviyesinde bulunuyor.
+                        </p>
+                        <h4 class="text-danger">
+                            Hanesinde 18 yaş altı çocuk bulunanların üçte biri çocuklarına harçlık verirken
+                            zorlanıyor.
+                        </h4>
+                        <p class="lead">
+                            Hanesinde 18 yaş altı çocuk var/yok filtresini kullanarak baktığımızda, hanesinde 18 yaş altı
+                            çocuk bulunan kişilerin yüzde 32’sinin çocuklarına harçlık verirken zorlandıklarını
+                            görüyoruz. Eğitim masraflarını karşılamakta zorlananların oranı da yüzde 33 oluyor.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab4" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>TÜRKİYE’DE NEGATİF PARTİ KİMLİĞİ: OLASI ADAYLAR</h2>
+                        <h4 class="text-danger">
+                            Türkiye’de maddi yoksunluk.
+                        </h4>
+                        <p class="lead">
+                            Bu ayki araştırmamızda toplum genelinde maddi yoksunluk oranı ölçümü gerçekleştirdik.
+                            Bunun için görüştüğümüz kişilerin finansal sıkıntıda olma durumlarını
+                            anlayabileceğimiz sorulara yer verdik. Dijital Yönetici Özetimizde bu sorulardan
+                            dördünün analizine yer veriyoruz. Türkiye’de güncel maddi yoksunluk oranını yüzde
+                            55 düzeyinde ölçtüğümüzü de not düşmeliyiz.
+                        </p>
+                        <h4 class="text-danger">
+                            Her 10 kişiden 8’i evden uzakta bir haftalık tatil yapamayacağını söylüyor.
+                        </h4>
+                        <p class="lead">
+                            Görüştüğümüz kişilerin maddi yoksunluğunu belirleyen ölçütlerden biri olan “evden uzakta bir
+                            haftalık tatil yapabilme” ihtiyacını yerine getiremeyeceğini söyleyenlerin oranı yüzde
+                            81 olarak ölçülüyor. Bu oran beyaz yakalı çalışanlar arasında da yüzde 70 düzeyinde.
+                        </p>
+                        <h4 class="text-danger">
+                            Her 10 kişiden 7’si beklemediği, ani bir harcamayı karşılayamayacağını düşünüyor.
+                        </h4>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <p class="lead">
+                            Her 10 kişiden 7’sinin beklenmedik bir harcamayı karşılamakta tereddüt yaşadığını
+                            görüyoruz. İktidar bloku seçmeninin de yarıdan fazlası ani bir harcamayla
+                            karşılaştığında bu harcamayı karşılayamayacağını düşünüyor.
+                        </p>
+                        <h4 class="text-danger">
+                            Toplumun yüzde 64’ü haftanın üç günü et, tavuk ve balık tüketemediğini söylüyor.
+                        </h4>
+                        <p class="lead">
+                            Maddi yoksunluk ölçümünde yeterli düzeyde protein tüketimini belirlemek adına haftanın üç
+                            günü et, tavuk, balık tüketimi ölçülüyor. Görüştüğümüz kişilere sorduğumuzda
+                            toplumun yüzde 64’ünün bu ihtiyacını karşılayamadığını görüyoruz. Alt gelir grubunda
+                            bu oran yüzde 84’e kadar yükseliyor.
+                        </p>
+                        <h4 class="text-danger">
+                            Görüştüğümüz kişilerin yarıya yakını kış aylarında evini ısıtamayacağını düşünüyor.
+                        </h4>
+                        <p class="lead">
+                            Görüştüğümüz kişilerin yüzde 48’i önümüzdeki kış aylarında evini ısıtamayacağını
+                            düşünüyor. Bu eğilimin en yüksek görüldüğü kümelerden ikisi ev kadınlar ve işsizler.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab5" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <h2>GÜNCEL SİYASET</h2>
+                        <h4 class="text-danger">
+                            Kriz beklentisinde 5 puan düşüş görülüyor; düşüşü sağlayan daha çok iktidar seçmeni.
+                        </h4>
+                    </div>
+                    <div class="col-lg-4 mx-auto stickyText">
+                        <p class="lead">
+                            Toplum genelinde ekonomik kriz bekleyenlerin oranı bu ay itibarıyla yüzde 72 düzeyinde
+                            bulunuyor. Bu oran geçen aydan bu yana 5 puan düşmüş görünüyor.
+                        </p>
+                        <p class="lead">
+                            Grafiğin üst kısmında yer alan siyasi tercih filtresini kullandığımızda, Ak Parti ve MHP’yi
+                            seçerek, iktidar bloku seçmenin kriz beklentisine bakarsak bu oranın yüzde 40
+                            düzeyinde olduğunu, bu oranın geçen ayın 10 puan gerisinde yer aldığını görüyoruz.
+                            CHP ve İyi Parti seçimini yaptığımızdaysa bu oran yüzde 91’e ulaşıyor.
+                        </p>
+                        <h4 class="text-danger">
+                            Geçim durumu stabil durumunu sürdürüyor: Her 2 kişiden 1’i kıt kanaat geçiniyor.
+                        </h4>
+                        <p class="lead">
+                            Toplum genelinde geçinebilme durumunda stabil durum varlığını sürdürüyor. Halen kıt kanaat
+                            geçinenler ağırlığını koruyor. Her 2 kişiden 1’i kıt kanaat geçiniyor. Her 2 kişiden 1’i
+                            geçinemeyip borca girdiğini söylüyor.
+                        </p>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div id="my-dashboard-5"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="py-5 bg-dark" style="position:absolute;width:100%">
+        <div class="container">
+            <p class="m-0 text-center text-white" style="line-height: 50px;color: #b9bcbf!important">Powered by <a href="https://www.trafipper.com/" target="_blank"><img style="height:50px" src="https://static.wixstatic.com/media/232b09_0f190f9671ea4c87bf6a5377375e77f7~mv2.png/v1/fill/w_98,h_41,al_c,q_85,usm_0.66_1.00_0.01/trf-logo3.webp" alt="Trafipper" /></a></p>
+        </div>
+    </footer>
+    <button class="btn-danger text-white" onclick="topFunction()" id="myBtnToTop" title="Yıkarı çık">&#8593;</button>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn-a.cumul.io/js/cumulio.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            Cumulio.addDashboard({
+                dashboardId: '7686e8b8-6fe2-4091-8928-9fbc10e3e779',
+                container: '#my-dashboard-1',
+                key: '240c47a6-e9c2-41f0-a927-56944b42ab61',
+                token: 'qJAUJZX0adJ4beuMUSKGIGRIRGeEgRC3aZe9yg0pZPwSKFRwr20nNacSIhqdrrJJmKxtAQhH9MIa3Vf7WOtfzOUkIFHAQd4OBCyDHk5znspPQ30TbXH1NJRodZRuHKPIl38cQWLR66fQtBqCaYb8gY',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '22c6ab3d-4226-477a-ab8a-f513b2a57327',
+                container: '#my-dashboard-2',
+                key: '240c47a6-e9c2-41f0-a927-56944b42ab61',
+                token: 'qJAUJZX0adJ4beuMUSKGIGRIRGeEgRC3aZe9yg0pZPwSKFRwr20nNacSIhqdrrJJmKxtAQhH9MIa3Vf7WOtfzOUkIFHAQd4OBCyDHk5znspPQ30TbXH1NJRodZRuHKPIl38cQWLR66fQtBqCaYb8gY',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: 'f966ec16-0421-40ff-b37c-ace546d7cab1',
+                container: '#my-dashboard-3',
+                key: '240c47a6-e9c2-41f0-a927-56944b42ab61',
+                token: 'qJAUJZX0adJ4beuMUSKGIGRIRGeEgRC3aZe9yg0pZPwSKFRwr20nNacSIhqdrrJJmKxtAQhH9MIa3Vf7WOtfzOUkIFHAQd4OBCyDHk5znspPQ30TbXH1NJRodZRuHKPIl38cQWLR66fQtBqCaYb8gY',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: 'f612a17e-7f81-4d90-a4fe-b4f52de912a7',
+                container: '#my-dashboard-4',
+                key: '240c47a6-e9c2-41f0-a927-56944b42ab61',
+                token: 'qJAUJZX0adJ4beuMUSKGIGRIRGeEgRC3aZe9yg0pZPwSKFRwr20nNacSIhqdrrJJmKxtAQhH9MIa3Vf7WOtfzOUkIFHAQd4OBCyDHk5znspPQ30TbXH1NJRodZRuHKPIl38cQWLR66fQtBqCaYb8gY',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+            Cumulio.addDashboard({
+                dashboardId: '58ff8024-3842-4a8b-9fb5-97f4c9ca802f',
+                container: '#my-dashboard-5',
+                key: '240c47a6-e9c2-41f0-a927-56944b42ab61',
+                token: 'qJAUJZX0adJ4beuMUSKGIGRIRGeEgRC3aZe9yg0pZPwSKFRwr20nNacSIhqdrrJJmKxtAQhH9MIa3Vf7WOtfzOUkIFHAQd4OBCyDHk5znspPQ30TbXH1NJRodZRuHKPIl38cQWLR66fQtBqCaYb8gY',
+                language: 'tr',
+                loader: {
+                    spinnerColor: '#28a745'
+                }
+            });
+
+
+
+            $('#cleanFilters').click(function () {
+                Cumulio.reloadDashboard();
+            });
+
+            function checkScroll() {
+                var startY = $('.navbar').height() * 2;
+
+                if ($(window).scrollTop() > startY) {
+                    $('.navbar').addClass("scrolled");
+                } else {
+                    $('.navbar').removeClass("scrolled");
+                }
+            }
+
+            if ($('.navbar').length > 0) {
+                $(window).on("scroll load resize", function () {
+                    checkScroll();
+                });
+            }
+
+            anime.timeline({ loop: false })
+                .add({
+                    targets: '.ml5 .line',
+                    opacity: [0.5, 1],
+                    scaleX: [0, 1],
+                    easing: "easeInOutExpo",
+                    duration: 700
+                }).add({
+                    targets: '.ml5 .line',
+                    duration: 600,
+                    easing: "easeOutExpo",
+                    translateY: (el, i) => (-0.625 + 0.625 * 2 * i) + "em"
+                }).add({
+                    targets: '.ml5 .ampersand',
+                    opacity: [0, 1],
+                    scaleY: [0.5, 1],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=600'
+                }).add({
+                    targets: '.ml5 .letters-left',
+                    opacity: [0, 1],
+                    translateX: ["0.5em", 0],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=300'
+                }).add({
+                    targets: '.ml5 .letters-right',
+                    opacity: [0, 1],
+                    translateX: ["-0.5em", 0],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=600'
+                }).add({
+                    targets: '.ml5',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 99999999999999999
+                });
+
+        });
+        var mybutton = document.getElementById("myBtnToTop");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        $(document).ready(function () {
+            $(function () {
+                $(document).click(function (event) {
+                    $('.navbar-collapse').collapse('hide');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
